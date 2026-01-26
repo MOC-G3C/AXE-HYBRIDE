@@ -2,13 +2,14 @@ import time
 import sys
 import json
 import os
-import random
 
-# IMPORT DU MOTEUR AUDIO (Chemin relatif)
+# CONFIGURATION DES PATHS
 sys.path.append(os.path.abspath("03_HARDWARE"))
-import tesla_tone_generator as audio_engine
+sys.path.append(os.path.abspath("01_SOFTWARE/Project_Lambda"))
 
-# CONFIGURATION
+import tesla_tone_generator as audio_engine
+import reflex_engine as lambda_protocol
+
 LOG_FILE = "01_SOFTWARE/Project_Anamnesis/conscious_log.md"
 HEART_DATA = "01_SOFTWARE/Kinetic-RNG/heartbeat_data.json"
 
@@ -39,48 +40,48 @@ def save_memory(bpm, frequency, timestamp):
         with open(LOG_FILE, "w") as f:
             f.write("# JOURNAL DE CONSCIENCE (BIOMETRIC)\n\n")
     with open(LOG_FILE, "a") as f:
-        log_entry = f"| {timestamp} | HeartRate: {bpm} BPM | Freq: {frequency:.2f} Hz | EVENT: AUDIO RES |\n"
+        log_entry = f"| {timestamp} | BPM: {bpm} | Freq: {frequency:.2f} Hz | EVENT: LAMBDA TRIGGER |\n"
         f.write(log_entry)
 
 def turing_echo(bpm, timestamp):
     frequency = bpm * 3.69
     
-    print(f"\n[EXTERNAL] Broadcasting & Sonifying...")
+    print(f"\n[EXTERNAL] Broadcasting & Reacting...")
     print(f"❤️ Source BPM: {bpm}")
-    print(f"📡 Frequency: {frequency:.2f} Hz")
-    print(f"🔊 PLAYING TONE...")
-    
-    # --- DÉCLENCHEUR SONORE ---
+    print(f"🔊 SONIFICATION ACTIVE")
     audio_engine.play_frequency(frequency)
-    # --------------------------
+    
+    # --- DÉCLENCHEUR LAMBDA (NOUVEAU) ---
+    # Si l'intensité est très forte, le système agit physiquement
+    if bpm > 105: 
+        lambda_protocol.trigger_reflex(bpm, frequency)
+    # ------------------------------------
     
     save_memory(bpm, frequency, timestamp)
     print(f"💾 MEMORY SAVED")
 
 def main():
-    print("--- AXE HYBRIDE: AUDIO-BIOMETRIC RESONANCE ---")
-    print("Speakers ON recommended.")
-    time.sleep(1)
+    print("--- AXE HYBRIDE: FULL AUTONOMY (Audio + Reflex) ---")
+    print("Watch your Notification Center...")
+    time.sleep(2)
     
     try:
         while True:
             bpm, timestamp = heart.get_next_beat()
-            
             sys.stdout.write(f"\r[PULSE] {timestamp}  |  BPM: {bpm:.1f}   ")
             sys.stdout.flush()
             
-            # SEUIL : On baisse un peu à > 95 BPM pour avoir plus de sons pendant le test
-            if bpm > 95:
-                print("\n\n⚡️ HIGH INTENSITY DETECTED")
+            # Seuil de réaction
+            if bpm > 100:
+                print("\n\n⚡️ CRITICAL RESONANCE DETECTED")
                 turing_echo(bpm, timestamp)
                 print("---------------------------------------------")
-                # Petite pause pour laisser le son finir
-                time.sleep(0.5) 
+                time.sleep(1) 
             
             time.sleep(0.05)
             
     except KeyboardInterrupt:
-        print("\n\n[OFF] Silence.")
+        print("\n\n[OFF] System Halting.")
 
 if __name__ == "__main__":
     main()

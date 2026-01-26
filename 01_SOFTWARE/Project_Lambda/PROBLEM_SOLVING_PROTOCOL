@@ -1,0 +1,25 @@
+# PROBLEM-SOLVING PROTOCOL (SOP-03)
+**Objective:** To identify, analyze, and resolve technical or logical deviations within the Axis [cite: 2026-01-21].
+
+## PHASE 1: DIAGNOSIS (The "What")
+* **Observation:** Describe the error or deviation without guessing the cause.
+* **Impact:** What part of the structure is affected? (Physical Anchor, Historical Wisdom, or Stress Test?)
+* **Isolation:** Can we reproduce the error under controlled conditions?
+
+## PHASE 2: ROOT CAUSE ANALYSIS (The "Why")
+Perform a "Triple-Why" analysis to find the source:
+1. **Why did the error occur?** (Immediate technical cause)
+2. **Why was this cause possible?** (Process or logic flaw)
+3. **Why did our safety checks fail to catch it?** (Governance gap) [cite: 2026-01-21]
+
+## PHASE 3: CORRECTIVE ACTION (The "How")
+* **Short-Term Fix:** What is the immediate patch to stop the issue?
+* **Long-Term Prevention:** How do we update the "Building Code" (White Paper) to ensure this never happens again? [cite: 2026-01-21]
+
+## PHASE 4: RE-VALIDATION
+* [ ] **New Test:** Run the simulation again with the fix.
+* [ ] **Cross-Check:** Use the *Data Validation Checklist (QC-02)* on the new result.
+* [ ] **Final Signature:** The Human Operator signs off on the resolution.
+
+---
+*Logic and clarity over speed and impulse.* [cite: 2026-01-21]
