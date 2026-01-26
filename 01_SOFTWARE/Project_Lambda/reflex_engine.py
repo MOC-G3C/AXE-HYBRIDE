@@ -3,22 +3,27 @@ import platform
 
 def trigger_reflex(bpm, frequency):
     """
-    Exécute une action système réelle basée sur l'intensité.
-    Pour macOS : Envoie une Notification Centre.
+    Exécute une action système : Notification + Synthèse Vocale.
     """
     print(f"\n[LAMBDA] ⚠️ INITIATING REFLEX ACTION...")
     
-    # Message de l'alerte
+    # 1. NOTIFICATION VISUELLE
     title = "AXE HYBRIDE: ALERT"
-    message = f"Bio-Resonance Critical: {bpm} BPM / {frequency:.2f} Hz"
+    message = f"Critical Resonance: {bpm} BPM"
     
-    # Commande spécifique macOS (AppleScript)
     if platform.system() == "Darwin":
-        cmd = f"""osascript -e 'display notification "{message}" with title "{title}" sound name "Ping"'"""
-        os.system(cmd)
+        # Notification visuelle
+        cmd_notify = f"""osascript -e 'display notification "{message}" with title "{title}"'"""
+        os.system(cmd_notify)
         
-    print(f"[LAMBDA] Reflex Executed: Notification Sent.")
+        # 2. SYNTHÈSE VOCALE (LOGOS)
+        # La machine annonce l'événement à voix haute.
+        # Le '&' permet de ne pas bloquer le script pendant qu'elle parle.
+        speech = f"Warning. Critical biometric surge detected. {int(bpm)} beats per minute."
+        os.system(f"say -v Samantha '{speech}' &")
+        
+    print(f"[LAMBDA] Reflex Executed: Notification & Voice dispatched.")
 
 if __name__ == "__main__":
     # Test manuel
-    trigger_reflex(120, 442)
+    trigger_reflex(110, 400)

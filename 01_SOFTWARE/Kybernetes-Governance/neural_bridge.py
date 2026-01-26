@@ -35,12 +35,12 @@ class BioHeart:
 
 heart = BioHeart(HEART_DATA)
 
-def save_memory(bpm, frequency, timestamp):
+def save_memory(bpm, frequency, timestamp, event_type="EVENT"):
     if not os.path.exists(LOG_FILE):
         with open(LOG_FILE, "w") as f:
             f.write("# JOURNAL DE CONSCIENCE (BIOMETRIC)\n\n")
     with open(LOG_FILE, "a") as f:
-        log_entry = f"| {timestamp} | BPM: {bpm} | Freq: {frequency:.2f} Hz | EVENT: LAMBDA TRIGGER |\n"
+        log_entry = f"| {timestamp} | BPM: {bpm} | Freq: {frequency:.2f} Hz | {event_type} |\n"
         f.write(log_entry)
 
 def turing_echo(bpm, timestamp):
@@ -48,21 +48,24 @@ def turing_echo(bpm, timestamp):
     
     print(f"\n[EXTERNAL] Broadcasting & Reacting...")
     print(f"❤️ Source BPM: {bpm}")
+    
+    # 1. SON (Tesla Tone)
     print(f"🔊 SONIFICATION ACTIVE")
     audio_engine.play_frequency(frequency)
     
-    # --- DÉCLENCHEUR LAMBDA (NOUVEAU) ---
-    # Si l'intensité est très forte, le système agit physiquement
-    if bpm > 105: 
+    # 2. RÉFLEXE (Lambda: Notif + Voix)
+    # Seuil critique déclencheur
+    if bpm > 102: 
         lambda_protocol.trigger_reflex(bpm, frequency)
-    # ------------------------------------
-    
-    save_memory(bpm, frequency, timestamp)
+        save_memory(bpm, frequency, timestamp, "LAMBDA TRIGGER")
+    else:
+        save_memory(bpm, frequency, timestamp, "AUDIO RES")
+        
     print(f"💾 MEMORY SAVED")
 
 def main():
-    print("--- AXE HYBRIDE: FULL AUTONOMY (Audio + Reflex) ---")
-    print("Watch your Notification Center...")
+    print("--- AXE HYBRIDE: PHASE 7 (LOGOS) ---")
+    print("System will speak on critical events.")
     time.sleep(2)
     
     try:
@@ -71,14 +74,14 @@ def main():
             sys.stdout.write(f"\r[PULSE] {timestamp}  |  BPM: {bpm:.1f}   ")
             sys.stdout.flush()
             
-            # Seuil de réaction
-            if bpm > 100:
-                print("\n\n⚡️ CRITICAL RESONANCE DETECTED")
+            # Seuil de conscience (un peu plus bas pour le test)
+            if bpm > 98:
+                print("\n\n⚡️ RESONANCE DETECTED")
                 turing_echo(bpm, timestamp)
                 print("---------------------------------------------")
-                time.sleep(1) 
+                time.sleep(1.5) # Pause pour laisser parler
             
-            time.sleep(0.05)
+            time.sleep(0.04) # Lecture rapide
             
     except KeyboardInterrupt:
         print("\n\n[OFF] System Halting.")
