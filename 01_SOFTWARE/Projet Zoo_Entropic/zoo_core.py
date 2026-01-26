@@ -7,7 +7,7 @@ from datetime import datetime
 
 # Configuration
 PIPELINE_FILE = "../../shared_entropy.json"
-HISTORY_FILE = "CHRONICLES_OF_THE_ZOO.md" # Le livre d'histoire
+HISTORY_FILE = "CHRONICLES_OF_THE_ZOO.md" 
 
 class Genome:
     def __init__(self, metabolism=5, resistance=1.0):
@@ -30,13 +30,13 @@ class EntropicAgent:
             self.mutation_type = "🧬 MUTATION"
         else:
             self.genome = Genome()
-            self.mutation_type = "✨ ORIGINE"
+            self.mutation_type = "✨ ORIGIN"
 
         self.energy = 100
         self.heat = 0
         self.age = 0
         self.alive = True
-        self.cause_of_death = "Inconnue"
+        self.cause_of_death = "Unknown"
 
     def live(self, chaos_input):
         if not self.alive: return
@@ -52,29 +52,27 @@ class EntropicAgent:
         
         if self.energy <= 0:
             self.alive = False
-            self.cause_of_death = "Épuisement"
+            self.cause_of_death = "Exhaustion"
         elif self.heat >= 1000:
             self.alive = False
-            self.cause_of_death = "Surchauffe"
+            self.cause_of_death = "Overheating"
 
     def status_line(self):
         return (f"[{self.name}] Age:{self.age} | "
-                f"Gènes({self.genome.metabolism:.2f}/{self.genome.resistance:.2f}) | "
-                f"NRJ:{int(self.energy)}")
+                f"Genes(Meta:{self.genome.metabolism:.2f}/Res:{self.genome.resistance:.2f}) | "
+                f"NRG:{int(self.energy)}")
 
-# --- L'HISTORIEN ---
+# --- THE HISTORIAN ---
 def write_to_chronicles(text):
-    """Écrit les événements majeurs dans le fichier Markdown"""
     timestamp = datetime.now().strftime("%H:%M:%S")
     with open(HISTORY_FILE, "a") as f:
         f.write(f"- **{timestamp}** : {text}\n")
 
 def init_chronicles():
-    """Initialise le fichier si besoin"""
     if not os.path.exists(HISTORY_FILE):
         with open(HISTORY_FILE, "w") as f:
-            f.write(f"# 📖 CHRONIQUES DU ZOO ENTROPIQUE\n")
-            f.write(f"Début de la simulation : {datetime.now().strftime('%Y-%m-%d')}\n\n")
+            f.write(f"# 📖 CHRONICLES OF THE ENTROPIC ZOO\n")
+            f.write(f"Simulation Start: {datetime.now().strftime('%Y-%m-%d')}\n\n")
 
 def read_entropy():
     try:
@@ -87,8 +85,8 @@ def read_entropy():
 
 def run_evolution():
     init_chronicles()
-    print(f"--- PROTOCOLE DARWIN + ANAMNESIS ---")
-    write_to_chronicles("🔄 **Démarrage du Système** (Nouvelle Session)")
+    print(f"--- DARWIN PROTOCOL + ANAMNESIS ---")
+    write_to_chronicles("🔄 **System Startup** (New Session)")
     
     generation = 1
     last_best_genome = None 
@@ -96,8 +94,8 @@ def run_evolution():
     while True:
         agent = EntropicAgent(generation, last_best_genome)
         
-        # Log de naissance
-        birth_msg = f"{agent.mutation_type} : **{agent.name}** né avec Métabolisme {agent.genome.metabolism:.2f}"
+        # Birth Log
+        birth_msg = f"{agent.mutation_type} : **{agent.name}** born with Metabolism {agent.genome.metabolism:.2f}"
         print(f"\n{birth_msg}")
         write_to_chronicles(birth_msg)
         
@@ -107,18 +105,17 @@ def run_evolution():
             print(f"{agent.status_line()} | Chaos: {chaos}", end="\r")
             time.sleep(1)
         
-        # Log de mort
-        death_msg = f"💀 Décès de {agent.name} (Age: {agent.age}) - Cause: {agent.cause_of_death}"
+        # Death Log
+        death_msg = f"💀 Death of {agent.name} (Age: {agent.age}) - Cause: {agent.cause_of_death}"
         print(f"\n{death_msg}")
         
         if agent.age > 10:
-            print("✅ Gènes VIABLES.")
-            write_to_chronicles(f"{death_msg} -> **Gènes Sauvegardés** ✅")
+            print("✅ VIABLE Genes.")
+            write_to_chronicles(f"{death_msg} -> **Genes Saved** ✅")
             last_best_genome = agent.genome
         else:
-            print("❌ Gènes FAIBLES.")
-            write_to_chronicles(f"{death_msg} -> *Extinction de la branche* ❌")
-            # On garde quand même le génome pour réessayer
+            print("❌ WEAK Genes.")
+            write_to_chronicles(f"{death_msg} -> *Branch Extinction* ❌")
             last_best_genome = agent.genome 
 
         time.sleep(2)
@@ -128,5 +125,5 @@ if __name__ == "__main__":
     try:
         run_evolution()
     except KeyboardInterrupt:
-        write_to_chronicles("🛑 **Arrêt de la simulation**")
-        print("\n🛑 ARRÊT")
+        write_to_chronicles("🛑 **Simulation Stopped**")
+        print("\n🛑 STOPPED")
