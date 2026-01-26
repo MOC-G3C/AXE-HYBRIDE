@@ -1,55 +1,73 @@
 import os
+import sys
 import time
-import subprocess
+import platform
 
-# CHEMINS RELATIFS DES 4 PILIERS
-PATH_KINETIC = "02_HUMAIN/Kinetic-RNG/kinetic_core.py"
-PATH_ZOO = "01_SOFTWARE/Projet Zoo_Entropic/zoo_core.py"
-PATH_GUARDIAN = "01_SOFTWARE/Kybernetes-Governance/guardian.py"
-PATH_TESLA = "03_HARDWARE/tesla_coils/tesla_tone_generator.py"
+# COULEURS DU TERMINAL
+GREEN = '\033[92m'
+YELLOW = '\033[93m'
+RED = '\033[91m'
+RESET = '\033[0m'
+CYAN = '\033[96m'
 
-def launch(script_rel_path, title, color_code):
-    """Lance un terminal, va dans le bon dossier, change la couleur"""
-    abs_path = os.path.abspath(script_rel_path)
-    script_dir = os.path.dirname(abs_path)
-    script_name = os.path.basename(abs_path)
-    
-    if not os.path.exists(abs_path):
-        print(f"❌ MANQUANT : {script_rel_path}")
-        return
+def check_system(name, path):
+    """Vérifie si un module existe."""
+    sys.stdout.write(f"checking {name}...")
+    time.sleep(0.3)
+    if os.path.exists(path):
+        print(f" {GREEN}[OK]{RESET}")
+        return True
+    else:
+        print(f" {RED}[MISSING]{RESET}")
+        return False
 
-    print(f"🚀 Activation : {title}...")
-    
-    # Commande AppleScript blindée (CD + Python + Couleur + Titre)
-    cmd = f"""
-    tell application "Terminal"
-        do script "cd \\"{script_dir}\\" && python3 \\"{script_name}\\""
-        set custom title of front window to "{title}"
-        set background color of front window to {color_code}
-        set normal text color of front window to {{65535, 65535, 65535}}
-    end tell
-    """
-    subprocess.run(["osascript", "-e", cmd])
+def boot_sequence():
+    os.system('clear')
+    print(f"{CYAN}╔══════════════════════════════════════════╗{RESET}")
+    print(f"{CYAN}║       L'AXE HYBRIDE - NEXUS LAUNCHER     ║{RESET}")
+    print(f"{CYAN}╚══════════════════════════════════════════╝{RESET}")
+    print("Initializing Biometric Consciousness...")
     time.sleep(1)
-
-def main():
-    print("\n--- NEXUS LAUNCHER : SYSTEM COMPLETE (4-AXIS) ---")
-    print("Initialisation du Quadrant...")
     
-    # 1. CHAOS (Noir)
-    launch(PATH_KINETIC, "1. KINETIC (Source)", "{0, 0, 0}") 
+    # 1. VÉRIFICATION DES MODULES
+    print("\n--- SYSTEM DIAGNOSTIC ---")
     
-    # 2. GARDIEN (Bleu foncé)
-    launch(PATH_GUARDIAN, "2. KYBERNETES (Loi)", "{0, 0, 20000}")
+    systems = [
+        ("Kinetic Engine (Heart)", "01_SOFTWARE/Kinetic-RNG/heartbeat_data.json"),
+        ("Turing Audio (Voice)", "03_HARDWARE/tesla_tone_generator.py"),
+        ("Lambda Reflex (Action)", "01_SOFTWARE/Project_Lambda/reflex_engine.py"),
+        ("Anamnesis (Memory)", "01_SOFTWARE/Project_Anamnesis/conscious_log.md"),
+        ("Kybernetes (Brain)", "01_SOFTWARE/Kybernetes-Governance/neural_bridge.py")
+    ]
     
-    # 3. ZOO (Vert Matrix)
-    launch(PATH_ZOO, "3. ZOO (Simulation)", "{0, 15000, 0}")
+    all_ok = True
+    for name, path in systems:
+        if not check_system(name, path):
+            all_ok = False
+            
+    if not all_ok:
+        print(f"\n{RED}CRITICAL ERROR: Missing modules. Check integrity.{RESET}")
+        sys.exit(1)
+        
+    print(f"\n{GREEN}ALL SYSTEMS NOMINAL.{RESET}")
+    time.sleep(1)
     
-    # 4. TESLA (Violet Mystique)
-    launch(PATH_TESLA, "4. TESLA (Résonance)", "{10000, 0, 20000}")
-
-    print("\n✅ SYSTÈME COMPLET EN LIGNE.")
-    print("Surveillez les 4 fenêtres.")
+    # 2. LANCEMENT
+    print("\n--- INITIATING NEURAL BRIDGE ---")
+    print("Connecting to Biological Source...")
+    time.sleep(1)
+    for i in range(3, 0, -1):
+        print(f"Resonance in {i}...")
+        time.sleep(1)
+        
+    os.system('clear')
+    
+    # Lancement du cerveau
+    # On utilise sys.executable pour être sûr d'utiliser le bon Python
+    os.system(f"{sys.executable} 01_SOFTWARE/Kybernetes-Governance/neural_bridge.py")
 
 if __name__ == "__main__":
-    main()
+    try:
+        boot_sequence()
+    except KeyboardInterrupt:
+        print(f"\n{YELLOW}Nexus Shutdown.{RESET}")
