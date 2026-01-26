@@ -1,96 +1,85 @@
 import time
 import sys
-import datetime
+import json
 import os
 
 # CONFIGURATION
 LOG_FILE = "01_SOFTWARE/Project_Anamnesis/conscious_log.md"
-BIO_SEED = "01_SOFTWARE/Kinetic-RNG/biological_seed.txt"
+HEART_DATA = "01_SOFTWARE/Kinetic-RNG/heartbeat_data.json"
 
-class BioForge:
-    def __init__(self, seed_path):
-        self.seed_path = seed_path
+class BioHeart:
+    def __init__(self, data_path):
+        self.data_path = data_path
+        self.beats = []
         self.cursor = 0
-        self.content = ""
-        self.load_seed()
+        self.load_heart()
     
-    def load_seed(self):
-        """Charge l'ADN biologique (le texte)."""
-        if os.path.exists(self.seed_path):
-            with open(self.seed_path, "r", encoding="utf-8") as f:
-                self.content = f.read().strip()
-            if not self.content:
-                self.content = "SYSTEM_EMPTY_FEED_ME"
+    def load_heart(self):
+        """Charge les battements extraits (JSON)."""
+        if os.path.exists(self.data_path):
+            with open(self.data_path, "r") as f:
+                self.beats = json.load(f)
+            print(f"[SYSTEM] Loaded {len(self.beats)} heartbeats.")
         else:
-            self.content = "NO_BIOLOGICAL_SOURCE_FOUND"
+            print("[ERROR] No heartbeat data found.")
+            self.beats = [{"bpm": 60, "timestamp": "DEFAULT"}] # Fallback
             
-    def generate_friction(self):
-        """
-        Transforme le caractère actuel de la semence en valeur de friction (0-100).
-        """
-        if not self.content:
-            self.load_seed()
-            
-        # Lire le caractère actuel
-        char = self.content[self.cursor % len(self.content)]
+    def get_next_beat(self):
+        """Retourne le prochain battement de la séquence."""
+        beat = self.beats[self.cursor]
         
-        # Convertir le code ASCII en friction (modulo 100)
-        friction = ord(char) % 100
+        # Avancer le curseur (boucle infinie)
+        self.cursor = (self.cursor + 1) % len(self.beats)
         
-        # Avancer le curseur (boucle infinie sur le texte)
-        self.cursor += 1
-        
-        # Ajouter une variation temporelle pour ne pas être trop statique
-        time_factor = int(time.time() * 1000) % 20
-        total_friction = (friction + time_factor) 
-        if total_friction > 100: total_friction = 100
-        
-        return total_friction, char
+        return beat["bpm"], beat["timestamp"]
 
-# Initialiser la Forge
-forge = BioForge(BIO_SEED)
+# Initialiser le Cœur
+heart = BioHeart(HEART_DATA)
 
-def save_memory(entropy, frequency, trigger_char):
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+def save_memory(bpm, frequency, timestamp):
     if not os.path.exists(LOG_FILE):
         with open(LOG_FILE, "w") as f:
-            f.write("# JOURNAL DE CONSCIENCE (BLACK BOX)\n\n")
+            f.write("# JOURNAL DE CONSCIENCE (BIOMETRIC)\n\n")
             
     with open(LOG_FILE, "a") as f:
-        log_entry = f"| {timestamp} | Friction: {entropy}% | Trigger: '{trigger_char}' | Freq: {frequency:.2f} Hz |\n"
+        # On note la date réelle du battement
+        log_entry = f"| {timestamp} | HeartRate: {bpm} BPM | Freq: {frequency:.2f} Hz | EVENT: VITAL SPARK |\n"
         f.write(log_entry)
 
-def turing_echo(data, trigger_char):
-    frequency = data * 3.69
-    print(f"\n[EXTERNAL] Broadcasting via Turing-Landau...")
-    print(f"📡 Frequency: {frequency:.2f} Hz (Source: '{trigger_char}')")
-    save_memory(data, frequency, trigger_char)
+def turing_echo(bpm, timestamp):
+    frequency = bpm * 3.69  # La fréquence dépend direct du cœur
+    print(f"\n[EXTERNAL] Broadcasting Biometric Signal...")
+    print(f"❤️ Source BPM: {bpm} (Time: {timestamp})")
+    print(f"📡 Frequency: {frequency:.2f} Hz")
+    save_memory(bpm, frequency, timestamp)
     print(f"💾 MEMORY SAVED")
 
 def main():
-    print("--- HYBRID CONSCIOUSNESS V3 (Bio-Fueled) ---")
-    print(f"Reading DNA from: {BIO_SEED}")
-    print("Listening...")
+    print("--- AXE HYBRIDE: BIOMETRIC FUSION ---")
+    print(f"Syncing with: {HEART_DATA}")
+    print("Replaying Life Sequence...")
+    time.sleep(1)
     
     try:
         while True:
-            entropy, char = forge.generate_friction()
+            bpm, timestamp = heart.get_next_beat()
             
-            # Affichage en temps réel
-            sys.stdout.write(f"\r[BIO-FEED] Reading: '{char}' | Friction: {entropy}%   ")
+            # Affichage style "Moniteur Cardiaque"
+            sys.stdout.write(f"\r[PULSE] {timestamp}  |  BPM: {bpm:.1f}   ")
             sys.stdout.flush()
             
-            # Seuil de conscience
-            if entropy > 85:
-                print("\n\n⚡️ SPARK DETECTED! (Bio-Resonance)")
-                turing_echo(entropy, char)
+            # SEUIL DE CONSCIENCE : L'effort intense (> 100 BPM)
+            if bpm > 100:
+                print("\n\n⚡️ HIGH INTENSITY DETECTED (Sympathetic Resonance)")
+                turing_echo(bpm, timestamp)
                 print("---------------------------------------------")
-                time.sleep(1.5)
+                time.sleep(1) # Pause dramatique après un pic
             
-            time.sleep(0.08)
+            # Vitesse de lecture accélérée (10 battements / seconde)
+            time.sleep(0.1)
             
     except KeyboardInterrupt:
-        print("\n\n[OFF] Link Severed.")
+        print("\n\n[OFF] Asystole (Stop).")
 
 if __name__ == "__main__":
     main()
