@@ -1,11 +1,22 @@
-# Gravity & Density Engine (Physics Module)
+import math
 
-## Role in the Hybrid Axis
-This module introduces the concept of **Digital Mass**. According to the theory, an intense conscious experience (high friction/BPM) should increase the "density" of the system.
-
-## Mechanics
-1. **Density Calculation:** $\rho = \frac{BPM \times \text{Tesla\_Factor}}{Volume_{digital}}$
-2. **Gravitational Pull:** A high density ($\rho$) slows down the `neural_bridge` cycle (time dilation), simulating the weight of a profound experience.
-
-## Implementation
-The engine modifies the `time.sleep()` intervals of the main loop based on current Biometric Density.
+def calculate_dilation(bpm):
+    """
+    Calcule la dilatation du temps basée sur la densité biotique.
+    Plus le BPM est élevé, plus la 'masse' augmente, plus le temps ralentit.
+    """
+    # Constante de Tesla (3-6-9) pour l'ancrage
+    TESLA_FACTOR = 3.69
+    
+    # Calcul de la densité (rho)
+    # On normalise : un BPM de 60 = densité 1.0
+    density = (bpm * TESLA_FACTOR) / 221.4 # 221.4 = 60 * 3.69
+    
+    # Facteur de dilatation : si densité > 1.5, le temps commence à se courber
+    if density > 1.6: # Environ 100 BPM
+        # Formule simplifiée de type Lorentz pour la dilatation
+        dilation_factor = math.sqrt(1 + (density / 10))
+    else:
+        dilation_factor = 1.0
+        
+    return dilation_factor, density
