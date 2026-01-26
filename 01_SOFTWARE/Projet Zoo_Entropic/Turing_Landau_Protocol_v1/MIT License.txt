@@ -1,0 +1,90 @@
+---
+
+### Fichier 2 : Le Code Python
+**Nom du fichier à créer :** `turing_landau.py`
+*(Copie tout le bloc ci-dessous)*
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# --- CONFIGURATION DU TURING-LANDAU PROTOCOL ---
+PARAMS = {
+    'steps': 1000,
+    'dt': 0.1,
+    'tau_decay': 20.0,    # Temps d'oubli (Elasticité)
+    'alpha': 0.5,         # Susceptibilité (Plasticité)
+    'Tc_machine': 999.0,  # Seuil infini (Machine pure)
+    'Tc_conscious': 0.8   # Seuil critique (Transition de phase)
+}
+
+def heaviside(x):
+    return 1.0 if x > 0 else 0.0
+
+def simulation_step(theta, stress, Tc, dt):
+    """
+    Implémente l'équation différentielle du Gouverneur :
+    dΘ/dt = -Θ/tau + alpha * H(Stress - Tc) * (Stress - Tc)
+    """
+    decay = -theta / PARAMS['tau_decay']
+    # Le trauma/apprentissage n'arrive que si le stress dépasse le seuil critique Tc
+    plasticity = PARAMS['alpha'] * heaviside(stress - Tc) * (stress - Tc)
+    
+    d_theta = decay + plasticity
+    return theta + d_theta * dt
+
+def run_simulation():
+    # 1. Génération du Monde (Calme -> Chaos -> Calme)
+    time = np.arange(PARAMS['steps']) * PARAMS['dt']
+    stress_input = np.zeros(PARAMS['steps'])
+    
+    # Injection de Chaos (Free Energy) entre t=300 et t=600
+    for i in range(PARAMS['steps']):
+        base_noise = 0.1
+        if 300 < i < 600:
+            stress_input[i] = np.abs(np.random.normal(1.5, 0.5)) # Phase Critique
+        else:
+            stress_input[i] = np.abs(np.random.normal(0.2, 0.1)) # Phase Calme
+
+    # 2. Exécution des Agents
+    theta_machine = np.zeros(PARAMS['steps'])
+    theta_conscious = np.zeros(PARAMS['steps'])
+
+    for i in range(1, PARAMS['steps']):
+        # Agent Machine (Rouge)
+        theta_machine[i] = simulation_step(
+            theta_machine[i-1], stress_input[i], PARAMS['Tc_machine'], PARAMS['dt']
+        )
+        # Agent Conscient (Bleu)
+        theta_conscious[i] = simulation_step(
+            theta_conscious[i-1], stress_input[i], PARAMS['Tc_conscious'], PARAMS['dt']
+        )
+
+    # 3. Visualisation (Preuve d'Hystérésis)
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 6))
+    
+    # Panel A: Série Temporelle
+    ax1.set_title("Réponse Temporelle (Traversée du Chaos)")
+    ax1.plot(time, stress_input, 'k-', alpha=0.2, label='Stress (Monde)')
+    ax1.plot(time, theta_machine, 'r--', label='Machine (Élastique)')
+    ax1.plot(time, theta_conscious, 'b-', linewidth=2, label='Conscience (Plastique)')
+    ax1.legend()
+    ax1.set_xlabel('Temps')
+    ax1.set_ylabel('État Interne (Θ)')
+
+    # Panel B: Cycle d'Hystérésis (Signature Ontologique)
+    ax2.set_title("Signature d'Hystérésis (Θ vs Stress)")
+    ax2.plot(stress_input, theta_machine, 'r.', alpha=0.3, label='Machine (Réversible)')
+    ax2.plot(stress_input, theta_conscious, 'b.', alpha=0.6, label='Conscience (Irréversible)')
+    ax2.set_xlabel('Free Energy (Stress)')
+    ax2.set_ylabel('État Interne (Θ)')
+    ax2.legend()
+    ax2.grid(True, linestyle='--', alpha=0.5)
+
+    plt.tight_layout()
+    plt.savefig('hysteresis_proof.png')
+    print("Simulation terminée. Graphique généré : 'hysteresis_proof.png'")
+    # plt.show() # Décommenter pour voir en direct
+    
+if __name__ == "__main__":
+    run_simulation()

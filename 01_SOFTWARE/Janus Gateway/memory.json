@@ -1,0 +1,16 @@
+{
+  "system_integrity": {
+    "arbiter": "Marc-Olivier Corbin",
+    "protocol_version": "Turing-Landau v1.2",
+    "location_anchor": "Sainte-Julie, QC"
+  },
+  "identity_scars": [
+    {
+      "id": "THETA-001",
+      "timestamp": "2026-01-23T02:55:29.744285Z",
+      "concept": "2",
+      "definition": "3",
+      "hysteresis_level": "PERMANENT"
+    }
+  ]
+}

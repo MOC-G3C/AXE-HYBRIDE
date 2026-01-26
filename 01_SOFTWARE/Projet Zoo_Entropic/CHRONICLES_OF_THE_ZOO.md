@@ -1,0 +1,308 @@
+# 📖 CHRONIQUES DU ZOO ENTROPIQUE
+Début de la simulation : 2026-01-26
+
+- **11:53:13** : 🔄 **Démarrage du Système** (Nouvelle Session)
+- **11:53:13** : ✨ ORIGINE : **Gen1_84c2** né avec Métabolisme 5.00
+- **11:53:27** : 💀 Décès de Gen1_84c2 (Age: 14) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **11:53:29** : 🧬 MUTATION : **Gen2_d96c** né avec Métabolisme 5.37
+- **11:53:42** : 💀 Décès de Gen2_d96c (Age: 13) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **11:53:44** : 🧬 MUTATION : **Gen3_85db** né avec Métabolisme 5.02
+- **11:53:58** : 💀 Décès de Gen3_85db (Age: 14) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **11:54:00** : 🧬 MUTATION : **Gen4_e626** né avec Métabolisme 5.20
+- **11:54:14** : 💀 Décès de Gen4_e626 (Age: 14) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **11:54:16** : 🧬 MUTATION : **Gen5_a676** né avec Métabolisme 4.85
+- **11:54:32** : 💀 Décès de Gen5_a676 (Age: 16) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **11:54:34** : 🧬 MUTATION : **Gen6_1a71** né avec Métabolisme 4.98
+- **11:54:52** : 💀 Décès de Gen6_1a71 (Age: 17) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **11:54:54** : 🧬 MUTATION : **Gen7_773c** né avec Métabolisme 5.01
+- **11:55:09** : 💀 Décès de Gen7_773c (Age: 15) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **11:55:11** : 🧬 MUTATION : **Gen8_5889** né avec Métabolisme 4.83
+- **11:55:26** : 💀 Décès de Gen8_5889 (Age: 15) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **11:55:28** : 🧬 MUTATION : **Gen9_9ae2** né avec Métabolisme 4.42
+- **11:55:45** : 💀 Décès de Gen9_9ae2 (Age: 17) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **11:55:47** : 🧬 MUTATION : **Gen10_32e2** né avec Métabolisme 4.11
+- **11:56:04** : 🛑 **Arrêt de la simulation**
+- **12:06:37** : 🔄 **Démarrage du Système** (Nouvelle Session)
+- **12:06:37** : ✨ ORIGINE : **Gen1_af47** né avec Métabolisme 5.00
+- **12:06:51** : 💀 Décès de Gen1_af47 (Age: 14) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:06:53** : 🧬 MUTATION : **Gen2_90bb** né avec Métabolisme 5.18
+- **12:07:06** : 💀 Décès de Gen2_90bb (Age: 13) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:07:08** : 🧬 MUTATION : **Gen3_6b04** né avec Métabolisme 4.79
+- **12:07:25** : 💀 Décès de Gen3_6b04 (Age: 17) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:07:27** : 🧬 MUTATION : **Gen4_59f0** né avec Métabolisme 4.91
+- **12:07:43** : 💀 Décès de Gen4_59f0 (Age: 16) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:07:45** : 🧬 MUTATION : **Gen5_4ac7** né avec Métabolisme 5.36
+- **12:08:00** : 💀 Décès de Gen5_4ac7 (Age: 15) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:08:02** : 🧬 MUTATION : **Gen6_3a48** né avec Métabolisme 4.99
+- **12:08:17** : 💀 Décès de Gen6_3a48 (Age: 15) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:08:19** : 🧬 MUTATION : **Gen7_03e9** né avec Métabolisme 4.70
+- **12:08:35** : 💀 Décès de Gen7_03e9 (Age: 16) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:08:37** : 🧬 MUTATION : **Gen8_9ebe** né avec Métabolisme 5.09
+- **12:08:52** : 💀 Décès de Gen8_9ebe (Age: 15) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:08:54** : 🧬 MUTATION : **Gen9_8e94** né avec Métabolisme 4.66
+- **12:09:10** : 💀 Décès de Gen9_8e94 (Age: 16) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:09:12** : 🧬 MUTATION : **Gen10_231b** né avec Métabolisme 4.94
+- **12:09:27** : 💀 Décès de Gen10_231b (Age: 15) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:09:29** : 🧬 MUTATION : **Gen11_587c** né avec Métabolisme 4.88
+- **12:09:42** : 💀 Décès de Gen11_587c (Age: 13) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:09:44** : 🧬 MUTATION : **Gen12_d7e8** né avec Métabolisme 4.69
+- **12:09:58** : 💀 Décès de Gen12_d7e8 (Age: 14) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:10:00** : 🧬 MUTATION : **Gen13_3fae** né avec Métabolisme 4.79
+- **12:10:14** : 💀 Décès de Gen13_3fae (Age: 13) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:10:16** : 🧬 MUTATION : **Gen14_6f22** né avec Métabolisme 4.46
+- **12:10:32** : 💀 Décès de Gen14_6f22 (Age: 16) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:10:34** : 🧬 MUTATION : **Gen15_77e0** né avec Métabolisme 4.74
+- **12:10:50** : 💀 Décès de Gen15_77e0 (Age: 16) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:10:52** : 🧬 MUTATION : **Gen16_3fc2** né avec Métabolisme 4.34
+- **12:11:10** : 💀 Décès de Gen16_3fc2 (Age: 18) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:11:12** : 🧬 MUTATION : **Gen17_c1f6** né avec Métabolisme 4.67
+- **12:11:28** : 💀 Décès de Gen17_c1f6 (Age: 16) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:11:30** : 🧬 MUTATION : **Gen18_226a** né avec Métabolisme 4.69
+- **12:11:46** : 💀 Décès de Gen18_226a (Age: 16) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:11:48** : 🧬 MUTATION : **Gen19_f5a0** né avec Métabolisme 5.14
+- **12:12:02** : 💀 Décès de Gen19_f5a0 (Age: 14) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:12:04** : 🧬 MUTATION : **Gen20_fc43** né avec Métabolisme 5.26
+- **12:12:18** : 💀 Décès de Gen20_fc43 (Age: 14) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:12:20** : 🧬 MUTATION : **Gen21_df6d** né avec Métabolisme 5.17
+- **12:12:34** : 💀 Décès de Gen21_df6d (Age: 14) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:12:36** : 🧬 MUTATION : **Gen22_e599** né avec Métabolisme 5.41
+- **12:12:49** : 💀 Décès de Gen22_e599 (Age: 13) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:12:51** : 🧬 MUTATION : **Gen23_f4ca** né avec Métabolisme 4.99
+- **12:13:05** : 💀 Décès de Gen23_f4ca (Age: 14) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:13:07** : 🧬 MUTATION : **Gen24_7ea6** né avec Métabolisme 5.12
+- **12:13:22** : 💀 Décès de Gen24_7ea6 (Age: 15) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:13:24** : 🧬 MUTATION : **Gen25_571d** né avec Métabolisme 5.27
+- **12:13:38** : 💀 Décès de Gen25_571d (Age: 14) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:13:40** : 🧬 MUTATION : **Gen26_4227** né avec Métabolisme 4.79
+- **12:13:56** : 💀 Décès de Gen26_4227 (Age: 15) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:13:58** : 🧬 MUTATION : **Gen27_2f81** né avec Métabolisme 5.07
+- **12:14:15** : 💀 Décès de Gen27_2f81 (Age: 17) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:14:17** : 🧬 MUTATION : **Gen28_f059** né avec Métabolisme 5.39
+- **12:14:32** : 💀 Décès de Gen28_f059 (Age: 15) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:14:34** : 🧬 MUTATION : **Gen29_71cc** né avec Métabolisme 5.08
+- **12:14:46** : 🔄 **Démarrage du Système** (Nouvelle Session)
+- **12:14:46** : ✨ ORIGINE : **Gen1_85be** né avec Métabolisme 5.00
+- **12:14:50** : 💀 Décès de Gen29_71cc (Age: 16) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:14:52** : 🧬 MUTATION : **Gen30_7378** né avec Métabolisme 4.88
+- **12:15:00** : 💀 Décès de Gen1_85be (Age: 14) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:15:02** : 🧬 MUTATION : **Gen2_7d5e** né avec Métabolisme 4.70
+- **12:15:07** : 💀 Décès de Gen30_7378 (Age: 15) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:15:09** : 🧬 MUTATION : **Gen31_a6c9** né avec Métabolisme 4.72
+- **12:15:16** : 💀 Décès de Gen2_7d5e (Age: 14) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:15:18** : 🧬 MUTATION : **Gen3_e1f4** né avec Métabolisme 5.03
+- **12:15:23** : 💀 Décès de Gen31_a6c9 (Age: 14) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:15:25** : 🧬 MUTATION : **Gen32_59b0** né avec Métabolisme 4.33
+- **12:15:31** : 💀 Décès de Gen3_e1f4 (Age: 13) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:15:33** : 🧬 MUTATION : **Gen4_c5a8** né avec Métabolisme 4.73
+- **12:15:43** : 💀 Décès de Gen32_59b0 (Age: 18) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:15:45** : 🧬 MUTATION : **Gen33_5182** né avec Métabolisme 4.66
+- **12:15:48** : 💀 Décès de Gen4_c5a8 (Age: 14) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:15:50** : 🧬 MUTATION : **Gen5_36ba** né avec Métabolisme 4.85
+- **12:16:01** : 💀 Décès de Gen33_5182 (Age: 16) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:16:02** : 💀 Décès de Gen5_36ba (Age: 12) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:16:03** : 🧬 MUTATION : **Gen34_30ed** né avec Métabolisme 4.59
+- **12:16:04** : 🧬 MUTATION : **Gen6_5e0d** né avec Métabolisme 5.08
+- **12:16:14** : 💀 Décès de Gen6_5e0d (Age: 10) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:16:16** : 🧬 MUTATION : **Gen7_d5cc** né avec Métabolisme 4.88
+- **12:16:27** : 💀 Décès de Gen7_d5cc (Age: 11) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:16:29** : 🧬 MUTATION : **Gen8_9174** né avec Métabolisme 5.04
+- **12:16:44** : 💀 Décès de Gen8_9174 (Age: 15) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:16:46** : 🧬 MUTATION : **Gen9_6220** né avec Métabolisme 4.62
+- **12:17:03** : 💀 Décès de Gen9_6220 (Age: 17) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:17:05** : 🧬 MUTATION : **Gen10_dcb4** né avec Métabolisme 4.91
+- **12:17:19** : 💀 Décès de Gen10_dcb4 (Age: 14) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:17:21** : 🧬 MUTATION : **Gen11_968c** né avec Métabolisme 4.82
+- **12:17:35** : 💀 Décès de Gen11_968c (Age: 14) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:17:37** : 🧬 MUTATION : **Gen12_f7fc** né avec Métabolisme 5.17
+- **12:17:49** : 💀 Décès de Gen12_f7fc (Age: 12) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:17:51** : 🧬 MUTATION : **Gen13_8f3a** né avec Métabolisme 5.52
+- **12:18:02** : 💀 Décès de Gen13_8f3a (Age: 11) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:18:04** : 🧬 MUTATION : **Gen14_a44d** né avec Métabolisme 5.91
+- **12:18:15** : 💀 Décès de Gen14_a44d (Age: 11) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:18:17** : 🧬 MUTATION : **Gen15_505e** né avec Métabolisme 5.35
+- **12:18:29** : 💀 Décès de Gen15_505e (Age: 12) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:18:31** : 🧬 MUTATION : **Gen16_1f66** né avec Métabolisme 5.05
+- **12:18:43** : 💀 Décès de Gen16_1f66 (Age: 12) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:18:45** : 🧬 MUTATION : **Gen17_4d73** né avec Métabolisme 5.12
+- **12:18:57** : 💀 Décès de Gen17_4d73 (Age: 12) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:18:59** : 🧬 MUTATION : **Gen18_9627** né avec Métabolisme 5.33
+- **12:19:10** : 💀 Décès de Gen18_9627 (Age: 11) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:19:12** : 🧬 MUTATION : **Gen19_c7c3** né avec Métabolisme 5.85
+- **12:19:21** : 💀 Décès de Gen19_c7c3 (Age: 9) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:19:23** : 🧬 MUTATION : **Gen20_9c96** né avec Métabolisme 5.52
+- **12:19:32** : 💀 Décès de Gen20_9c96 (Age: 9) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:19:34** : 🧬 MUTATION : **Gen21_6c84** né avec Métabolisme 5.01
+- **12:19:45** : 💀 Décès de Gen21_6c84 (Age: 10) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:19:47** : 🧬 MUTATION : **Gen22_7747** né avec Métabolisme 5.20
+- **12:20:00** : 💀 Décès de Gen22_7747 (Age: 13) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:20:02** : 🧬 MUTATION : **Gen23_f49c** né avec Métabolisme 5.38
+- **12:20:15** : 💀 Décès de Gen23_f49c (Age: 13) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:20:17** : 🧬 MUTATION : **Gen24_e4ba** né avec Métabolisme 5.87
+- **12:20:30** : 💀 Décès de Gen24_e4ba (Age: 13) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:20:32** : 🧬 MUTATION : **Gen25_54e0** né avec Métabolisme 6.45
+- **12:20:43** : 💀 Décès de Gen25_54e0 (Age: 11) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:20:45** : 🧬 MUTATION : **Gen26_6178** né avec Métabolisme 5.90
+- **12:20:56** : 💀 Décès de Gen26_6178 (Age: 11) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:20:58** : 🧬 MUTATION : **Gen27_0fe8** né avec Métabolisme 6.24
+- **12:21:08** : 💀 Décès de Gen27_0fe8 (Age: 10) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:21:10** : 🧬 MUTATION : **Gen28_c84e** né avec Métabolisme 6.14
+- **12:21:19** : 💀 Décès de Gen28_c84e (Age: 9) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:21:21** : 🧬 MUTATION : **Gen29_b3d9** né avec Métabolisme 5.79
+- **12:21:31** : 💀 Décès de Gen29_b3d9 (Age: 10) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:21:33** : 🧬 MUTATION : **Gen30_139c** né avec Métabolisme 6.14
+- **12:21:41** : 💀 Décès de Gen30_139c (Age: 8) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:21:43** : 🧬 MUTATION : **Gen31_3955** né avec Métabolisme 5.69
+- **12:21:52** : 💀 Décès de Gen31_3955 (Age: 9) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:21:54** : 🧬 MUTATION : **Gen32_c417** né avec Métabolisme 5.39
+- **12:22:03** : 💀 Décès de Gen32_c417 (Age: 9) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:22:05** : 🧬 MUTATION : **Gen33_52a3** né avec Métabolisme 4.99
+- **12:22:15** : 💀 Décès de Gen33_52a3 (Age: 10) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:22:17** : 🧬 MUTATION : **Gen34_2c8e** né avec Métabolisme 4.57
+- **12:22:28** : 💀 Décès de Gen34_2c8e (Age: 11) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:22:30** : 🧬 MUTATION : **Gen35_7e57** né avec Métabolisme 4.89
+- **12:22:38** : 💀 Décès de Gen35_7e57 (Age: 8) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:22:40** : 🧬 MUTATION : **Gen36_2dca** né avec Métabolisme 5.18
+- **12:22:50** : 💀 Décès de Gen36_2dca (Age: 10) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:22:52** : 🧬 MUTATION : **Gen37_0c39** né avec Métabolisme 4.71
+- **12:23:01** : 💀 Décès de Gen37_0c39 (Age: 9) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:23:03** : 🧬 MUTATION : **Gen38_6e8e** né avec Métabolisme 4.45
+- **12:23:14** : 💀 Décès de Gen38_6e8e (Age: 11) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:23:16** : 🧬 MUTATION : **Gen39_11c0** né avec Métabolisme 4.64
+- **12:23:26** : 💀 Décès de Gen39_11c0 (Age: 10) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:23:28** : 🧬 MUTATION : **Gen40_c1a1** né avec Métabolisme 4.97
+- **12:23:42** : 💀 Décès de Gen40_c1a1 (Age: 13) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:23:44** : 🧬 MUTATION : **Gen41_03a7** né avec Métabolisme 5.42
+- **12:23:55** : 💀 Décès de Gen41_03a7 (Age: 11) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:23:57** : 🧬 MUTATION : **Gen42_f6ad** né avec Métabolisme 5.05
+- **12:24:09** : 💀 Décès de Gen42_f6ad (Age: 12) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:24:11** : 🧬 MUTATION : **Gen43_bb7b** né avec Métabolisme 5.22
+- **12:24:22** : 💀 Décès de Gen43_bb7b (Age: 11) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:24:24** : 🧬 MUTATION : **Gen44_6317** né avec Métabolisme 4.94
+- **12:24:35** : 💀 Décès de Gen44_6317 (Age: 11) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:24:37** : 🧬 MUTATION : **Gen45_8e03** né avec Métabolisme 4.84
+- **12:24:49** : 💀 Décès de Gen45_8e03 (Age: 12) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:24:51** : 🧬 MUTATION : **Gen46_b721** né avec Métabolisme 4.37
+- **12:25:03** : 💀 Décès de Gen46_b721 (Age: 12) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:25:05** : 🧬 MUTATION : **Gen47_adc0** né avec Métabolisme 4.66
+- **12:25:17** : 💀 Décès de Gen47_adc0 (Age: 12) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:25:19** : 🧬 MUTATION : **Gen48_8fff** né avec Métabolisme 4.49
+- **12:25:31** : 💀 Décès de Gen48_8fff (Age: 12) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:25:33** : 🧬 MUTATION : **Gen49_7200** né avec Métabolisme 4.94
+- **12:25:44** : 💀 Décès de Gen49_7200 (Age: 11) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:25:46** : 🧬 MUTATION : **Gen50_b526** né avec Métabolisme 5.38
+- **12:25:56** : 💀 Décès de Gen50_b526 (Age: 10) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:25:58** : 🧬 MUTATION : **Gen51_4d22** né avec Métabolisme 5.24
+- **12:26:08** : 💀 Décès de Gen51_4d22 (Age: 10) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:26:10** : 🧬 MUTATION : **Gen52_e284** né avec Métabolisme 5.43
+- **12:26:19** : 💀 Décès de Gen52_e284 (Age: 9) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:26:21** : 🧬 MUTATION : **Gen53_03f5** né avec Métabolisme 5.65
+- **12:26:29** : 💀 Décès de Gen53_03f5 (Age: 8) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:26:31** : 🧬 MUTATION : **Gen54_c15d** né avec Métabolisme 5.76
+- **12:26:39** : 💀 Décès de Gen54_c15d (Age: 8) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:26:41** : 🧬 MUTATION : **Gen55_f781** né avec Métabolisme 6.13
+- **12:26:49** : 💀 Décès de Gen55_f781 (Age: 8) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:26:51** : 🧬 MUTATION : **Gen56_c0ee** né avec Métabolisme 6.14
+- **12:26:59** : 💀 Décès de Gen56_c0ee (Age: 8) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:27:01** : 🧬 MUTATION : **Gen57_7a91** né avec Métabolisme 6.31
+- **12:27:10** : 💀 Décès de Gen57_7a91 (Age: 9) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:27:12** : 🧬 MUTATION : **Gen58_18dd** né avec Métabolisme 6.85
+- **12:27:20** : 💀 Décès de Gen58_18dd (Age: 8) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:27:22** : 🧬 MUTATION : **Gen59_a325** né avec Métabolisme 7.15
+- **12:27:31** : 💀 Décès de Gen59_a325 (Age: 9) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:27:33** : 🧬 MUTATION : **Gen60_5900** né avec Métabolisme 6.73
+- **12:27:43** : 💀 Décès de Gen60_5900 (Age: 9) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:27:45** : 🧬 MUTATION : **Gen61_46dd** né avec Métabolisme 6.13
+- **12:27:55** : 💀 Décès de Gen61_46dd (Age: 10) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:27:57** : 🧬 MUTATION : **Gen62_3bc0** né avec Métabolisme 6.66
+- **12:28:06** : 💀 Décès de Gen62_3bc0 (Age: 9) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:28:08** : 🧬 MUTATION : **Gen63_efd1** né avec Métabolisme 6.23
+- **12:28:17** : 💀 Décès de Gen63_efd1 (Age: 9) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:28:19** : 🧬 MUTATION : **Gen64_6942** né avec Métabolisme 6.67
+- **12:28:27** : 💀 Décès de Gen64_6942 (Age: 8) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:28:29** : 🧬 MUTATION : **Gen65_b4e6** né avec Métabolisme 6.79
+- **12:28:37** : 💀 Décès de Gen65_b4e6 (Age: 8) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:28:39** : 🧬 MUTATION : **Gen66_041b** né avec Métabolisme 6.39
+- **12:28:47** : 💀 Décès de Gen66_041b (Age: 8) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:28:49** : 🧬 MUTATION : **Gen67_ce16** né avec Métabolisme 6.65
+- **12:28:57** : 💀 Décès de Gen67_ce16 (Age: 8) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:28:59** : 🧬 MUTATION : **Gen68_fb39** né avec Métabolisme 6.76
+- **12:29:06** : 💀 Décès de Gen68_fb39 (Age: 7) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:29:08** : 🧬 MUTATION : **Gen69_8f1e** né avec Métabolisme 7.29
+- **12:29:15** : 💀 Décès de Gen69_8f1e (Age: 7) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:29:17** : 🧬 MUTATION : **Gen70_64a2** né avec Métabolisme 7.68
+- **12:29:23** : 💀 Décès de Gen70_64a2 (Age: 6) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:29:25** : 🧬 MUTATION : **Gen71_65d5** né avec Métabolisme 8.23
+- **12:29:32** : 💀 Décès de Gen71_65d5 (Age: 7) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:29:34** : 🧬 MUTATION : **Gen72_1fb0** né avec Métabolisme 8.61
+- **12:29:40** : 💀 Décès de Gen72_1fb0 (Age: 6) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:29:42** : 🧬 MUTATION : **Gen73_a8b5** né avec Métabolisme 8.32
+- **12:29:49** : 💀 Décès de Gen73_a8b5 (Age: 7) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:29:51** : 🧬 MUTATION : **Gen74_ed88** né avec Métabolisme 7.62
+- **12:29:58** : 💀 Décès de Gen74_ed88 (Age: 7) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:30:00** : 🧬 MUTATION : **Gen75_9981** né avec Métabolisme 6.97
+- **12:30:08** : 💀 Décès de Gen75_9981 (Age: 8) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:30:10** : 🧬 MUTATION : **Gen76_cb9d** né avec Métabolisme 6.64
+- **12:30:21** : 💀 Décès de Gen76_cb9d (Age: 11) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:30:23** : 🧬 MUTATION : **Gen77_c4bd** né avec Métabolisme 6.10
+- **12:30:32** : 💀 Décès de Gen77_c4bd (Age: 9) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:30:34** : 🧬 MUTATION : **Gen78_a4cf** né avec Métabolisme 5.58
+- **12:30:43** : 💀 Décès de Gen78_a4cf (Age: 9) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:30:45** : 🧬 MUTATION : **Gen79_c9c2** né avec Métabolisme 5.65
+- **12:30:57** : 💀 Décès de Gen79_c9c2 (Age: 12) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:30:59** : 🧬 MUTATION : **Gen80_6c1b** né avec Métabolisme 5.47
+- **12:31:11** : 💀 Décès de Gen80_6c1b (Age: 12) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:31:13** : 🧬 MUTATION : **Gen81_a026** né avec Métabolisme 5.76
+- **12:31:23** : 💀 Décès de Gen81_a026 (Age: 10) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:31:25** : 🧬 MUTATION : **Gen82_640e** né avec Métabolisme 5.27
+- **12:31:35** : 💀 Décès de Gen82_640e (Age: 10) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:31:37** : 🧬 MUTATION : **Gen83_34e1** né avec Métabolisme 5.48
+- **12:31:48** : 💀 Décès de Gen83_34e1 (Age: 10) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:31:50** : 🧬 MUTATION : **Gen84_be1b** né avec Métabolisme 5.74
+- **12:31:59** : 💀 Décès de Gen84_be1b (Age: 9) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:32:01** : 🧬 MUTATION : **Gen85_dfad** né avec Métabolisme 5.31
+- **12:32:09** : 💀 Décès de Gen85_dfad (Age: 8) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:32:11** : 🧬 MUTATION : **Gen86_13c5** né avec Métabolisme 5.66
+- **12:32:19** : 💀 Décès de Gen86_13c5 (Age: 8) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:32:21** : 🧬 MUTATION : **Gen87_d215** né avec Métabolisme 5.75
+- **12:32:29** : 💀 Décès de Gen87_d215 (Age: 8) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:32:31** : 🧬 MUTATION : **Gen88_2822** né avec Métabolisme 5.40
+- **12:32:39** : 💀 Décès de Gen88_2822 (Age: 8) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:32:41** : 🧬 MUTATION : **Gen89_1ae9** né avec Métabolisme 5.19
+- **12:32:49** : 💀 Décès de Gen89_1ae9 (Age: 8) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:32:51** : 🧬 MUTATION : **Gen90_7303** né avec Métabolisme 5.11
+- **12:33:00** : 💀 Décès de Gen90_7303 (Age: 9) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:33:02** : 🧬 MUTATION : **Gen91_1e78** né avec Métabolisme 4.97
+- **12:33:09** : 💀 Décès de Gen91_1e78 (Age: 7) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:33:11** : 🧬 MUTATION : **Gen92_614e** né avec Métabolisme 5.42
+- **12:33:18** : 💀 Décès de Gen92_614e (Age: 7) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:33:20** : 🧬 MUTATION : **Gen93_85e9** né avec Métabolisme 5.85
+- **12:33:27** : 💀 Décès de Gen93_85e9 (Age: 7) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:33:29** : 🧬 MUTATION : **Gen94_faa3** né avec Métabolisme 5.70
+- **12:33:37** : 💀 Décès de Gen94_faa3 (Age: 8) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:33:39** : 🧬 MUTATION : **Gen95_fe27** né avec Métabolisme 5.30
+- **12:33:48** : 💀 Décès de Gen95_fe27 (Age: 9) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:33:50** : 🧬 MUTATION : **Gen96_496e** né avec Métabolisme 4.95
+- **12:34:00** : 💀 Décès de Gen96_496e (Age: 10) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:34:02** : 🧬 MUTATION : **Gen97_14c0** né avec Métabolisme 4.89
+- **12:34:14** : 💀 Décès de Gen97_14c0 (Age: 12) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:34:16** : 🧬 MUTATION : **Gen98_a00d** né avec Métabolisme 4.85
+- **12:34:28** : 💀 Décès de Gen98_a00d (Age: 12) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:34:30** : 🧬 MUTATION : **Gen99_8124** né avec Métabolisme 5.16
+- **12:34:41** : 💀 Décès de Gen99_8124 (Age: 11) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:34:43** : 🧬 MUTATION : **Gen100_88bc** né avec Métabolisme 4.67
+- **12:34:54** : 💀 Décès de Gen100_88bc (Age: 11) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:34:56** : 🧬 MUTATION : **Gen101_e05b** né avec Métabolisme 4.49
+- **12:35:07** : 💀 Décès de Gen101_e05b (Age: 11) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:35:09** : 🧬 MUTATION : **Gen102_d7da** né avec Métabolisme 4.52
+- **12:35:19** : 💀 Décès de Gen102_d7da (Age: 10) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:35:21** : 🧬 MUTATION : **Gen103_1c1f** né avec Métabolisme 4.20
+- **12:35:32** : 💀 Décès de Gen103_1c1f (Age: 11) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
+- **12:35:34** : 🧬 MUTATION : **Gen104_cb1c** né avec Métabolisme 4.54
+- **12:35:44** : 💀 Décès de Gen104_cb1c (Age: 9) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:35:46** : 🧬 MUTATION : **Gen105_f386** né avec Métabolisme 4.96
+- **12:35:56** : 💀 Décès de Gen105_f386 (Age: 10) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:35:58** : 🧬 MUTATION : **Gen106_2b94** né avec Métabolisme 5.25
+- **12:36:07** : 💀 Décès de Gen106_2b94 (Age: 9) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:36:09** : 🧬 MUTATION : **Gen107_944a** né avec Métabolisme 4.80
+- **12:36:17** : 💀 Décès de Gen107_944a (Age: 8) - Cause: Épuisement -> *Extinction de la branche* ❌
+- **12:36:19** : 🧬 MUTATION : **Gen108_fb11** né avec Métabolisme 5.09

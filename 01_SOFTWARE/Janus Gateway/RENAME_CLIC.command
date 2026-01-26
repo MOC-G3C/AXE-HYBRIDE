@@ -1,0 +1,1 @@
+python3 ~/Documents/Janus-Gateway/rename_photos.py

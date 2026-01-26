@@ -1,0 +1,10 @@
+# ⚖️ THE HYBRID AXIS LICENSE (MOC-G3C)
+
+**Type:** Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
+
+### Summary of Rights:
+1. **Attribution:** You must give credit to the **M.O.C. Operator**.
+2. **Non-Commercial:** You may NOT use this protocol for commercial AI development.
+3. **No Derivatives:** If you remix or transform this material, you may not distribute the modified material.
+
+> "The machine serves the flesh; the code is not for sale."
