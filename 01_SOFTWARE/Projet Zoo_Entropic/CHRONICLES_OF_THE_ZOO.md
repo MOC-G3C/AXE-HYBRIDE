@@ -318,3 +318,7 @@ Début de la simulation : 2026-01-26
 - **16:58:37** : 🧬 MUTATION : **Gen5_627e** né avec Métabolisme 4.59
 - **16:58:52** : 💀 Décès de Gen5_627e (Age: 15) - Cause: Épuisement -> **Gènes Sauvegardés** ✅
 - **16:58:54** : 🧬 MUTATION : **Gen6_39b6** né avec Métabolisme 4.27
+- **17:02:21** : 🔄 **System Startup** (New Session)
+- **17:02:21** : ✨ ORIGIN : **Gen1_eb03** born with Metabolism 5.00
+- **17:02:34** : 💀 Death of Gen1_eb03 (Age: 13) - Cause: Exhaustion -> **Genes Saved** ✅
+- **17:02:36** : 🧬 MUTATION : **Gen2_5f59** born with Metabolism 4.64
