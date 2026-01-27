@@ -1,16 +1,12 @@
-def absorb_kinetic_energy(self, movement_delta):
-        """
-        Converts physical movement into digital vitality.
-        Based on the Kinetic-RNG entropy principles.
-        """
-        if self.is_alive and movement_delta > 0:
-            # Kinetic conversion formula
-            energy_gain = min(movement_delta * 0.05, 5.0)
-            self.energy = min(self.energy + energy_gain, 150.0)
-            
-            # High kinetic activity increases trust (Shared effort)
-            if movement_delta > 100:
-                self.trust = min(self.trust + 0.5, self.max_trust)
-                
-            return True
-        return False
+def generate_oracle(self, sentiment):
+        """Generates a message, now blending clipboard wisdom."""
+        # Load external wisdom [cite: 2026-01-26]
+        vocab_path = os.path.join(os.path.dirname(__file__), "custom_vocab.txt")
+        if os.path.exists(vocab_path):
+            with open(vocab_path, "r") as f:
+                self.fragments.extend(f.read().splitlines())
+        
+        # Deduplicate fragments
+        self.fragments = list(set(self.fragments))
+        
+        # ... (rest of the existing oracle logic with random.choice) ...
