@@ -1,10 +1,12 @@
-import holistic_mapper
+import auto_merge
 
-# Inside generate_night_report():
-current_progress = holistic_mapper.generate_holistic_map()
+# Inside generate_night_report(), after healing and bug detection:
+merge_success = auto_merge.execute_autonomous_merge(branch_created, health_issues)
 
-# Append to the report string [cite: 2026-01-26]:
-report += f"\n## 🗺️ HOLISTIC MAPPING\n"
-report += f"- **Current Global Progress**: {current_progress:.1f}%\n"
-report += f"- **Visual Map**: [PROJECT_MAP.svg](../02_HUMAIN/PROJECT_MAP.svg)\n"
-report += f"- **Status**: On track for Objective #1 [cite: 2026-01-26].\n"
+# Update the report [cite: 2026-01-26]:
+report += f"\n## 🧬 CONTINUOUS INTEGRATION\n"
+if merge_success:
+    report += f"- **Status**: ✅ AUTONOMOUS MERGE SUCCESSFUL\n"
+    report += f"- **Result**: The main branch has been optimized with nocturnal insights.\n"
+else:
+    report += f"- **Status**: ⚠️ MERGE BYPASSED (Manual review required or errors found)\n"
