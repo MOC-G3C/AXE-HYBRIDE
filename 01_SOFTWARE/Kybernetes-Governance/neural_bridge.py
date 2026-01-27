@@ -1,9 +1,6 @@
-import os
-import sys
-import time
-import random
+import os, sys, time, random
 
-# Fix automatique des chemins pour trouver les modules
+# Fix des chemins automatiques
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(os.path.join(ROOT, "03_HARDWARE"))
 sys.path.append(os.path.join(ROOT, "04_PHYSICS"))
@@ -13,26 +10,29 @@ import visual_core
 
 def main():
     os.system('clear')
-    print("--- AXE HYBRIDE : SIMULATION ACTIVE ---")
+    log_file = os.path.join(ROOT, "01_SOFTWARE/Kinetic-RNG/pulse_history.csv")
+    os.makedirs(os.path.dirname(log_file), exist_ok=True)
+    
+    print("--- AXE HYBRIDE : PULSE SYSTÉMIQUE ACTIF ---")
+    
     while True:
         try:
-            bpm = random.uniform(65, 135)
+            # Génère un pouls virtuel (70-110 BPM)
+            virtual_bpm = random.uniform(72, 108)
             timestamp = time.strftime("%H:%M:%S")
-            dilation, density = physics_engine.calculate_dilation(bpm)
             
-            # Affichage console
-            visual_core.update_display(bpm, timestamp, density)
+            # Calcul de la densité physique
+            dilation, density = physics_engine.calculate_dilation(virtual_bpm)
+            
+            # Mise à jour de l'affichage (Dashboard & Console)
+            visual_core.update_display(virtual_bpm, timestamp, density)
             
             # Sauvegarde des données
-            log_dir = os.path.join(ROOT, "01_SOFTWARE/Kinetic-RNG")
-            os.makedirs(log_dir, exist_ok=True)
-            with open(os.path.join(log_dir, "pulse_history.csv"), "a") as f:
-                f.write(f"{timestamp},{bpm:.2f},{density:.2f}\n")
+            with open(log_file, "a") as f:
+                f.write(f"{time.strftime('%Y-%m-%d %H:%M:%S')},{virtual_bpm:.2f},{density:.2f}\n")
             
-            time.sleep(0.5)
+            time.sleep(0.8) 
         except KeyboardInterrupt:
-            print("\nSystème arrêté.")
             break
 
-if __name__ == "__main__":
-    main()
+if __name__ == "__main__": main()
