@@ -1,43 +1,41 @@
 class DigitalOrganism:
     def __init__(self, name="Ectoplasm-01", root_path="."):
-        # ... (keep existing init code) ...
-        self.scars = 0 # Track number of resurrections [cite: 2026-01-26]
+        # ... (keep existing init) ...
+        self.scars = 0
+        self.radiant_timer = 0 # Timer for healing in seconds
         
-    def resurrect(self):
-        """Forbidden Protocol: Brings the entity back with a genetic and visual cost."""
-        if not self.is_alive:
-            self.scars += 1 # Add a scar [cite: 2026-01-26]
-            self.genetic_bonus *= 0.2
-            self.energy = 70.0
-            self.stability = 0.5
-            self.is_alive = True
-            self.last_stage = self.get_stage_name()
-            
-            # Log with scar count
+    def heal_scar(self):
+        """Removes one scar and logs the recovery."""
+        if self.scars > 0:
+            self.scars -= 1
             timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-            entry = f"| {timestamp} | VOID | REBORN | SCARS: {self.scars} | (LAZARUS) |\n"
-            with open(self.journal_path, "a") as f: f.write(entry)
-            
-            self.save_legacy()
+            entry = f"| {timestamp} | RADIANT | HEALED | SCARS: {self.scars} | (REGENERATION) |\n"
+            with open(self.journal_path, "a") as f:
+                f.write(entry)
+            os.system('afplay /System/Library/Sounds/Glass.aiff &')
             return True
         return False
 
-    def get_morphology(self):
-        """Returns an ASCII representation with added scars if necessary."""
-        if not self.is_alive: return "[ † ]"
+    def evolve(self, bpm, entropy, gravity):
+        if not self.is_alive: return
         
-        # Base morphology [cite: 2026-01-26]
-        if self.energy < 33: base = "( . )"
-        elif self.energy < 66: base = "( o )"
-        elif self.energy < 99: base = "<{ O }>"
-        else: base = "✧<{{ ✹ }}>✧"
-
-        # Apply Scars (Visual glitches based on scar count) [cite: 2021-01-21]
-        if self.scars == 1:
-            return f"~{base}~"
-        elif self.scars == 2:
-            return f"~!{base}!~"
-        elif self.scars >= 3:
-            return f"zZ{base}Zz" # Heavy corruption
+        # Standard Evolution
+        if int(bpm) % 3 == 0: self.energy += 5.0
+        self.stability -= (gravity / 100)
+        
+        # Healing Logic: 10 mins (600s) in RADIANT stage [cite: 2021-01-21]
+        current_stage = self.get_stage_name()
+        if current_stage == "RADIANT":
+            self.radiant_timer += 1
+            if self.radiant_timer >= 600: 
+                if self.heal_scar():
+                    self.radiant_timer = 0 # Reset after healing
+        else:
+            self.radiant_timer = 0 # Reset if stage is lost
             
-        return base
+        if self.energy <= 0 or self.stability <= 0:
+            self.die()
+            return
+
+        if current_stage != self.last_stage:
+            self.log_mutation(current_stage)
