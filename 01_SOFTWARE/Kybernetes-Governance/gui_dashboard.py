@@ -1,3 +1,4 @@
-# In your AxeHybrideGUI.__init__ method:
-# Pass the ROOT path to the organism for file management
-self.pet = DigitalOrganism("ECTO-01", root_path=ROOT)
+# In your update_loop, the pet_label will now automatically 
+# show the generation thanks to the updated get_status()
+self.pet.evolve(bpm, r_factor, gravity)
+self.pet_label.config(text=self.pet.get_status())
