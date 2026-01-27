@@ -1,9 +1,9 @@
-import self_code_refactor
+import dream_bug_detector
 
-# Inside your generate_night_report function, before writing the file:
-branch_created = self_code_refactor.prepare_ectoplasm_branch()
+# Inside your generate_night_report function:
+health_issues = dream_bug_detector.run_nocturnal_health_check()
 
-# Append this to the report string:
-report += f"\n## 🛠️ AUTONOMOUS REFACTORING\n"
-report += f"- **Git Branch Created**: `{branch_created}`\n"
-report += f"- **Action Required**: Run `git checkout {branch_created}` to review proposals.\n"
+# Append to the report string [cite: 2026-01-26]:
+report += "\n## 🛡️ NOCTURNAL HEALTH CHECK\n"
+for issue in health_issues:
+    report += f"- {issue}\n"
