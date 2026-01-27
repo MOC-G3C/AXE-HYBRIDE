@@ -7,11 +7,6 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 CSV_PATH = os.path.join(ROOT, "01_SOFTWARE/Kinetic-RNG/pulse_history.csv")
 ARCHIVE_DIR = os.path.join(ROOT, "01_SOFTWARE/Kinetic-RNG/Archives")
 
-def send_notification(title, message):
-    """Sends a native macOS visual notification."""
-    cmd = f'display notification "{message}" with title "{title}"'
-    os.system(f"osascript -e '{cmd}'")
-
 def get_previous_avg():
     yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
     prev_report = os.path.join(ARCHIVE_DIR, f"energy_report_{yesterday}.txt")
@@ -30,17 +25,29 @@ def generate_daily_report():
     today = datetime.now().strftime('%Y-%m-%d')
     report_file = os.path.join(ARCHIVE_DIR, f"energy_report_{today}.txt")
 
+    # Analysis
     df = pd.read_csv(CSV_PATH, names=["Timestamp", "BPM", "Density"])
     avg_bpm = df['BPM'].mean()
-    status = "STABLE" if avg_bpm < 100 else "HIGH ACTIVITY"
+    
+    # TESLA COUNTER: Counts entries where BPM is a multiple of 3
+    tesla_syncs = len(df[df['BPM'].astype(int) % 3 == 0])
+    
+    prev_avg = get_previous_avg()
+    trend = f"Trend: {avg_bpm - prev_avg:+.2f} BPM" if prev_avg else "Trend: N/A"
 
-    # Save report
-    report = f"--- AXE HYBRIDE REPORT ({today}) ---\nAvg: {avg_bpm:.2f} BPM | Status: {status}"
+    report = f"""--- AXE HYBRIDE : DAILY ENERGY REPORT ({today}) ---
+
+- Average Machine Pulse: {avg_bpm:.2f} BPM
+- {trend}
+- Tesla Harmonic Syncs: {tesla_syncs} times today ⚡
+- System Status: {"STABLE" if avg_bpm < 100 else "HIGH ACTIVITY"}
+--------------------------------------------------
+"""
     with open(report_file, "w") as f:
         f.write(report)
     
-    # Trigger visual notification
-    send_notification("Axe Hybride", f"Rapport généré. Statut système : {status}")
+    # Native notification
+    os.system(f'osascript -e \'display notification "{tesla_syncs} Tesla syncs detected today." with title "Axe Hybride"\'')
     return report
 
 if __name__ == "__main__":
