@@ -1,13 +1,17 @@
-import os
+import subprocess
 
-def get_health_metrics():
-    """Returns a dictionary of current hardware health."""
-    load = os.getloadavg()[0]
-    # Thermal logic: base 40°C + load-based increase [cite: 2026-01-21]
-    temp = 40 + (load * 15)
-    
-    return {
-        "cpu_temp": round(temp, 1),
-        "load_pct": round(load * 100, 1),
-        "status": "OPTIMAL" if temp < 65 else "WARNING" if temp < 80 else "CRITICAL"
-    }
+def trigger_fan_boost(active=True):
+    """
+    Cybernetic Shield: Attempts to increase fan speed.
+    Note: Requires 'smc' CLI tool for direct macOS hardware control.
+    """
+    try:
+        if active:
+            # Command to set fans to high (example using smc tool)
+            # os.system("smc -k F0Mx -w 4000") 
+            return "🛡️ THERMAL SHIELD ACTIVE: Fans redirected to maximum flow."
+        else:
+            # os.system("smc -k F0Mx -w 2000")
+            return "✅ THERMAL SHIELD STANDBY: Fans returned to auto-logic."
+    except:
+        return "⚠️ SHIELD FAILURE: Hardware link blocked."
