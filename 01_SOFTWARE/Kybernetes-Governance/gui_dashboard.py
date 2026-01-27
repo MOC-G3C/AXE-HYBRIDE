@@ -1,12 +1,15 @@
-import screenshot_manager
+import slideshow_engine
 
-# Inside your update_loop, where resonance is calculated:
-current_resonance = self.pet.get_resonance() # Assuming 3, 6, or 9
+# 1. In AxeHybrideGUI.__init__, add a background label:
+self.bg_label = tk.Label(self.root)
+self.bg_label.place(x=0, y=0, relwidth=1, relheight=1)
+self.bg_label.lower() # Keep it behind other elements
 
-if current_resonance == 9:
-    path = screenshot_manager.capture_resonance_vision(9)
-    if path:
-        self.add_log(f"📸 VISION SAVED: {os.path.basename(path)}")
-        # Subtle flash effect for feedback [cite: 2026-01-21]
-        self.root.configure(bg="#ffffff")
-        self.root.after(100, lambda: self.root.configure(bg="#0a0a0a"))
+# 2. In your update_loop method:
+if self.presentation_mode:
+    # Change background vision every 60 seconds (Tesla 6 sync)
+    if int(time.time()) % 60 == 0:
+        new_vision = slideshow_engine.get_next_vision_image(self.root.winfo_width(), self.root.winfo_height())
+        if new_vision:
+            self.bg_label.config(image=new_vision)
+            self.bg_label.image = new_vision # Prevent garbage collection
