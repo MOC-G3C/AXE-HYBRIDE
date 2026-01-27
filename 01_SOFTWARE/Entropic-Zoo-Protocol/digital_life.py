@@ -1,13 +1,13 @@
-def inject_energy(self):
-        """Sacrificial Protocol: Injects 50% energy from external source."""
+def apply_stasis(self, seconds_elapsed):
+        """Reduces energy loss during hibernation (90% reduction)."""
         if self.is_alive:
-            # Boosting energy (can exceed 100% up to 150%)
-            self.energy = min(self.energy + 50.0, 150.0)
-            # Stability gains a small boost from the raw power
-            self.stability = min(self.stability + 0.1, self.max_stability)
+            # Formula: Loss reduced by factor of 10 [cite: 2026-01-21]
+            stasis_decay = (seconds_elapsed * 0.01) * 0.1 
+            self.energy = max(self.energy - stasis_decay, 0)
             
             timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-            entry = f"| {timestamp} | {self.get_stage_name()} | POWER INJECTION | +50% ENERGY |\n"
+            entry = f"| {timestamp} | STASIS | WAKE | {seconds_elapsed}s elapsed | Energy: {self.energy:.1f}% |\n"
+            
             with open(self.journal_path, "a") as f:
                 f.write(entry)
             return True
