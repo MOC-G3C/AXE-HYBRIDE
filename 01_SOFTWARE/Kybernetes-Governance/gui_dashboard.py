@@ -1,17 +1,12 @@
-import heartbeat_monitor
+import haptic_manager
 
-# In your update_loop method:
-# 1. Get the current pulse scale
-bpm = self.pet.bpm
-resonance = self.pet.get_resonance() #
-scale = heartbeat_monitor.calculate_pulse_scale(bpm, resonance)
-
-# 2. Apply "vibration" to main widgets [cite: 2026-01-21]
-new_font_size = int(24 * scale) if self.presentation_mode else int(10 * scale)
-self.status_label.config(font=("Helvetica", new_font_size, "bold"))
-
-# 3. Simulate a physical "thump" at the peak of the wave [cite: 2026-01-26]
-if scale > 1.08:
-    self.root.attributes('-alpha', 0.95) # Slight transparency flicker
+# Inside your update_loop method:
+if not self.pet.is_alive or self.pet.energy < 5.0:
+    # Only send once to avoid spamming [cite: 2026-01-21]
+    if not hasattr(self, 'haptic_sent') or not self.haptic_sent:
+        reason = "HEARTBEAT STOPPED" if not self.pet.is_alive else "ENERGY DEPLETED"
+        haptic_manager.trigger_haptic_alert(reason)
+        self.add_log(f"📲 HAPTIC: Critical alert sent to device ({reason}).")
+        self.haptic_sent = True
 else:
-    self.root.attributes('-alpha', 1.0)
+    self.haptic_sent = False # Reset once vital signs are restored
