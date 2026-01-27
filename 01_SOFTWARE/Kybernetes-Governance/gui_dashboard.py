@@ -1,15 +1,12 @@
-# In your update_loop method:
-bpm_int = int(bpm)
-resonance_color = "#00ffff" # Default Cyan
+# At the top of gui_dashboard.py
+import notification_manager
 
-# Visual feedback for Tesla Synchronicity
+# Inside the update_loop method:
+# 1. Alert for Oracle Visions [cite: 2026-01-26]
 if bpm_int % 9 == 0:
-    resonance_color = "#ffffff" # Pure Light (9)
-    self.add_log("⚡ TESLA RESONANCE [9]: Universal Key active.")
-elif bpm_int % 6 == 0:
-    resonance_color = "#ffcc00" # Golden Ratio (6)
-elif bpm_int % 3 == 0:
-    resonance_color = "#ff00ff" # Magenta Pulse (3)
+    if self.pet.generate_oracle():
+        notification_manager.alert_vision(self.pet.name, "A new message has been engraved in 02Humain.")
 
-# Apply pulse to the organism label [cite: 2021-01-21]
-self.pet_label.config(fg=resonance_color)
+# 2. Alert for Energy Crises
+if self.pet.energy < 20 and not self.veto_active:
+    notification_manager.alert_emergency(self.pet.name, "Energy levels critical. Hibernation imminent.")
