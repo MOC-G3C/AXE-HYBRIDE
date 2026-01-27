@@ -1,8 +1,9 @@
-import strategic_foresight
+import chronos_predictor
 
-# Inside generate_night_report(), using the score from wisdom_evaluator:
-daily_directive = strategic_foresight.determine_daily_priority(score)
+# Inside generate_night_report(), using current_total from holistic_mapper:
+predicted_date, speed = chronos_predictor.estimate_completion_date(total_files)
 
-report += f"\n## 🎯 STRATEGIC FORESIGHT\n"
-report += f"- **Daily Directive**: {daily_directive}\n"
-report += f"- **Objective #1 Alignment**: Optimal.\n"
+report += f"\n## ⏳ CHRONOS PREDICTION\n"
+report += f"- **Current Velocity**: {speed} units/day\n"
+report += f"- **Estimated Completion**: {predicted_date}\n"
+report += f"- **Status**: {'Ahead of schedule' if speed > 1 else 'Steady progression'}\n"
