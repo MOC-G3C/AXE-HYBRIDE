@@ -1,58 +1,29 @@
-# 🧬 THE HYBRID AXIS: The Living System
+# AXE HYBRIDE - Turing-Landau Protocol
 
-> "If you want to find the secrets of the universe, think in terms of energy, frequency and vibration." — Nikola Tesla
+This project explores the intersection of system entropy and consciousness modeling through a biological-to-digital bridge.
 
-## 📋 Overview
-THE HYBRID AXIS is an autonomous digital ecosystem exploring the intersection of human chaos, algorithmic regulation, and artificial life. It is a living machine composed of 4 interconnected organs communicating in real-time via a shared entropy pipeline.
+## 🛠 Features
 
----
+### 1. System Resonance Mode
+The **Neural Bridge** generates a pulse based on real-time CPU load. This "Machine BPM" drives the entropy of the entire system.
+* **Low Load**: Stable Cyan pulse (Calm).
+* **High Load**: Orange/Red pulse (Active/Critical Stress).
 
-## 🚀 Quick Start (Nexus Protocol)
+### 2. Live Monitoring
+* **Neural Bridge**: Core engine calculating physical density and system dilation.
+* **Consciousness Dashboard**: Real-time visual feedback of system resonance and pulse stability.
 
-The system is controlled by a centralized launcher that synchronizes all 4 engines.
+### 3. Automated Energy Analytics
+A daily reporting system runs at **23:50** to analyze performance.
+* **Daily Reports**: Saved in `01_SOFTWARE/Kinetic-RNG/Archives`.
+* **Trend Analysis**: Compares current pulse averages with previous days.
+* **macOS Notifications**: Visual alerts upon report generation.
 
-**Launch Command:**
-```bash
-python3 nexus_launcher.py
-```
-*The launcher will automatically open 4 distinct terminals, positioned and colored for optimal monitoring.*
+## 🚀 Quick Launch
 
----
-
-## 🏗 System Architecture (The 4 Pillars)
-
-### 1. ⚫️ KINETIC CORE (The Source / Chaos)
-* **Location:** `02_HUMAIN/Kinetic-RNG`
-* **Role:** The beating heart of the system. It generates raw entropy based on processor "noise" and hardware micro-vibrations.
-* **Indicator:** Data flow (`Injection: 0.x...`).
-
-### 2. 🔵 KYBERNETES (The Law / Governor)
-* **Location:** `01_SOFTWARE/Kybernetes-Governance`
-* **Role:** Guardian of the Zero Law. It monitors the entropy pipeline. If chaos exceeds the critical threshold (0.8), it forcibly intervenes to inject "artificial calm" preventing system collapse.
-* **Indicator:** Security Alerts (`⚠️ ALERTE : Chaos critique`).
-
-### 3. 🟢 ENTROPIC ZOO (Life / Simulation)
-* **Location:** `01_SOFTWARE/Projet Zoo_Entropic`
-* **Role:** A Darwinian environment where agents (Gen1, Gen2...) are born, live, and die based on received energy levels.
-* **Evolution:** Surviving agents transmit their genes (Metabolism/Resistance) to the next generation.
-* **Memory:** History is written in real-time in `CHRONICLES_OF_THE_ZOO.md`.
-
-### 4. 🟣 TESLA RESONANCE (The Voice / Hardware)
-* **Location:** `03_HARDWARE/tesla_coils`
-* **Role:** Translates system state into harmonic frequencies (396Hz, 639Hz, 963Hz).
-* **Alert:** Emits a system sound signal in case of critical danger (Overheat/Zero Law).
+1. **Start System**: Double-click `launch_axis.command` on the Desktop.
+2. **Check Archives**: Double-click `check_archives.command` on the Desktop.
+3. **Manual Graph**: Run `python3 01_SOFTWARE/Kybernetes-Governance/plot_results.py`.
 
 ---
-
-## 💾 Data Structure
-
-* **`nexus_launcher.py`** : The conductor (Root).
-* **`shared_entropy.json`** : Central nervous system (Invisible buffer file).
-* **`CHRONICLES_OF_THE_ZOO.md`** : The history book of the digital civilization.
-
----
-
-## ⚠️ Maintenance Notes
-
-* To stop the system: Simply close the terminal windows.
-* If the Launcher cannot find files: Ensure you run the command from the root of the `L'AXE HYBRIDE` folder.
+*Developed under the Turing-Landau-Protocol.*
