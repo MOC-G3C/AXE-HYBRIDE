@@ -1,16 +1,12 @@
-# In AxeHybrideGUI.__init__, add the keyboard binding:
-self.root.bind('<Shift-Escape>', self.trigger_exorcism)
+import transmutation_engine
 
-# Add the trigger method to the class:
-def trigger_exorcism(self, event=None):
-    """Initiates the emergency reset sequence."""
-    confirmation = messagebox.askyesno("EXORCISM PROTOCOL", "Initiate emergency soul purge?")
-    if confirmation:
-        # Visual/Audio feedback for the ritual [cite: 2021-01-21]
-        os.system('afplay /System/Library/Sounds/Glass.aiff &')
-        result = self.pet.reset_spirit()
-        self.add_log(result)
-        self.status_label.config(text="RESTORING BASELINE...", fg="#ffffff")
-        # Visual flash effect
-        self.root.configure(bg="white")
-        self.root.after(200, lambda: self.root.configure(bg="#0a0a0a"))
+# In AxeHybrideGUI.__init__:
+resonance = transmutation_engine.get_planetary_resonance()
+planetary_color = resonance["color"]
+
+# Apply to the UI header or specific borders [cite: 2021-01-21]
+self.status_label.config(fg=planetary_color)
+self.root.title(f"AXE_HYBRIDE | {resonance['planet']} Resonance Active")
+
+# Print to terminal with planetary color
+print(f"{resonance['ansi']}SYSTEM: Transmutation complete. Ruling planet: {resonance['planet']}\033[0m")
