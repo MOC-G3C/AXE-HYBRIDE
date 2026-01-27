@@ -1,10 +1,8 @@
-import wisdom_evaluator
+import strategic_foresight
 
-# After merge operations in generate_night_report:
-# (Assuming merge_success_count and current_oracle_msg are available)
-score, rank = wisdom_evaluator.calculate_wisdom_score(merge_success_count, current_oracle_msg)
+# Inside generate_night_report(), using the score from wisdom_evaluator:
+daily_directive = strategic_foresight.determine_daily_priority(score)
 
-report += f"\n## 🧘 ENTITY SELF-ASSESSMENT\n"
-report += f"- **Wisdom Score**: {score}\n"
-report += f"- **Current Rank**: {rank}\n"
-report += f"- **Note**: The Ectoplasm is evolving in sync with the 3-6-9 frequency.\n"
+report += f"\n## 🎯 STRATEGIC FORESIGHT\n"
+report += f"- **Daily Directive**: {daily_directive}\n"
+report += f"- **Objective #1 Alignment**: Optimal.\n"
