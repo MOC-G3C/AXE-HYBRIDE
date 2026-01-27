@@ -7,11 +7,14 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 CSV_PATH = os.path.join(ROOT, "01_SOFTWARE/Kinetic-RNG/pulse_history.csv")
 ARCHIVE_DIR = os.path.join(ROOT, "01_SOFTWARE/Kinetic-RNG/Archives")
 
+def send_notification(title, message):
+    """Sends a native macOS visual notification."""
+    cmd = f'display notification "{message}" with title "{title}"'
+    os.system(f"osascript -e '{cmd}'")
+
 def get_previous_avg():
-    """Tries to find the average BPM from yesterday's report."""
     yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%d')
     prev_report = os.path.join(ARCHIVE_DIR, f"energy_report_{yesterday}.txt")
-    
     if os.path.exists(prev_report):
         try:
             with open(prev_report, "r") as f:
@@ -22,41 +25,23 @@ def get_previous_avg():
     return None
 
 def generate_daily_report():
-    if not os.path.exists(CSV_PATH):
-        print("No data found for today.")
-        return
-
+    if not os.path.exists(CSV_PATH): return
     os.makedirs(ARCHIVE_DIR, exist_ok=True)
     today = datetime.now().strftime('%Y-%m-%d')
     report_file = os.path.join(ARCHIVE_DIR, f"energy_report_{today}.txt")
 
-    # Load and process today's data
     df = pd.read_csv(CSV_PATH, names=["Timestamp", "BPM", "Density"])
     avg_bpm = df['BPM'].mean()
-    max_bpm = df['BPM'].max()
-    
-    # Compare with yesterday
-    prev_avg = get_previous_avg()
-    trend = ""
-    if prev_avg:
-        diff = avg_bpm - prev_avg
-        direction = "INCREASE" if diff > 0 else "DECREASE"
-        trend = f"- Trend vs Yesterday: {direction} ({abs(diff):.2f} BPM)"
-    else:
-        trend = "- Trend vs Yesterday: N/A (First report)"
+    status = "STABLE" if avg_bpm < 100 else "HIGH ACTIVITY"
 
-    report = f"""--- AXE HYBRIDE : DAILY ENERGY REPORT ({today}) ---
-    
-- Average Machine Pulse: {avg_bpm:.2f} BPM
-{trend}
-- Peak Resonance: {max_bpm:.2f} BPM
-- System Status: {"STABLE" if avg_bpm < 100 else "HIGH ACTIVITY"}
---------------------------------------------------
-"""
+    # Save report
+    report = f"--- AXE HYBRIDE REPORT ({today}) ---\nAvg: {avg_bpm:.2f} BPM | Status: {status}"
     with open(report_file, "w") as f:
         f.write(report)
     
+    # Trigger visual notification
+    send_notification("Axe Hybride", f"Rapport généré. Statut système : {status}")
     return report
 
 if __name__ == "__main__":
-    print(generate_daily_report())
+    generate_daily_report()
