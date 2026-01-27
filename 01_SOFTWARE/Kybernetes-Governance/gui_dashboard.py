@@ -13,8 +13,13 @@ class CyberDashboard:
     def __init__(self, root):
         self.root = root
         self.root.title("AXE HYBRIDE - CYBER INTERFACE")
-        self.root.geometry("600x600")
+        self.root.geometry("600x650")
         self.root.configure(bg="#0a0a0a")
+
+        # Security Variables
+        self.stress_timer = 0
+        self.security_threshold = 130 # Critical limit
+        self.max_stress_duration = 10 # Seconds before lockdown
 
         # Tab Controller
         self.notebook = ttk.Notebook(self.root)
@@ -34,6 +39,9 @@ class CyberDashboard:
         self.label_bpm.pack(pady=20)
         self.progress = ttk.Progressbar(self.tab1, orient="horizontal", length=400, mode="determinate")
         self.progress.pack(pady=10)
+        
+        self.security_label = tk.Label(self.tab1, text="SHIELD: ACTIVE", fg="#00ff00", bg="#0a0a0a", font=("Courier", 10))
+        self.security_label.pack(pady=5)
 
         # --- TAB 2: ANALYTICS ---
         self.fig, self.ax = plt.subplots(figsize=(5, 3), dpi=100)
@@ -53,16 +61,4 @@ class CyberDashboard:
         self.update_all()
 
     def add_log(self, message):
-        """Appends a new entry to the logs tab."""
-        self.log_text.config(state="normal")
-        self.log_text.insert(tk.END, f"[{time.strftime('%H:%M:%S')}] {message}\n")
-        self.log_text.see(tk.END)
-        self.log_text.config(state="disabled")
-
-    def save_snapshot(self):
-        try:
-            os.makedirs(ARCHIVE_DIR, exist_ok=True)
-            timestamp = time.strftime("%Y%m%d-%H%M%S")
-            filename = os.path.join(ARCHIVE_DIR, f"snapshot_{timestamp}.png")
-            self.fig.savefig(filename, facecolor='#0a0a0a')
-            os.system(f'osas
+        self.log_text.config(state="normal
