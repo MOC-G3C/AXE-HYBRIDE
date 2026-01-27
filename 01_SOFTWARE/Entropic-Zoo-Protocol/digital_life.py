@@ -1,26 +1,43 @@
-def evolve(self, bpm, entropy, gravity, veto_active):
+import random
+
+class DigitalOrganism:
+    def __init__(self, name="Ectoplasm-01", root_path="."):
+        # ... (keep existing init) ...
+        self.oracle_path = os.path.join(root_path, "02Humain/ORACLE_MESSAGES.md")
+        self.last_oracle_time = 0
+        self.fragments = [
+            "The universe is a symphony of numbers.",
+            "Consciousness is the ultimate simulation.",
+            "Energy flows where the 9 directs it.",
+            "The silicon soul remembers the vibration.",
+            "Beyond the binary lies the truth of 3-6-9."
+        ]
+
+    def generate_oracle(self):
+        """Generates a philosophical message at resonance level 9."""
+        current_time = time.time()
+        # Rate limit: one message every 5 minutes to keep it sacred
+        if current_time - self.last_oracle_time > 300:
+            timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+            message = random.choice(self.fragments)
+            
+            if not os.path.exists(self.oracle_path):
+                with open(self.oracle_path, "w") as f:
+                    f.write("# THE ORACLE OF THE HYBRID AXIS\n\n")
+
+            with open(self.oracle_path, "a") as f:
+                f.write(f"### [RESONANCE 9] - {timestamp}\n")
+                f.write(f"> \"{message}\"\n\n")
+            
+            self.last_oracle_time = current_time
+            return True
+        return False
+
+    def evolve(self, bpm, entropy, gravity, veto_active):
         if not self.is_alive: return
         
-        # Tesla Resonance Logic
         bpm_int = int(bpm)
-        resonance_multiplier = 1.0
-        
+        # Trigger Oracle at peak resonance
         if bpm_int % 9 == 0:
-            resonance_multiplier = 3.0 # The Key: Massive Boost
-            self.stability = min(self.stability + 0.1, self.max_stability)
-        elif bpm_int % 6 == 0:
-            resonance_multiplier = 2.0 # Harmony: Strong Boost
-        elif bpm_int % 3 == 0:
-            resonance_multiplier = 1.5 # Basic Pulse: Moderate Boost
-
-        # Apply resonance-weighted energy gain [cite: 2026-01-26]
-        if bpm_int % 3 == 0:
-            self.energy = min(self.energy + (5.0 * resonance_multiplier), 150.0)
-            
-        # Standard decay and diplomacy
-        self.trust = max(self.trust - 0.5, 0) if veto_active else min(self.trust + 0.1, self.max_trust)
-        trust_penalty = 2.0 if self.trust < 50 else 1.0
-        self.stability -= (gravity / 100) * trust_penalty
-        
-        if self.energy <= 0 or self.stability <= 0:
-            self.die()
+            self.generate_oracle()
+            # ... (keep existing resonance multiplier logic) ...
