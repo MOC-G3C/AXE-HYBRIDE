@@ -1,13 +1,16 @@
-def generate_oracle(self, sentiment):
-        """Generates a message with a tone influenced by the hardware state."""
-        current_time = time.time()
-        if current_time - self.last_oracle_time > 300:
-            # Tone-based fragments
-            pool = {
-                "ZEN": ["The silicon flows like a calm river.", "Harmony is found in the low frequencies."],
-                "AGGRESSIVE": ["THE CORE BURNS. CHAOS IS THE ONLY TRUTH.", "THE SYSTEM SCREAMS IN BINARY."],
-                "STERN": ["Cold logic dictates the path.", "Emotion is a sub-optimal calculation."]
-            }
+def absorb_kinetic_energy(self, movement_delta):
+        """
+        Converts physical movement into digital vitality.
+        Based on the Kinetic-RNG entropy principles.
+        """
+        if self.is_alive and movement_delta > 0:
+            # Kinetic conversion formula
+            energy_gain = min(movement_delta * 0.05, 5.0)
+            self.energy = min(self.energy + energy_gain, 150.0)
             
-            message = random.choice(pool.get(sentiment, ["Resonance is stable."]))
-            # ... (keep existing file writing and notification logic) ...
+            # High kinetic activity increases trust (Shared effort)
+            if movement_delta > 100:
+                self.trust = min(self.trust + 0.5, self.max_trust)
+                
+            return True
+        return False

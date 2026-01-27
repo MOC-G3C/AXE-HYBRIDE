@@ -1,11 +1,16 @@
-import museum_mode
+# In AxeHybrideGUI.__init__, add coordinates tracker:
+self.last_mouse_pos = (0, 0)
 
-# In AxeHybrideGUI.__init__, add:
-self.museum_btn = ttk.Button(self.tab1, text="ACTIVATE MUSEUM MODE (🖼️)", command=self.open_museum)
-self.museum_btn.pack(pady=5)
+# In your update_loop method:
+current_mouse_pos = self.root.winfo_pointerxy()
+# Calculate distance (Kinetic Entropy)
+dx = current_mouse_pos[0] - self.last_mouse_pos[0]
+dy = current_mouse_pos[1] - self.last_mouse_pos[1]
+distance = (dx**2 + dy**2)**0.5
 
-# Add the method:
-def open_museum(self):
-    if museum_mode.generate_gallery_view():
-        self.add_log("🖼️ MUSEUM: Gallery updated on Desktop.")
-        os.system("open ~/Desktop/AXE_HYBRIDE_GALLERY.html")
+if distance > 10: # Only count significant movements
+    if self.pet.absorb_kinetic_energy(distance):
+        # Update UI feedback subtly
+        self.status_label.config(text=f"KINETIC SYNC: +{distance:.1f}pts", fg="#00ff00")
+
+self.last_mouse_pos = current_mouse_pos
