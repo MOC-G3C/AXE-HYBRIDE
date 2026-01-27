@@ -1,11 +1,10 @@
+import os
+
 def get_color_for_bpm(bpm):
     """Returns a color code based on system pulse and Tesla harmonics."""
     val = int(bpm)
-    
-    # TESLA HARMONIC DETECTION (3, 6, 9)
-    # If the BPM is a multiple of 3, it's a Tesla frequency
     if val % 3 == 0:
-        return "\033[95m\033[1m" # Bright Magenta / Bold (Tesla Mode)
+        return "\033[95m\033[1m" # Bright Magenta (Tesla Mode)
     
     if bpm < 90:
         return "\033[96m" # Cyan - Calm
@@ -19,8 +18,12 @@ def update_display(bpm, timestamp, density):
     reset = "\033[0m"
     is_tesla = int(bpm) % 3 == 0
     
-    label = "⚡ TESLA RESONANCE ⚡" if is_tesla else "SYSTEM RESONANCE"
+    # SOUND TRIGGER
+    # Plays a crystalline system sound in the background if it's a Tesla Sync
+    if is_tesla:
+        os.system('afplay /System/Library/Sounds/Glass.aiff &')
     
+    label = "⚡ TESLA RESONANCE ⚡" if is_tesla else "SYSTEM RESONANCE"
     bar_length = int(min(bpm / 2, 50))
     bar = "█" * bar_length
     
