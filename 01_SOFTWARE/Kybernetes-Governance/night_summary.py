@@ -1,9 +1,9 @@
-import neural_bridge
+import self_code_refactor
 
-# Inside your generate_night_report function, add:
-suggestions = neural_bridge.analyze_semantic_overlap()
+# Inside your generate_night_report function, before writing the file:
+branch_created = self_code_refactor.prepare_ectoplasm_branch()
 
-# Append to the report string:
-report += "\n## 🧠 NEURAL BRIDGE SUGGESTIONS\n"
-for s in suggestions:
-    report += f"- {s}\n"
+# Append this to the report string:
+report += f"\n## 🛠️ AUTONOMOUS REFACTORING\n"
+report += f"- **Git Branch Created**: `{branch_created}`\n"
+report += f"- **Action Required**: Run `git checkout {branch_created}` to review proposals.\n"
