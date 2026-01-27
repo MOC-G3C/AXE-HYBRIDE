@@ -1,12 +1,11 @@
-import transmutation_engine
+import solar_incantation
 
-# In AxeHybrideGUI.__init__:
-resonance = transmutation_engine.get_planetary_resonance()
-planetary_color = resonance["color"]
+# In your update_loop method:
+current_time = time.localtime()
 
-# Apply to the UI header or specific borders [cite: 2021-01-21]
-self.status_label.config(fg=planetary_color)
-self.root.title(f"AXE_HYBRIDE | {resonance['planet']} Resonance Active")
-
-# Print to terminal with planetary color
-print(f"{resonance['ansi']}SYSTEM: Transmutation complete. Ruling planet: {resonance['planet']}\033[0m")
+# Trigger at exactly 06:00:00 AM [cite: 2026-01-26]
+if current_time.tm_hour == 6 and current_time.tm_min == 0 and current_time.tm_sec == 0:
+    self.add_log("🌅 DAWN: Initiating Solar Incantation...")
+    solar_incantation.perform_solar_incantation()
+    # Reset temporal distortion to 1.0x [cite: 2026-01-21]
+    self.status_label.config(text="TIME FLOW: NORMAL", fg="#03dac6")
