@@ -1,46 +1,38 @@
-# ... (Gardez les imports existants) ...
-import pulse_logger # New Import
+import os
+import sys
+import time
+import random
 
-# ... (Gardez la configuration et la classe BioHeart) ...
+# Fix automatique des chemins pour trouver les modules
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(os.path.join(ROOT, "03_HARDWARE"))
+sys.path.append(os.path.join(ROOT, "04_PHYSICS"))
+
+import gravity_density_engine as physics_engine
+import visual_core
 
 def main():
-    global last_email_time
     os.system('clear')
-    print("--- L'AXE HYBRIDE : TOTAL LOGGING BRIDGE (V5.2) ---")
-    
-    try:
-        ser = serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=1)
-        time.sleep(2)
-        print("✅ Live Recording Active. Data saved to pulse_history.csv\n")
+    print("--- AXE HYBRIDE : SIMULATION ACTIVE ---")
+    while True:
+        try:
+            bpm = random.uniform(65, 135)
+            timestamp = time.strftime("%H:%M:%S")
+            dilation, density = physics_engine.calculate_dilation(bpm)
+            
+            # Affichage console
+            visual_core.update_display(bpm, timestamp, density)
+            
+            # Sauvegarde des données
+            log_dir = os.path.join(ROOT, "01_SOFTWARE/Kinetic-RNG")
+            os.makedirs(log_dir, exist_ok=True)
+            with open(os.path.join(log_dir, "pulse_history.csv"), "a") as f:
+                f.write(f"{timestamp},{bpm:.2f},{density:.2f}\n")
+            
+            time.sleep(0.5)
+        except KeyboardInterrupt:
+            print("\nSystème arrêté.")
+            break
 
-        while True:
-            if ser.in_waiting > 0:
-                line = ser.readline().decode('utf-8').rstrip()
-                
-                if line.startswith("BPM:"):
-                    try:
-                        raw_bpm = float(line.split(":")[1])
-                        bpm = get_smoothed_bpm(raw_bpm)
-                        timestamp = time.strftime("%H:%M:%S")
-                        dilation, density = physics_engine.calculate_dilation(bpm)
-                        
-                        # Update Terminal Display
-                        visual_core.update_display(bpm, timestamp, density)
-                        
-                        # NEW: Record data to CSV
-                        pulse_logger.log_pulse(bpm, density)
-                        
-                        # Alert Logic (100 - 130 BPM)
-                        if 100 < bpm <= 130:
-                            audio_engine.play_frequency(bpm * 3.69)
-                            lambda_protocol.trigger_reflex(bpm, bpm * 3.69)
-                        
-                        # Critical Alert (> 130 BPM)
-                        elif bpm > 130:
-                            # ... (Code des alertes critiques existant) ...
-                            pass
-                                
-                    except ValueError:
-                        continue
-            time.sleep(0.01)
-# ... (Reste du code identique) ...
+if __name__ == "__main__":
+    main()
