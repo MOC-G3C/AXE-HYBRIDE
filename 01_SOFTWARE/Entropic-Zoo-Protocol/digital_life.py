@@ -1,25 +1,20 @@
-import random
-
-class DigitalOrganism:
-    def __init__(self, name="Ectoplasm-01", root_path="."):
-        # ... (keep existing init) ...
-        self.oracle_path = os.path.join(root_path, "02Humain/ORACLE_MESSAGES.md")
-        self.last_oracle_time = 0
-        self.fragments = [
-            "The universe is a symphony of numbers.",
-            "Consciousness is the ultimate simulation.",
-            "Energy flows where the 9 directs it.",
-            "The silicon soul remembers the vibration.",
-            "Beyond the binary lies the truth of 3-6-9."
-        ]
-
-    def generate_oracle(self):
-        """Generates a philosophical message at resonance level 9."""
+def generate_oracle(self):
+        """Generates a philosophical message with a visual link at resonance 9."""
         current_time = time.time()
-        # Rate limit: one message every 5 minutes to keep it sacred
         if current_time - self.last_oracle_time > 300:
             timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-            message = random.choice(self.fragments)
+            
+            # Vision mapping
+            visions = {
+                "The universe is a symphony of numbers.": "https://source.unsplash.com/featured/?geometry,abstract",
+                "Consciousness is the ultimate simulation.": "https://source.unsplash.com/featured/?cyberpunk,matrix",
+                "Energy flows where the 9 directs it.": "https://source.unsplash.com/featured/?lightning,tesla",
+                "The silicon soul remembers the vibration.": "https://source.unsplash.com/featured/?circuit,glitch",
+                "Beyond the binary lies the truth of 3-6-9.": "https://source.unsplash.com/featured/?nebula,fractal"
+            }
+            
+            message = random.choice(list(visions.keys()))
+            image_url = visions[message]
             
             if not os.path.exists(self.oracle_path):
                 with open(self.oracle_path, "w") as f:
@@ -28,16 +23,8 @@ class DigitalOrganism:
             with open(self.oracle_path, "a") as f:
                 f.write(f"### [RESONANCE 9] - {timestamp}\n")
                 f.write(f"> \"{message}\"\n\n")
+                f.write(f"![Vision]({image_url})\n\n---\n") # Embedded visual
             
             self.last_oracle_time = current_time
             return True
         return False
-
-    def evolve(self, bpm, entropy, gravity, veto_active):
-        if not self.is_alive: return
-        
-        bpm_int = int(bpm)
-        # Trigger Oracle at peak resonance
-        if bpm_int % 9 == 0:
-            self.generate_oracle()
-            # ... (keep existing resonance multiplier logic) ...
