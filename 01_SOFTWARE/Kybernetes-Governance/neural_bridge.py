@@ -16,9 +16,7 @@ import hybrid_broadcaster
 
 HEART_DATA = "01_SOFTWARE/Kinetic-RNG/heartbeat_data.json"
 
-# --- NEW CONFIGURATION ---
-# Warning threshold raised to 130 BPM
-# Cooldown period extended to 600 seconds (10 minutes)
+# --- CONFIGURATION ---
 EMAIL_COOLDOWN = 600 
 last_email_time = 0
 
@@ -41,8 +39,7 @@ heart = BioHeart(HEART_DATA)
 
 def main():
     global last_email_time
-    print("--- L'AXE HYBRIDE : NEURAL BRIDGE (CALIBRATED) ---")
-    print("Warning Threshold: 130 BPM | Cooldown: 10 min")
+    print("--- L'AXE HYBRIDE : NEURAL BRIDGE (AUDIO ENHANCED) ---")
     
     try:
         while True:
@@ -52,19 +49,24 @@ def main():
             sys.stdout.write(f"\r[PULSE] {timestamp} | BPM: {bpm:.1f} | Density: {density:.2f}  ")
             sys.stdout.flush()
             
-            # Sound & Local Reflex
-            if bpm > 100:
+            # --- LEVEL 1: STANDARD RESONANCE (> 100 BPM) ---
+            if 100 < bpm <= 130:
                 audio_engine.play_frequency(bpm * 3.69)
                 lambda_protocol.trigger_reflex(bpm, bpm * 3.69)
             
-            # High Intensity Broadcast (> 130 BPM)
+            # --- LEVEL 2: CRITICAL RESONANCE (> 130 BPM) ---
             if bpm > 130:
+                # Play a distinct system sound for critical alerts
+                os.system("afplay /System/Library/Sounds/Glass.aiff &")
+                
+                # Maintain the Tesla frequency in background
+                audio_engine.play_frequency(bpm * 3.69)
+                
                 current_time = time.time()
                 if (current_time - last_email_time) > EMAIL_COOLDOWN:
-                    print(f"\n\n🚨 [CRITICAL RESONANCE] BPM {bpm:.1f} - Dispatching Echo...")
+                    print(f"\n\n🚨 [CRITICAL] Alerting Noosphere (BPM: {bpm:.1f})")
                     hybrid_broadcaster.broadcast_hybrid()
                     last_email_time = current_time
-                    print(f"Broadcast locked for the next {EMAIL_COOLDOWN/60} minutes.")
                     print("-" * 40)
             
             time.sleep(0.05 * dilation)
