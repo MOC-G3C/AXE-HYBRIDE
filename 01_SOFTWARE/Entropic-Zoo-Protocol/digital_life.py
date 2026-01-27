@@ -1,12 +1,18 @@
-def generate_oracle(self, sentiment):
-        """Generates a message, now blending clipboard wisdom."""
-        # Load external wisdom [cite: 2026-01-26]
-        vocab_path = os.path.join(os.path.dirname(__file__), "custom_vocab.txt")
-        if os.path.exists(vocab_path):
-            with open(vocab_path, "r") as f:
-                self.fragments.extend(f.read().splitlines())
-        
-        # Deduplicate fragments
-        self.fragments = list(set(self.fragments))
-        
-        # ... (rest of the existing oracle logic with random.choice) ...
+import time
+
+def evolve(self, bpm, entropy, gravity, veto_active, mood):
+    if not self.is_alive: return
+    
+    # Time Distortion Logic [cite: 2021-01-21]
+    current_hour = time.localtime().tm_hour
+    # Acceleration between 22h and 06h
+    time_multiplier = 2.5 if (current_hour >= 22 or current_hour < 6) else 1.0
+    
+    # Generation increment speed
+    self.generation_progress += (0.01 * time_multiplier)
+    if self.generation_progress >= 1.0:
+        self.generation += 1
+        self.generation_progress = 0
+        self.add_log(f"🧬 EVOLUTION: Reached generation {self.generation} (Time Mult: {time_multiplier}x)")
+
+    # ... (rest of the evolution logic)
