@@ -1,9 +1,12 @@
-import chronos_predictor
+import alarm_monitor
 
-# Inside generate_night_report(), using current_total from holistic_mapper:
-predicted_date, speed = chronos_predictor.estimate_completion_date(total_files)
+# Inside generate_night_report(), after Chronos provides predicted_date:
+alert_triggered, slippage_days = alarm_monitor.check_project_slippage(predicted_date)
 
-report += f"\n## ⏳ CHRONOS PREDICTION\n"
-report += f"- **Current Velocity**: {speed} units/day\n"
-report += f"- **Estimated Completion**: {predicted_date}\n"
-report += f"- **Status**: {'Ahead of schedule' if speed > 1 else 'Steady progression'}\n"
+report += f"\n## 🚨 SENTINEL ALERT\n"
+if alert_triggered:
+    report += f"- **STATUS**: CRITICAL SLIPPAGE DETECTED\n"
+    report += f"- **Slippage**: +{slippage_days} days since last check.\n"
+    report += f"- **Action**: Haptic feedback sent to mobile. Wake up, Marko.\n"
+else:
+    report += f"- **STATUS**: Temporal stability confirmed.\n"
