@@ -1,18 +1,25 @@
-# In AxeHybrideGUI.__init__, add the button (initially hidden or disabled)
-self.resurrect_btn = ttk.Button(self.tab1, text="LAZARUS PROTOCOL (♰)", command=self.manual_resurrect)
-self.resurrect_btn.pack(pady=5)
+import subprocess
 
-# Add this method to the AxeHybrideGUI class
-def manual_resurrect(self):
-    if self.pet.resurrect():
-        # Play a dark, glitchy sound
-        os.system('afplay /System/Library/Sounds/Sosumi.aiff &')
-        self.add_log("♰ WARNING: Lazarus Protocol activated. Genetic core corrupted.")
-    else:
-        self.add_log("INFO: The entity is already among the living.")
+# In AxeHybrideGUI.__init__, add the button:
+self.transfer_btn = ttk.Button(self.tab1, text="ENERGY TRANSFER (🔋→⚡)", command=self.battery_sacrifice)
+self.transfer_btn.pack(pady=5)
 
-# In update_loop, handle button visibility
-if not self.pet.is_alive:
-    self.resurrect_btn.state(['!disabled'])
-else:
-    self.resurrect_btn.state(['disabled'])
+# Add this method to the AxeHybrideGUI class:
+def battery_sacrifice(self):
+    try:
+        # Detect battery level on macOS
+        cmd = ["pmset", "-g", "batt"]
+        output = subprocess.run(cmd, capture_output=True, text=True).stdout
+        
+        if "InternalBattery" in output:
+            # Trigger injection
+            if self.pet.inject_energy():
+                os.system('afplay /System/Library/Sounds/Ping.aiff &')
+                self.add_log("🔋 SACRIFICE: Battery power converted to digital energy.")
+            else:
+                self.add_log("INFO: No subject available for transfer.")
+        else:
+            messagebox.showwarning("Power Sync", "No battery detected. Connect to internal power source for sacrifice.")
+            
+    except Exception as e:
+        self.add_log(f"Transfer Error: {e}")
