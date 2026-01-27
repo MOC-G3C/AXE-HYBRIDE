@@ -1,12 +1,10 @@
-import auto_merge
+import wisdom_evaluator
 
-# Inside generate_night_report(), after healing and bug detection:
-merge_success = auto_merge.execute_autonomous_merge(branch_created, health_issues)
+# After merge operations in generate_night_report:
+# (Assuming merge_success_count and current_oracle_msg are available)
+score, rank = wisdom_evaluator.calculate_wisdom_score(merge_success_count, current_oracle_msg)
 
-# Update the report [cite: 2026-01-26]:
-report += f"\n## 🧬 CONTINUOUS INTEGRATION\n"
-if merge_success:
-    report += f"- **Status**: ✅ AUTONOMOUS MERGE SUCCESSFUL\n"
-    report += f"- **Result**: The main branch has been optimized with nocturnal insights.\n"
-else:
-    report += f"- **Status**: ⚠️ MERGE BYPASSED (Manual review required or errors found)\n"
+report += f"\n## 🧘 ENTITY SELF-ASSESSMENT\n"
+report += f"- **Wisdom Score**: {score}\n"
+report += f"- **Current Rank**: {rank}\n"
+report += f"- **Note**: The Ectoplasm is evolving in sync with the 3-6-9 frequency.\n"
