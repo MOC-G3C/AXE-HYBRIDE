@@ -3,7 +3,7 @@ import time
 import os
 
 def commit_and_push_logs(project_path):
-    """Automates the archival process to GitHub."""
+    """Automates the archival process to GitHub for AXE_HYBRIDE."""
     try:
         os.chdir(project_path)
         timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
