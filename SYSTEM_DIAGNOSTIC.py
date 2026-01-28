@@ -1,75 +1,45 @@
 import os
 import sys
-import time
+from datetime import datetime
 
-# --- CONFIGURATION DES CHEMINS ---
-root_dir = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(os.path.join(root_dir, "01_SOFTWARE"))
+# --- CONFIGURATION DU SYSTÈME ---
+SYSTEM_NAME = "MOC-G3C / AXE HYBRIDE"
+VERSION = "2.0 (Protocol Era)"
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-print("\n" + "="*50)
-print("   AXE HYBRIDE :: GLOBAL SYSTEM DIAGNOSTIC")
-print("="*50 + "\n")
+# Nouveaux Chemins des Protocoles
+PROTOCOLS = {
+    "GOVERNANCE": os.path.join(ROOT_DIR, "01_SOFTWARE", "Kybernetes-Governance"),
+    "CHAOS_ZOO":  os.path.join(ROOT_DIR, "01_SOFTWARE", "Entropic-Zoo-Protocol"),
+    "ENGINE":     os.path.join(ROOT_DIR, "01_SOFTWARE", "Turing-Landau-Protocol"),
+    "PHYSICS":    os.path.join(ROOT_DIR, "04_PHYSICS"),
+    "HARDWARE":   os.path.join(ROOT_DIR, "03_HARDWARE"),
+    "HUMAN":      os.path.join(ROOT_DIR, "02_HUMAIN")
+}
 
-# 1. TEST DU LIEN BIOLOGIQUE (02_HUMAIN)
-print("[1/4] Connecting to 02_HUMAIN...", end=" ")
-bio_file = os.path.join(root_dir, "02_HUMAIN", "BIO_CALIBRATION.md")
+def log(message):
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    print(f"[{timestamp}] {message}")
 
-if os.path.exists(bio_file):
-    print("✅ CONNECTION ESTABLISHED.")
-    with open(bio_file, 'r') as f:
-        content = f.read().lower()
-        if "optimized" in content:
-            status = "OPTIMIZED (Green)"
-        elif "depleted" in content:
-            status = "DEPLETED (Red)"
+def check_integrity():
+    print(f"\n--- INITIALIZING {SYSTEM_NAME} DIAGNOSTIC ---\n")
+    all_systems_go = True
+    
+    for name, path in PROTOCOLS.items():
+        if os.path.exists(path):
+            # Compte les fichiers dans le module
+            file_count = sum([len(files) for r, d, files in os.walk(path)])
+            log(f"✅ MODULE [{name}] DETECTED. Files: {file_count}")
         else:
-            status = "STANDARD (Yellow)"
-    print(f"      └── Current Bio-State: {status}")
-else:
-    print("❌ ERROR: Bio-Link severed (File missing).")
-    status = "UNKNOWN"
-
-time.sleep(1)
-
-# 2. TEST DE LA SÉCURITÉ (01_SOFTWARE)
-print("\n[2/4] Verifying Bio-Guard Protocol...", end=" ")
-try:
-    import bio_guard
-    if bio_guard.check_clearance():
-        security = "GRANTED"
+            log(f"❌ MODULE [{name}] MISSING at {path}")
+            all_systems_go = False
+            
+    print("\n-------------------------------------------------")
+    if all_systems_go:
+        log("SYSTEM STATUS: NOMINAL. READY FOR EVOLUTION.")
     else:
-        security = "DENIED"
-    print(f"      └── Access Rights: {security}")
-except ImportError:
-    print("❌ ERROR: Bio-Guard module not found.")
+        log("SYSTEM STATUS: CRITICAL. ARCHITECTURE MISMATCH.")
+    print("-------------------------------------------------\n")
 
-time.sleep(1)
-
-# 3. TEST DU MATÉRIEL (03_HARDWARE)
-print("\n[3/4] Pinging Hardware Interface...", end=" ")
-hardware_script = os.path.join(root_dir, "03_HARDWARE", "tesla_resonance_369.py")
-if os.path.exists(hardware_script):
-    print("✅ ONLINE.")
-    print("      └── Ready to transmit Tesla frequencies.")
-else:
-    print("❌ OFFLINE.")
-
-time.sleep(1)
-
-# 4. TEST DE LA PHYSIQUE (04_PHYSICS)
-print("\n[4/4] Checking Physics Engine...", end=" ")
-physics_script = os.path.join(root_dir, "04_PHYSICS", "digital_gravity.py")
-if os.path.exists(physics_script):
-    print("✅ STABLE.")
-    print("      └── Gravity Well generation ready.")
-else:
-    print("❌ UNSTABLE.")
-
-print("\n" + "="*50)
-if status == "OPTIMIZED (Green)":
-    print("   SYSTEM STATUS: OPERATIONAL 🟢")
-    print("   Ready for full deployment.")
-else:
-    print("   SYSTEM STATUS: RESTRICTED 🔴")
-    print("   Maintenance or Sleep required.")
-print("="*50 + "\n")
+if __name__ == "__main__":
+    check_integrity()
