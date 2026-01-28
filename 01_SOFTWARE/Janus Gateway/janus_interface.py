@@ -2,7 +2,6 @@ import os
 import sys
 import time
 import subprocess
-import threading
 
 # --- STYLING ---
 CYAN = '\033[96m'
@@ -15,7 +14,9 @@ BOLD = '\033[1m'
 class JanusGateway:
     def __init__(self):
         self.processes = []
-        self.root_software = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '01_SOFTWARE'))
+        # GPS FIX: We are in "01_SOFTWARE/Janus Gateway"
+        # Going up one level (..) takes us to "01_SOFTWARE"
+        self.root_software = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
     def clear_screen(self):
         os.system('clear')
@@ -27,24 +28,28 @@ class JanusGateway:
         print("╚══════════════════════════════════════════════════════════╝")
         print(f"{RESET}")
 
-    def launch_module(self, path, name, new_window=True):
+    def launch_module(self, path, name):
+        # Path is relative to 01_SOFTWARE. Ex: "Kinetic-RNG/kinetic_pulse.py"
         full_path = os.path.join(self.root_software, path)
         
+        # FIX: Handle folder name mismatches (Space vs Underscore vs Hyphen)
+        # If "Project-Lambda" fails, try "Project_Lambda"
         if not os.path.exists(full_path):
-            print(f"{RED}[ERROR] Module not found: {name}{RESET}")
+            alternative = full_path.replace("-", "_")
+            if os.path.exists(alternative):
+                full_path = alternative
+        
+        if not os.path.exists(full_path):
+            print(f"{RED}[ERROR] Module path not found: {full_path}{RESET}")
             return
 
         print(f"{GREEN}[*] INITIALIZING {name}...{RESET}")
         time.sleep(0.5)
 
-        # MacOS specific: launch in new Terminal window
-        if new_window:
-            cmd = f"""osascript -e 'tell application "Terminal" to do script "python3 \\"{full_path}\\""'"""
-            os.system(cmd)
-        else:
-            # Run in background (silent)
-            p = subprocess.Popen(["python3", full_path])
-            self.processes.append(p)
+        # Launch in new Terminal window (MacOS)
+        # We use quotes around path to handle spaces in folder names
+        cmd = f"""osascript -e 'tell application "Terminal" to do script "python3 \\"{full_path}\\""'"""
+        os.system(cmd)
 
     def main_menu(self):
         while True:
@@ -59,24 +64,27 @@ class JanusGateway:
             choice = input(f"{YELLOW}>> AWAITING COMMAND: {RESET}")
 
             if choice == '1':
-                # Launch Sequence
                 print(f"\n{BOLD}>> INITIATING HYBRID SYNCHRONIZATION...{RESET}")
-                # 1. Heartbeat (Kinetic)
+                # 1. Heartbeat
                 self.launch_module("Kinetic-RNG/kinetic_pulse.py", "KINETIC HEART")
                 time.sleep(1)
-                # 2. Zoo (Visualization)
+                # 2. Zoo
                 self.launch_module("Entropic-Zoo-Protocol/evolution_engine.py", "ENTROPIC ZOO")
                 input(f"\n{CYAN}[PRESS ENTER TO RETURN TO MENU]{RESET}")
 
             elif choice == '2':
-                # Security Check
                 print(f"\n{BOLD}>> SCANNING MEMORY BANKS...{RESET}")
-                os.system(f"python3 \"{os.path.join(self.root_software, 'Project_Lambda/decay_sentinel.py')}\"")
+                # For the sentinel, we run it directly in this window
+                sentinel_path = os.path.join(self.root_software, "Project_Lambda/decay_sentinel.py")
+                # Fix path if needed
+                if not os.path.exists(sentinel_path):
+                    sentinel_path = sentinel_path.replace("-", "_")
+                
+                os.system(f"python3 \"{sentinel_path}\"")
                 input(f"\n{CYAN}[PRESS ENTER TO RETURN TO MENU]{RESET}")
 
             elif choice == '3':
                 print(f"\n{RED}>> SHUTTING DOWN NEURAL LINKS...{RESET}")
-                # Kills all python processes (Forceful reset)
                 os.system("pkill -f kinetic_pulse.py")
                 os.system("pkill -f evolution_engine.py")
                 print(f"{RED}>> SILENCE RESTORED.{RESET}")
