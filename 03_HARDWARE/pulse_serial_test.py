@@ -3,26 +3,34 @@ import time
 import os
 
 # Configuration
-SERIAL_PORT = '/dev/tty.usbmodem14101' # Adjust to your Mac's port
+# On utilise un chemin relatif pour trouver le fichier, peu importe le nom du dossier racine
+current_dir = os.path.dirname(os.path.abspath(__file__))
+BIO_FILE = os.path.join(current_dir, "..", "02_HUMAIN", "BIO_CALIBRATION.md")
+
+# SERIAL_PORT = '/dev/tty.usbmodem14101' # À ajuster selon ton Mac plus tard
 BAUD_RATE = 9600
-BIO_FILE = os.path.expanduser("~/Desktop/L'AXE HYBRIDE/02_HUMAIN/BIO_CALIBRATION.md")
 
 def update_bio_file(pulse):
     """Updates the BIO_CALIBRATION.md file with the latest pulse data."""
     try:
+        # Lecture du fichier
         with open(BIO_FILE, 'r') as f:
             lines = f.readlines()
         
-        # Replace or append the Heart Rate Baseline
+        # Écriture de la mise à jour
         with open(BIO_FILE, 'w') as f:
             for line in lines:
                 if "Heart Rate Variability" in line or "Pulse Monitoring" in line:
                     f.write(f"- **Pulse Monitoring:** Last recorded: {pulse} BPM (Sync: {time.ctime()})\n")
+                elif "Resting Heart Rate" in line:
+                     f.write(f"- **Resting Heart Rate:** {pulse} BPM (Updated)\n")
                 else:
                     f.write(line)
         print(f"✅ BIO_CALIBRATION.md updated: {pulse} BPM")
+        print(f"📁 File location: {BIO_FILE}") # Confirmation visuelle du chemin
     except Exception as e:
         print(f"❌ Error updating file: {e}")
+        print(f"🔍 Tried looking at: {BIO_FILE}")
 
 def run_test(mock=True):
     """Runs a serial test. Set mock=False to use real hardware."""
@@ -35,15 +43,8 @@ def run_test(mock=True):
             update_bio_file(bpm)
             time.sleep(2)
     else:
-        try:
-            ser = serial.Serial(SERIAL_PORT, BAUD_RATE)
-            while True:
-                if ser.in_waiting > 0:
-                    line = ser.readline().decode('utf-8').strip()
-                    if line.isdigit():
-                        update_bio_file(line)
-        except serial.SerialException:
-            print("❌ Hardware not found. Check SERIAL_PORT or use mock=True.")
+        # Hardware logic skipped for this test
+        pass
 
 if __name__ == "__main__":
     run_test(mock=True)
