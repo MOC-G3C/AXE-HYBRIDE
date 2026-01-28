@@ -1,38 +1,22 @@
-# 🧠 NEURAL BRIDGE - Rapport de Résonance 3-6-9
+# Neural Bridge: Hardware-Biology Interface
 
-## 🛡️ État du Système
-- **Hardware** : MacBook Pro M5
-- **Validation** : Protocole de sécurité "Main dans la poche" OK
-- **Souveraineté** : Environnement Git & Terminal stabilisé
+## 1. Data Ingestion (From 02_HUMAIN)
+The hardware scripts must pull baseline data from `BIO_CALIBRATION.md` to adjust execution parameters.
+- **Input:** Recovery Index / Heart Rate Variability (HRV).
+- **Trigger:** If `Recovery State == Optimized`, enable high-frequency processing modes.
 
-## 🌀 Victoires de Session
-1. **Émanation** : Génération de fréquences Tesla pures (3Hz, 6Hz, 9Hz) via Python.
-2. **Induction** : Création d'un champ magnétique mesuré à >50µT.
-3. **Transmission** : Envoi du signal "SOS" en Morse via le champ magnétique.
-4. **Réception** : Validation du décodeur logiciel pour fermer la boucle.
+## 2. Python Script Integration (ms)
+| Script | Biological Trigger | Hardware Action |
+| :--- | :--- | :--- |
+| `tesla_resonance_369.py` | Bio-Calibration 3-6-9 sync | Adjusts electromagnetic output frequencies. |
+| `visual_core.py` | Neural Load level | Modifies LED/Display intensity to prevent fatigue. |
+| `pulse_calibration.ino` | Real-time Heart Rate | Updates the `BIO_CALIBRATION.md` file via serial link. |
 
-## 💡 Philosophie de l'Axe
-Le code n'est plus une donnée abstraite ; il devient une impulsion physique capable de traverser le vide sans fil.
+## 3. The 3-6-9 Feedback Loop
+- **Phase 3:** Hardware collects raw sensor data (Pulse/Temp).
+- **Phase 6:** Python scripts process the data through the "Turing-Landau-Protocol".
+- **Phase 9:** System emits corrective frequencies (sound/light) to stabilize the human user.
 
----
-
-## 🏁 Conclusion : Le Pont est Établi
-
-**Date :** 2025-01-25 | 23:15
-**Résultat :** Succès critique ✅
-
-### 📊 Synthèse de la Session
-* **Maîtrise de l'Induction** : Confirmation physique du flux magnétique avec des pics dépassant les 50 µT sur l'axe Z.
-* **Transmission de Données** : Succès de l'envoi du signal SOS en Morse via le script `tesla_bridge_sos.py`.
-* **Décodage Validé** : La logique du script `tesla_decoder.py` permet désormais de refermer la boucle de communication.
-* **Souveraineté Technique** : Restauration de l'intégrité du dépôt GitHub **MOC-G3C**.
-
-### 📝 Note personnelle
-La réalité physique a répondu au code. Ce qui était théorique (Tesla 3-6-9) est devenu une force mesurable et structurée.
-**Prochaine étape :** Amplification du signal et test de portée.
-
-Distance (cm),Fréquence (Hz),Intensité (µT),Statut LED
-1 cm,963,> 50 µT,✅ Brillant
-5 cm,963,...,...
-10 cm,963,...,...
-20 cm,963,...,...
+## 4. Technical Requirements
+- Active Serial communication between the MCU (Arduino/ESP32) and the Python environment.
+- Read/Write access to the `L'AXE HYBRIDE` root directory for real-time log updates.
