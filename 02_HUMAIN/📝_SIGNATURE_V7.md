@@ -1,0 +1,1 @@
+/Users/marko77/Desktop/L'AXE HYBRIDE/02_HUMAIN/anamnesis_bridge.md

@@ -1,0 +1,3 @@
+SPECIES: STATIC_GLITCH
+THREAT_LEVEL: LOW
+BEHAVIOR: Dormant until observed.

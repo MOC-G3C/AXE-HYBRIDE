@@ -1,46 +1,49 @@
-import sys
-import os
 import time
+import math
 
-# --- SÉCURITÉ BIOLOGIQUE (PONT VERS 01_SOFTWARE) ---
-# On va chercher le module bio_guard qui est dans le dossier d'à côté
-current_dir = os.path.dirname(os.path.abspath(__file__))
-software_dir = os.path.join(current_dir, "..", "01_SOFTWARE")
-sys.path.append(software_dir)
+# Simulation de la connexion au Moteur Vortex
+# (Dans une version future, on importera directement le module VORTEX)
 
-try:
-    import bio_guard
-except ImportError:
-    print("⚠️  Erreur critique : Le module de sécurité (Bio-Guard) est introuvable.")
-    sys.exit(1)
-
-# --- MOTEUR GRAVITATIONNEL ---
-def run_gravity_simulation():
-    print("🌌 Initializing Digital Gravity Engine...")
+def calculate_gravity(mass, energy_state):
+    # La gravité standard
+    G_CONST = 9.81
     
-    # 1. LE CHECKPOINT BIOLOGIQUE
-    # On demande l'autorisation au gardien avant de toucher aux constantes universelles
-    if not bio_guard.check_clearance():
-        print("🛑  GRAVITY FAILURE: Operator biological state unstable.")
-        print("    Risk of mathematical collapse > 90%. Aborting.")
-        return
-
-    # 2. Lancement de la simulation (Si Accès Autorisé)
-    print("\n✅  Field Stability Confirmed. Manipulating Space-Time Density...")
-    
-    objects = [
-        {"id": "Alpha", "mass": 100},
-        {"id": "Beta",  "mass": 500},
-        {"id": "Omega", "mass": 1000}
-    ]
-    G_constant = 6.674 # Constante gravitationnelle simplifiée
-    
-    for obj in objects:
-        force = obj["mass"] * G_constant
-        print(f"   [+] Computing Gravity Well for {obj['id']}... Force: {force:.2f} N")
-        time.sleep(0.8) # Temps de calcul simulé
+    # Si l'état énergétique est une clé de Tesla (3, 6, 9), la gravité s'allège
+    if energy_state in [3, 6]:
+        # Flux magnétique : La gravité est moins dense
+        modifier = 0.8
+        status = "FLUX STATE (Levitation Potential)"
+    elif energy_state == 9:
+        # Point Zéro : Connexion pure
+        modifier = 0.0
+        status = "ZERO POINT (Singularity)"
+    else:
+        # Matière normale (1, 2, 4, 5, 7, 8)
+        modifier = 1.0
+        status = "SOLID STATE"
         
-    print("\n🪐  Simulation Complete. Space-time fabric remains intact.")
+    current_gravity = G_CONST * modifier
+    return current_gravity, status
+
+def run_simulation():
+    print("--- DIGITAL GRAVITY BRIDGE INITIALIZED ---")
+    print("Synchronization with VORTEX ENGINE... OK.")
+    
+    # Séquence de test synchronisée
+    cycle_sequence = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    object_mass = 75 # kg (Poids moyen humain)
+    
+    try:
+        while True:
+            for phase in cycle_sequence:
+                g_force, state = calculate_gravity(object_mass, phase)
+                weight = object_mass * g_force
+                
+                print(f"[PHASE {phase}] Gravity: {g_force:.2f} m/s² | Weight: {weight:.1f} N | [{state}]")
+                time.sleep(0.8)
+                
+    except KeyboardInterrupt:
+        print("\nGravity Simulation Decoupled.")
 
 if __name__ == "__main__":
-    run_gravity_simulation()
+    run_simulation()
