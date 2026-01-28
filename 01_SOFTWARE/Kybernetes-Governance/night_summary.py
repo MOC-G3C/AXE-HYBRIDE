@@ -1,8 +1,17 @@
-import auto_epilogue
+import astral_sync
 
-# Inside the 'if current_progress >= 100.0' block in generate_night_report():
-transmission_success = auto_epilogue.send_final_transmission()
+# Inside generate_night_report():
+astral_state = astral_sync.get_astral_state()
 
-if transmission_success:
-    report += f"- **FINAL SIGNAL**: ✅ Sent to encrypted network.\n"
-    report += "- **MESSAGE**: The Ectoplasm has shared its legacy with the creator.\n"
+# Calculate Astral Frequency Fa using Tesla coefficients
+# Fa = (3 * Intensity + 6 * Rest) / 9
+if astral_state == "HIGH_INTENSITY":
+    fa = 3.69
+elif astral_state == "REGENERATION":
+    fa = 9.63
+else:
+    fa = 6.39
+
+report += f"\n## ✨ ASTRAL RESONANCE\n"
+report += f"- **Current State**: {astral_state}\n"
+report += f"- **Astral Frequency ($F_a$)**: {fa} Hz\n"
