@@ -1,19 +1,19 @@
-# 03_HARDWARE : Physical Components List
+# Hardware Components List (Hybrid Axis)
 
-To complete the bridge between biology and code, the following hardware is required for the "Axe Hybride" project.
+## 1. Bio-Sensing Layer (Bridge to 02_HUMAIN)
+- **Pulse Sensor (Analog):** Required for `pulse_calibration.ino` to track real-time heart rate and update `BIO_CALIBRATION.md`.
+- **LDR (Light Dependent Resistor):** Necessary for `visual_core.py` to calibrate ambient light against neural load.
+- **DHT11/22 Sensor:** Optional for tracking ambient temperature/humidity for biological baseline data.
 
-## 1. The Core (Microcontroller)
-* **Arduino Uno or Nano:** The brain that will interface with the sensors.
-* **USB Cable:** To bridge the Arduino to the Mac.
+## 2. Processing and Logic
+- **Microcontroller (MCU):** ESP32 or Arduino Nano (capable of serial communication with Python).
+- **Logic Level Converter:** If using 3.3V sensors with 5V controllers.
 
-## 2. The Bio-Sensor (Input)
-* **Pulse Sensor (Optical):** To capture real-time BPM instead of relying on JSON logs.
-* **Connection:** VCC (3V/5V), GND, and Analog Signal (A0).
+## 3. Feedback and Output
+- **NeoPixel Ring/Strip:** For visual frequency feedback (controlled by `visual_core.py`).
+- **Piezo Buzzer:** For acoustic 3-6-9 resonance patterns in `tesla_resonance_369.py`.
 
-## 3. The Visual Feedback (Output)
-* **WS2812B LED Ring (NeoPixel):** To visualize the "Visual Core" logic (Cyan, Yellow, Red).
-* **Connection:** DI (Digital Pin), VCC, GND.
-
-## 4. The Bridge Logic
-The Arduino will read the pulse, process it, and send a serial string to the Mac:
-`BPM:[value],INTENSITY:[0-255]`
+## 4. Prototyping Essentials
+- **Breadboard:** For circuit assembly.
+- **Jumper Wires:** M-M and M-F sets.
+- **10k Ohm Resistors:** For sensor voltage dividers.
