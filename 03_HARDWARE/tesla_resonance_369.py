@@ -2,9 +2,10 @@ import os
 import time
 from datetime import datetime
 
-# Path to the biological calibration file
-BIO_PATH = os.path.expanduser("~/Desktop/L'AXE HYBRIDE/02_HUMAIN/BIO_CALIBRATION.md")
-LOG_PATH = os.path.expanduser("~/Desktop/L'AXE HYBRIDE/session_logs/HARDWARE_RESONANCE.md")
+# Configuration intelligente des chemins (Relatif)
+current_dir = os.path.dirname(os.path.abspath(__file__))
+BIO_PATH = os.path.join(current_dir, "..", "02_HUMAIN", "BIO_CALIBRATION.md")
+LOG_PATH = os.path.join(current_dir, "..", "session_logs", "HARDWARE_RESONANCE.md")
 
 def get_bio_state():
     """Reads the biological state to adjust system intensity."""
@@ -16,11 +17,12 @@ def get_bio_state():
             elif "depleted" in content:
                 return "low"
     except FileNotFoundError:
-        pass
+        print(f"⚠️ Warning: Could not find BIO file at {BIO_PATH}")
     return "standard"
 
 def log_resonance(summary):
     """Logs resonance results with a timestamp."""
+    # Création du dossier logs s'il n'existe pas
     os.makedirs(os.path.dirname(LOG_PATH), exist_ok=True)
     with open(LOG_PATH, 'a') as f:
         f.write(f"\n### Session: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
@@ -44,7 +46,7 @@ def run_simulation():
             time.sleep(0.05)
             
     log_resonance("\n".join(results))
-    print("✅ Session archived in session_logs.")
+    print(f"✅ Session archived in {LOG_PATH}")
 
 if __name__ == "__main__":
     run_simulation()

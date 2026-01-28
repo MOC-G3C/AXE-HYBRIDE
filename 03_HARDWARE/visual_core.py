@@ -1,8 +1,9 @@
 import os
 import time
 
-# System paths
-BIO_PATH = os.path.expanduser("~/Desktop/L'AXE HYBRIDE/02_HUMAIN/BIO_CALIBRATION.md")
+# Configuration intelligente des chemins (Relatif)
+current_dir = os.path.dirname(os.path.abspath(__file__))
+BIO_PATH = os.path.join(current_dir, "..", "02_HUMAIN", "BIO_CALIBRATION.md")
 
 def get_biological_input():
     """Extracts recovery status from the human layer."""
@@ -12,6 +13,7 @@ def get_biological_input():
             if "optimized" in status: return "DYNAMIC"
             if "depleted" in status: return "SOFT"
     except FileNotFoundError:
+        print(f"⚠️ Warning: Target file not found at {BIO_PATH}")
         pass
     return "BALANCED"
 
