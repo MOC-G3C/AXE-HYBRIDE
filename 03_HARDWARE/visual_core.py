@@ -1,28 +1,35 @@
-import sys
+import os
+import time
 
-# ANSI Color Codes
-RESET = "\033[0m"
-BOLD = "\033[1m"
-CYAN = "\033[36m"
-YELLOW = "\033[33m"
-RED = "\033[31m"
-BG_RED = "\033[41m"
+# System paths
+BIO_PATH = os.path.expanduser("~/Desktop/L'AXE HYBRIDE/02_HUMAIN/BIO_CALIBRATION.md")
 
-def get_color_state(bpm):
-    """Returns the visual theme based on the BPM threshold."""
-    if bpm > 130:
-        return f"{BG_RED}{BOLD}" # Level 2: Critical (Red Background)
-    elif bpm > 100:
-        return f"{YELLOW}{BOLD}" # Level 1: Resonance (Yellow)
-    else:
-        return CYAN # Base: Calm (Cyan)
+def get_biological_input():
+    """Extracts recovery status from the human layer."""
+    try:
+        with open(BIO_PATH, 'r') as f:
+            status = f.read().lower()
+            if "optimized" in status: return "DYNAMIC"
+            if "depleted" in status: return "SOFT"
+    except FileNotFoundError:
+        pass
+    return "BALANCED"
 
-def update_display(bpm, timestamp, density):
-    """Prints a color-coded status line."""
-    theme = get_color_state(bpm)
-    status = "CRITICAL" if bpm > 130 else "RESONANCE" if bpm > 100 else "PULSE"
+def apply_visual_filter():
+    mode = get_biological_input()
+    print(f"🖥️ Visual Core Initialization...")
     
-    # Building the visual line
-    line = f"\r{theme}[{status}] {timestamp} | BPM: {bpm:.1f} | Density: {density:.2f}{RESET}    "
-    sys.stdout.write(line)
-    sys.stdout.flush()
+    # Logic: Adjust brightness/color based on biological stress levels
+    settings = {
+        "DYNAMIC": {"brightness": 100, "temp": "6500K", "desc": "High productivity mode active."},
+        "BALANCED": {"brightness": 70, "temp": "5000K", "desc": "Standard operation mode."},
+        "SOFT": {"brightness": 30, "temp": "2700K", "desc": "Recovery mode - Reducing neural load."}
+    }
+    
+    current = settings[mode]
+    print(f"Status: {mode}")
+    print(f"Setting: {current['brightness']}% Brightness | {current['temp']}")
+    print(f"Note: {current['desc']}")
+
+if __name__ == "__main__":
+    apply_visual_filter()
