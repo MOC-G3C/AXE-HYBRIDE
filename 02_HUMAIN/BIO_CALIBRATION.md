@@ -1,21 +1,20 @@
-# Bio-Calibration & Hybrid Interface
+# Bio-Calibration: Performance & Sleep Correlation
 
-## Objective
-To quantify the impact of sleep-first recovery on cognitive output and biological preservation within the Hybrid Axis framework.
+## Overview
+This protocol monitors the synergy between biological recovery and technical output. It treats the human body as the primary "hardware" that must be calibrated before interacting with external systems.
 
-## Sleep/Code Correlation (ms)
-| Metric | Focus | System Impact |
-| :--- | :--- | :--- |
-| **Recovery State** | 7-9h high-quality sleep | Repairs DNA and flushes neurotoxins. |
-| **Cognitive Burst** | Focus window after rest | Maximum hardware performance without cortisol spikes. |
-| **Code Efficiency** | Output per energy unit | High-quality logic with minimal "friction" or bugs. |
+## Sleep-to-Code Correlation Matrix (ms)
+| Biological State | Rest Quality | Coding Performance | Bug Frequency |
+| :--- | :--- | :--- | :--- |
+| **Optimized** | > 8h / High REM | Peak logic flow & rapid prototyping | Minimal |
+| **Standard** | 6-7h / Average | Steady progress / Maintenance tasks | Low |
+| **Depleted** | < 5h / Interrupted | High friction / Syntax errors | High |
 
-## Bio-Hacking Bridge (02 -> 03)
-- **Pulse Monitoring:** Tracking resting heart rate as a stress benchmark.
-- **Sleep Cycles:** Documenting REM and Deep Sleep stages via external sensors.
-- **Neural Load:** Assessing mental fatigue levels before transitioning to hardware tasks.
+## Bio-Hacking Protocols
+- **Circadian Coding:** Schedule complex architectural tasks only during peak neurotransmitter windows (post-REM sleep).
+- **Stress-Load Balancing:** If resting heart rate is elevated, shift tasks from "01_SOFTWARE" (high cognitive load) to "03_HARDWARE" (tactile/physical assembly).
+- **Frequency Shielding:** Use 432Hz or 528Hz soundscapes during deep focus sessions to maintain cellular resonance (Tesla 3-6-9 alignment).
 
-## Maintenance Checklist
-- [ ] Verify baseline biological integrity (rested state).
-- [ ] Align current task with the 3-6-9 frequency protocol.
-- [ ] Record any "time lapse" discrepancies (feeling younger/older than chronological age).
+## Calibration Logs
+- **Internal Clock:** Record perceived age vs. chronological age daily.
+- **System Sync:** Ensure biological readiness before initiating "Neural Bridge" protocols in folder 03.
