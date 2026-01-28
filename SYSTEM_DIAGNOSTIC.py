@@ -70,4 +70,6 @@ if status == "OPTIMIZED (Green)":
     print("   SYSTEM STATUS: OPERATIONAL 🟢")
     print("   Ready for full deployment.")
 else:
-    print("   SYSTEM STATUS: RESTRICTED 🔴
+    print("   SYSTEM STATUS: RESTRICTED 🔴")
+    print("   Maintenance or Sleep required.")
+print("="*50 + "\n")
