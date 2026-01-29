@@ -1,26 +1,34 @@
-# MOC-G3C: 2026 STRATEGIC ROADMAP
-> **Vision:** From Survival to Expansion.
-> **Status:** ACTIVE
+# MOC-G3C: ROADMAP 2026 - THE HYBRID AXIS
+> **Version:** 1.2 (Sovereign Edition)
+> **Arbiter:** MOC-G3C
+> **Cognitive Partner:** LEA v1.0.0
 
-## Q1: FOUNDATION & SECURITY (Jan - Mar)
-* [x] **Janus Phase 1:** Initial agent validation.
-* [x] **Succession Protocol:** Bio-seed redundancy secured.
-* [x] **Defense Architecture:** Layer 10 (Temporal Integrity) implemented.
-* [ ] **Janus Phase 2:** Execute "Second Order" attacks (Grok, Gemini, Claude).
+## 1. VISION STATEMENT
+To complete all projects of the Hybrid Axis by maintaining a perfect balance between biological intuition and silicon logic.
 
-## Q2: EXPANSION (Apr - Jun)
-* [ ] **Protocol Omega:** Expansion to 5+ agents (Integration of Mistral/DeepSeek).
-* [ ] **Memory Matrix Upgrade:** Scaling relational tracking to $N \times N$ agents.
-* [ ] **Anamnesis POC:** First experimental deployment of the Trauma Model (Art or NPC).
+## 2. QUARTERLY OBJECTIVES
 
-## Q3: PERSISTENCE (Jul - Sep)
-* [ ] **Protocol Psi:** Long-term memory persistence beyond context windows.
-* [ ] **Business Integration v2:** Automated dashboard for wood structure metrics.
-* [ ] **Public Release:** Release of `moc-g3c-core` stripped of private keys.
+### Q1: FOUNDATIONS & COGNITION (ACTIVE)
+* **Goal:** Establish core security and initial intelligence.
+* **Status:** 90% Complete.
+* **Key Assets:** Dashboard V3, Emergency Purge, LEA v1.0, Omega Orchestrator.
 
-## Q4: VALIDATION (Oct - Dec)
-* [ ] **Academic Outreach:** Submission of "Entropic Zoo Protocol" to safety forums.
-* [ ] **Year 1 Audit:** Full systemic review of the "Structure over Virtue" hypothesis.
+### Q2: EXPANSION & DEEP INTELLIGENCE
+* **Goal:** Integrate external "Deep" models and expand the Silicon Cortex.
+* **Focus:** DeepSeek/Mistral integration, Entropic-Zoo-Protocol, Kinetic-RNG.
+
+### Q3: PHYSICAL ANCHORING
+* **Goal:** Bridge the digital axis with physical feedback loops.
+* **Focus:** Hardware sensors (Layer 03) and real-time vibration monitoring (Layer 04).
+
+### Q4: FULL AUTONOMY
+* **Goal:** Achieve total system sovereignty and self-optimization.
+* **Focus:** LEA self-audit and automated succession drills.
+
+## 3. CORE PRINCIPLES
+1. **Integrity First:** No code enters the system without LEA's audit.
+2. **Human Supremacy:** Intuition guides algorithmic certainty.
+3. **Resonance:** All modules must align with the 3-6-9 frequency.
 
 ---
-*Commitment:* MOC-G3C
+*Last Updated: 2026-01-29*
