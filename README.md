@@ -1,10 +1,20 @@
-## ⚖️ Governance Architecture
+# L'AXE HYBRIDE - MOC-G3C Sovereign System
+> **Phase:** Q1 2026 - Structural Consolidation Complete.
+> **Core Axiom:** Structure > Virtue.
 
-The Hybrid Axis operates under a strict anti-dependency governance model defined in the **Lambda Protocol**. This ensures that human oversight remains the semantic firewall for all autonomous agent operations.
+## 🌌 System Architecture (The 0-4 Layers)
+* **[00] ADMIN:** Governance, Roadmap, and Succession Protocols.
+* **[01] SOFTWARE:** The Silicon Cortex. Features the **Omega Orchestrator** and **Janus Gateway**.
+* **[02] HUMAIN:** The Biological Anchor. Intuition logs and the Nocturne Manifesto.
+* **[03] HARDWARE:** Physical feedback loops and wood structure integrity monitoring.
+* **[04] PHYSICS:** Tesla vibrational logic and digital gravity engines.
 
-### Key Documents
-* **📜 [Lambda Protocol v1.1](02_HUMAIN/Gouvernance/Lambda_Protocol_v1.1.md)** : The core constitution defining agent interactions, audit rights, and the "Janus" stress-testing methodology.
-* **👤 Human Arbiter**: Marc-Olivier Chiasson (MOC-G3C)
-* **🤖 System Status**: `ACTIVE` - Monitoring enabled.
+## 🧠 Active Intelligence (Protocol Omega)
+The system utilizes a multi-agent consensus bridge (Gemini, Claude, Grok, GPT-4) with automated sycophancy detection.
 
-> *"Trust is not a state, it is a continuous process of verification."* — Lambda Protocol §0
+## ⚡ Tesla Sync Logic
+All entropic injections and system cycles are calibrated on the **3-6-9** frequency matrix:
+$$\nu_{sync} = \frac{3 \cdot 6 \cdot 9}{\Delta t_{bio}}$$
+
+---
+*Status: OPTIMIZED | Arbiter: MOC-G3C*
