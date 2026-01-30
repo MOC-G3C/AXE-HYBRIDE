@@ -15,8 +15,7 @@ BOLD = '\033[1m'
 
 class JanusGateway:
     def __init__(self):
-        # RELATIVE PATHING: We are inside "01_SOFTWARE/Janus_Gateway"
-        # Going up one level (..) takes us to "01_SOFTWARE"
+        # RELATIVE PATHING
         self.software_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
         self.physics_root = os.path.abspath(os.path.join(self.software_root, '..', '04_PHYSICS'))
 
@@ -26,32 +25,19 @@ class JanusGateway:
     def draw_banner(self):
         print(f"{BOLD}{CYAN}")
         print("╔══════════════════════════════════════════════════════════╗")
-        print("║        ⛩️  JANUS GATEWAY V2.0 // HYBRID NEXUS            ║")
+        print("║      ⛩️  JANUS GATEWAY V2.1 // LEA INTEGRATION           ║")
         print("╚══════════════════════════════════════════════════════════╝")
         print(f"{RESET}")
 
     def find_script(self, base_path, folder_hints, script_name):
-        """
-        Robust search for a script even if folder names change slightly
-        (e.g., 'Project-Lambda' vs 'Project_Lambda')
-        """
         for folder in folder_hints:
-            # Try exact match first
             full_path = os.path.join(base_path, folder, script_name)
-            if os.path.exists(full_path):
-                return full_path
+            if os.path.exists(full_path): return full_path
             
-            # Try underscore/hyphen swap
-            alt_folder = folder.replace("-", "_")
-            full_path = os.path.join(base_path, alt_folder, script_name)
-            if os.path.exists(full_path):
-                return full_path
-                
-            alt_folder_2 = folder.replace("_", "-")
-            full_path = os.path.join(base_path, alt_folder_2, script_name)
-            if os.path.exists(full_path):
-                return full_path
-                
+            # Try variations (- vs _)
+            alt = folder.replace("-", "_")
+            if os.path.exists(os.path.join(base_path, alt, script_name)):
+                return os.path.join(base_path, alt, script_name)
         return None
 
     def launch_terminal(self, script_path):
@@ -70,61 +56,60 @@ class JanusGateway:
             print("  [1] 🟢 ACTIVATE LIFE (Heart + Brain + Zoo)")
             print("  [2] 👁️  CHECK VITALITY (Lambda Sentinel)")
             
-            print(f"\n{BOLD}--- GOVERNANCE LAYER ---{RESET}")
-            print(f"  [3] ⚖️  {PURPLE}CONSULT ORACLE (Kybernetes Law){RESET}")
+            print(f"\n{BOLD}--- COGNITIVE LAYER (NEW) ---{RESET}")
+            print(f"  [3] 🧠 {PURPLE}CONNECT TO L.E.A. (Logical Emotive Agent){RESET}")
+            print(f"  [4] ⚖️  CONSULT ORACLE (Kybernetes Law)")
             
             print(f"\n{BOLD}--- PHYSICAL LAYER ---{RESET}")
-            print(f"  [4] 🌌 {BLUE}LAUNCH GRAVITY ENGINE (Physics v1){RESET}")
+            print(f"  [5] 🌌 {BLUE}LAUNCH GRAVITY ENGINE (Physics v1){RESET}")
             
             print(f"\n{BOLD}--- SYSTEM ---{RESET}")
-            print("  [5] 💀 KILL SWITCH (Stop All)")
-            print("  [6] 🚪 EXIT GATEWAY")
+            print("  [6] 💀 KILL SWITCH (Stop All)")
+            print("  [7] 🚪 EXIT GATEWAY")
             print("\n" + "-"*60)
             
             choice = input(f"{YELLOW}>> AWAITING COMMAND: {RESET}")
 
             if choice == '1':
-                # HEART
                 heart = self.find_script(self.software_root, ["Kinetic-RNG"], "kinetic_pulse.py")
                 self.launch_terminal(heart)
                 time.sleep(1)
-                # ZOO
                 zoo = self.find_script(self.software_root, ["Entropic-Zoo-Protocol"], "evolution_engine.py")
                 self.launch_terminal(zoo)
                 input(f"\n{CYAN}[PRESS ENTER]{RESET}")
 
             elif choice == '2':
-                sentinel = self.find_script(self.software_root, ["Project_Lambda", "Project-Lambda"], "decay_sentinel.py")
-                if sentinel:
-                    os.system(f"python3 \"{sentinel}\"")
-                else:
-                    print(f"{RED}Sentinel not found.{RESET}")
+                sentinel = self.find_script(self.software_root, ["Project_Lambda"], "decay_sentinel.py")
+                if sentinel: os.system(f"python3 \"{sentinel}\"")
                 input(f"\n{CYAN}[PRESS ENTER]{RESET}")
 
             elif choice == '3':
-                oracle = self.find_script(self.software_root, ["Kybernetes-Governance"], "oracle_law.py")
-                if oracle:
-                    os.system(f"python3 \"{oracle}\"")
+                # LAUNCH LEA BRAIN DIRECTLY IN WINDOW
+                lea = self.find_script(self.software_root, ["LEA_CORE"], "lea_brain.py")
+                if lea:
+                    os.system(f"python3 \"{lea}\"")
                 else:
-                    print(f"{RED}Oracle not found.{RESET}")
-                input(f"\n{PURPLE}[PRESS ENTER]{RESET}")
+                    print(f"{RED}LEA CORE NOT DETECTED.{RESET}")
+                    time.sleep(2)
 
             elif choice == '4':
-                # PHYSICS is in 04_PHYSICS, which is a sibling of 01_SOFTWARE
+                oracle = self.find_script(self.software_root, ["Kybernetes-Governance"], "oracle_law.py")
+                if oracle: os.system(f"python3 \"{oracle}\"")
+                input(f"\n{PURPLE}[PRESS ENTER]{RESET}")
+
+            elif choice == '5':
                 gravity = os.path.join(self.physics_root, "digital_gravity.py")
                 self.launch_terminal(gravity)
                 input(f"\n{BLUE}[PRESS ENTER]{RESET}")
 
-            elif choice == '5':
+            elif choice == '6':
                 print(f"\n{RED}>> SHUTTING DOWN NEURAL LINKS...{RESET}")
                 os.system("pkill -f kinetic_pulse.py")
                 os.system("pkill -f evolution_engine.py")
                 os.system("pkill -f digital_gravity.py")
-                print(f"{RED}>> SILENCE RESTORED.{RESET}")
                 time.sleep(1)
 
-            elif choice == '6':
-                print(">> DISCONNECTING.")
+            elif choice == '7':
                 break
 
 if __name__ == "__main__":
