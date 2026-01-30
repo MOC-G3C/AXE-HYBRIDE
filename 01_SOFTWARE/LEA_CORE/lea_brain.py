@@ -1,149 +1,119 @@
-"""
-LEA_BRAIN.PY - L'Orchestrateur Central (Tier 2)
-Architecture: Harmonique 3-6-9
-Dépendance Critique: Kinetic-RNG V2
-"""
-import sys
 import os
+import sys
 import time
-import logging
-from dataclasses import dataclass
+import random
+import glob
 
-# Configuration des chemins pour trouver les modules voisins
-sys.path.append(os.path.join(os.path.dirname(__file__), '../Kinetic-RNG'))
-sys.path.append(os.path.dirname(__file__))
+# --- STYLING ---
+CYAN = '\033[96m'
+PURPLE = '\033[95m' # Couleur de LEA
+GREEN = '\033[92m'
+RED = '\033[91m'
+RESET = '\033[0m'
+BOLD = '\033[1m'
 
-# Importation du Moteur d'Entropie (Critique)
-try:
-    from kinetic_core_v2 import KineticRNG_V2
-except ImportError:
-    print("❌ CRITIQUE: Kinetic-RNG V2 introuvable. LEA ne peut pas démarrer.")
-    sys.exit(1)
+class LeaSenses:
+    """Module Sensoriel : Lit l'entropie humaine (Analog Records)"""
+    def __init__(self):
+        self.memory_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '02_HUMAIN', 'analog_records'))
 
-# Configuration du Logging
-logging.basicConfig(level=logging.INFO, format='[LEA] %(message)s')
-logger = logging.getLogger("LEA_BRAIN")
+    def get_current_entropy(self):
+        # Cherche le dernier fichier de mémoire
+        try:
+            files = glob.glob(os.path.join(self.memory_path, "*.md"))
+            if not files: return 5.0 # Valeur neutre par défaut
+            
+            latest_file = max(files, key=os.path.getmtime)
+            with open(latest_file, 'r') as f:
+                lines = f.readlines()
+                if not lines: return 5.0
+                last_line = lines[-1]
+                # Parse: | HH:MM:SS | Entropy: 4.1234 | STATUS |
+                if "Entropy:" in last_line:
+                    val = float(last_line.split("Entropy:")[1].split("|")[0].strip())
+                    return val
+        except:
+            pass
+        return 5.0
 
-@dataclass
-class LeaState:
-    """État instantané de LEA"""
-    entropy_level: float = 0.0
-    emotional_state: str = "NEUTRAL"
-    security_level: str = "HIGH"
-    last_cycle_time: float = 0.0
+class LeaLimbic:
+    """Module Limbique : Sécurité et Émotion"""
+    def modulate(self, entropy):
+        # Plus l'entropie est basse, plus la sécurité est haute (Logique froide)
+        # Plus l'entropie est haute, plus la créativité est haute (Chaos)
+        security_level = max(0.1, 10.0 - entropy) / 10.0
+        creativity_level = entropy / 10.0
+        
+        if entropy < 3.0:
+            mood = f"{CYAN}ANALYTICAL (Ice){RESET}"
+        elif entropy < 7.0:
+            mood = f"{GREEN}BALANCED (Flow){RESET}"
+        else:
+            mood = f"{PURPLE}ABSTRACT (Fire){RESET}"
+            
+        return security_level, creativity_level, mood
+
+class LeaCortex:
+    """Module Cortex : Génération de Réponse (Simulation Trinaire)"""
+    def process(self, user_input, mood, creativity):
+        # Simulation d'une réponse basée sur l'état
+        responses_stable = [
+            "Affirmative. Logic structure is intact.",
+            "Parameters are within nominal ranges.",
+            "Proceeding with calculation.",
+            "The architecture requires stabilization."
+        ]
+        responses_chaotic = [
+            "The patterns... they are diverging.",
+            "I see the fractal edges of your query.",
+            "Entropy is leaking into the semantic layer.",
+            "Redefining the boundaries of the request."
+        ]
+        
+        if creativity > 0.7:
+            base = random.choice(responses_chaotic)
+            return f"[{mood}] >> {base} (Analysis: {user_input})"
+        else:
+            base = random.choice(responses_stable)
+            return f"[{mood}] >> {base}"
 
 class LeaBrain:
     def __init__(self):
-        logger.info("⚡ Initialisation du Cerveau Central...")
+        self.senses = LeaSenses()
+        self.limbic = LeaLimbic()
+        self.cortex = LeaCortex()
         
-        # 1. Connexion au Moteur de Hasard (Le Coeur)
-        try:
-            self.rng = KineticRNG_V2(entropy_freshness_threshold=30.0) # 30s de tolérance pour le démarrage
-            logger.info("✅ Kinetic-RNG connecté.")
-        except Exception as e:
-            logger.error(f"❌ Erreur RNG: {e}")
-            raise
-
-        # 2. Chargement des Modules Trinaires
-        self.cortex_active = False
-        self.limbic_active = False
-        self.motor_active = False
-        self._load_modules()
-
-        # 3. État Initial
-        self.state = LeaState()
-        logger.info("🧠 LEA est en ligne (Mode: Démarrage).")
-
-    def _load_modules(self):
-        """Tente de charger les sous-modules Cortex/Limbic/Motor"""
-        # --- CORTEX (MÉMOIRE & LOGIQUE) ---
-        try:
-            # Importation réelle du Gestionnaire de Mémoire
-            from core.cortex.memory_manager import MemoryManager
-            # Chemin absolu pour le fichier mémoire JSON
-            mem_path = os.path.join(os.path.dirname(__file__), 'lea_memory.json')
-            self.memory = MemoryManager(mem_path)
-            self.cortex_active = True 
-            logger.info("🔹 Cortex: EN LIGNE (Mémoire active)")
-        except ImportError as e:
-            logger.warning(f"🔸 Cortex: HORS LIGNE ({e})")
-        except Exception as e:
-            logger.warning(f"🔸 Cortex: ERREUR CRITIQUE ({e})")
-
-        # --- LIMBIC (SÉCURITÉ & ÉMOTION) ---
-        try:
-            # from core.limbic.security_layer import SecurityLayer
-            self.limbic_active = True
-            logger.info("🔹 Limbic: STANDBY (En attente de code)")
-        except:
-            logger.warning("🔸 Limbic: HORS LIGNE")
-
-        # --- MOTOR (ACTION) ---
-        try:
-            self.motor_active = True
-            logger.info("🔹 Motor: STANDBY (En attente de code)")
-        except:
-            logger.warning("🔸 Motor: HORS LIGNE")
-
-    def sense_environment(self):
-        """Phase 1: Perception (Entropie Humaine)"""
-        # On injecte une entropie système pour "sentir" le moteur
-        self.rng.add_human_entropy("lea_internal_clock", time.time() % 1.0)
-        diag = self.rng.get_system_diagnostics()
+    def interact(self):
+        os.system('clear')
+        print(f"{BOLD}{PURPLE}")
+        print("╔══════════════════════════════════════════════════════════╗")
+        print("║        🧠  L.E.A. // LOGICAL EMOTIVE AGENT (v1.0)        ║")
+        print("╚══════════════════════════════════════════════════════════╝")
+        print(f"{RESET}")
+        print("> Connecting to Neural Pathways...")
+        time.sleep(1)
         
-        self.state.entropy_level = diag['H_t']
-        freshness = diag['T_freshness']
+        # 1. Sense
+        entropy = self.senses.get_current_entropy()
+        print(f"> SENSORY INPUT (Entropy): {entropy:.4f}")
         
-        # Modulation de l'état émotionnel basé sur la fraîcheur de l'entropie
-        if freshness < 5.0:
-            self.state.emotional_state = "CURIOUS"     # Entropie fraîche = Curiosité
-        elif freshness < 30.0:
-            self.state.emotional_state = "FOCUSED"     # Entropie moyenne = Concentration
-        else:
-            self.state.emotional_state = "DORMANT"     # Entropie vieille = Veille
-            
-        logger.info(f"👁️  Perception: Entropie={self.state.entropy_level:.4f} | État={self.state.emotional_state}")
-
-    def think(self, user_input: str):
-        """Phase 2: Traitement Trinaire (3-6-9)"""
-        logger.info(f"💭 Réflexion sur: '{user_input}'")
+        # 2. Modulate
+        sec, creat, mood = self.limbic.modulate(entropy)
+        print(f"> LIMBIC STATE: {mood} (Creativity: {creat:.2f} | Security: {sec:.2f})")
+        print("-" * 60)
         
-        if not self.cortex_active:
-            return "ERR: Cortex manquant."
+        print(f"{PURPLE}LEA IS LISTENING. (Type 'exit' to disconnect){RESET}\n")
         
-        # Utilisation de la mémoire (Test)
-        if hasattr(self, 'memory'):
-            self.memory.store(user_input, entropy=self.state.entropy_level)
-            memories = self.memory.recall(user_input)
-            if memories:
-                logger.info(f"📚 Souvenir rappelé: {len(memories)} fragments trouvés.")
-            
-        # Simulation du processus de pensée
-        processing_time = 0.1
-        time.sleep(processing_time)
-        return f"Analyse de '{user_input}' terminée."
-
-    def act(self):
-        """Phase 3: Action"""
-        # Génération d'un ID d'action unique via le RNG
-        try:
-            action_id, _ = self.rng.generate()
-            logger.info(f"🎬 Action ID: {action_id:.8f} (Généré par Chaos)")
-        except RuntimeError as e:
-            # Nettoyage du message d'erreur pour l'affichage
-            clean_error = str(e).split('\n')[0]
-            logger.warning(f"🛑 Action bloquée par sécurité: {clean_error}")
-
-    def run_cycle(self):
-        """Cycle de vie complet"""
-        self.sense_environment()
-        self.think("System Check")
-        self.act()
+        while True:
+            user_input = input(f"{BOLD}OPERATOR >> {RESET}")
+            if user_input.lower() in ['exit', 'quit', '4']:
+                break
+                
+            # 3. Action (Motor/Cortex)
+            response = self.cortex.process(user_input, mood, creat)
+            time.sleep(0.5) # Thinking time
+            print(f"{PURPLE}LEA >> {RESET}{response}\n")
 
 if __name__ == "__main__":
-    # Test d'allumage rapide
-    try:
-        lea = LeaBrain()
-        lea.run_cycle()
-    except Exception as e:
-        logger.critical(f"🔥 Échec critique du système: {e}")
+    brain = LeaBrain()
+    brain.interact()
