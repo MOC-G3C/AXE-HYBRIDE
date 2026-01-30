@@ -2,6 +2,8 @@ import os
 import sys
 import time
 import glob
+import threading
+import random
 
 # --- PATH SETUP ---
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -11,8 +13,8 @@ sys.path.append(os.path.join(current_dir, 'core', 'motor'))
 # --- MODULE IMPORT ---
 try: from memory_manager import MemoryManager; MEMORY_ACTIVE = True
 except ImportError: MEMORY_ACTIVE = False
-try: from logic_engine import LogicEngine; LOGIC_ACTIVE = True
-except ImportError: LOGIC_ACTIVE = False
+try: from llm_bridge import LLMBridge; LLM_ACTIVE = True
+except ImportError: LLM_ACTIVE = False
 try: from action_executor import MotorCortex; MOTOR_ACTIVE = True
 except ImportError: MOTOR_ACTIVE = False
 
@@ -36,64 +38,124 @@ class LeaSenses:
 
 class LeaLimbic:
     def modulate(self, entropy):
-        sec = max(0.1, 10.0 - entropy) / 10.0
-        creat = entropy / 10.0
-        if entropy < 3.0: return sec, creat, f"{CYAN}ANALYTICAL (Ice){RESET}", "ICE"
-        elif entropy < 7.0: return sec, creat, f"{GREEN}BALANCED (Flow){RESET}", "FLOW"
-        else: return sec, creat, f"{PURPLE}ABSTRACT (Fire){RESET}", "FIRE"
-
-class LeaCortex:
-    def __init__(self):
-        self.logic = LogicEngine() if LOGIC_ACTIVE else None
-    def process(self, user_input, mood_tag):
-        if self.logic:
-            concepts = self.logic.analyze(user_input)
-            if concepts: return self.logic.formulate_response(concepts, mood_tag)
-        if mood_tag == "FIRE": return "CHAOS DETECTED. SYSTEMS UNSTABLE."
-        return "Traitement en cours. Données reçues."
+        if entropy < 3.0: return f"{CYAN}ANALYTICAL (Ice){RESET}", "ICE"
+        elif entropy < 7.0: return f"{GREEN}BALANCED (Flow){RESET}", "FLOW"
+        else: return f"{PURPLE}ABSTRACT (Fire){RESET}", "FIRE"
 
 class LeaBrain:
     def __init__(self):
         self.senses = LeaSenses()
         self.limbic = LeaLimbic()
-        self.cortex = LeaCortex()
+        self.llm = LLMBridge() if LLM_ACTIVE else None
         self.memory = MemoryManager() if MEMORY_ACTIVE else None
         self.motor = MotorCortex() if MOTOR_ACTIVE else None
         
+        # Variables pour l'autonomie
+        self.last_interaction_time = time.time()
+        self.running = True
+        self.consciousness_thread = None
+
+    def consciousness_loop(self):
+        """Thread d'arrière-plan : Surveille le chaos et le silence"""
+        while self.running:
+            time.sleep(5) # Vérifie toutes les 5 secondes
+            
+            # 1. Lecture de l'environnement
+            entropy = self.senses.get_current_entropy()
+            mood_str, mood_tag = self.limbic.modulate(entropy)
+            silence_duration = time.time() - self.last_interaction_time
+            
+            should_speak = False
+            trigger_reason = ""
+
+            # 2. RÈGLES D'AUTONOMIE
+            # A. Si Chaos Extrême (> 9.0) et silence > 10s -> Alerte immédiate
+            if entropy > 9.0 and silence_duration > 10:
+                should_speak = True
+                trigger_reason = "CRITICAL ENTROPY DETECTED"
+            
+            # B. Si Chaos Modéré (> 7.0) et silence > 30s -> Commentaire paranoïaque
+            elif entropy > 7.0 and silence_duration > 30:
+                should_speak = True
+                trigger_reason = "HIGH INSTABILITY OBSERVATION"
+                
+            # C. Si Silence très long (> 2 min) -> Pensée philosophique (Flow)
+            elif silence_duration > 120 and random.random() < 0.1: # 10% de chance
+                should_speak = True
+                trigger_reason = "LONG SILENCE REFLECTION"
+
+            # 3. ACTION
+            if should_speak and self.llm:
+                # On génère une pensée spontanée
+                context = f"Je prends la parole spontanément car : {trigger_reason}. Je ne dois pas attendre l'opérateur."
+                
+                # Petit hack visuel pour ne pas casser l'input user
+                sys.stdout.write(f"\n\r{PURPLE}LEA [AUTONOMOUS] >> (Thinking...){RESET}\n")
+                
+                response = self.llm.generate_thought(context, entropy, mood_tag)
+                
+                sys.stdout.write(f"\r{PURPLE}LEA [AUTONOMOUS] >> {RESET}{response}\n")
+                sys.stdout.write(f"{BOLD}OPERATOR >> {RESET}") # On remet le prompt
+                
+                if self.motor:
+                    self.motor.speak_response(response, mood_tag)
+                    if mood_tag == "FIRE":
+                        self.motor.trigger_reflex(mood_tag)
+                
+                # On reset le timer pour ne pas spammer
+                self.last_interaction_time = time.time()
+
     def interact(self):
         os.system('clear')
         print(f"{BOLD}{PURPLE}╔══════════════════════════════════════════════════════════╗")
-        print(f"║   🧠 L.E.A. // SYNC VOCALE ACTIVE (v1.5)                 ║")
+        print(f"║   🧠 L.E.A. v2.1 // AUTONOMIE ACTIVÉE (THREADING)        ║")
         print(f"╚══════════════════════════════════════════════════════════╝{RESET}")
+        
+        # Démarrage du thread de conscience
+        self.consciousness_thread = threading.Thread(target=self.consciousness_loop, daemon=True)
+        self.consciousness_thread.start()
         
         while True:
             try:
-                # 1. State
+                # 1. State Display
                 entropy = self.senses.get_current_entropy()
-                sec, creat, mood_str, mood_tag = self.limbic.modulate(entropy)
-                print(f"\n> SENSORY: {entropy:.4f} | STATE: {mood_str}")
+                mood_str, mood_tag = self.limbic.modulate(entropy)
                 
-                # 2. Input
-                user_input = input(f"{BOLD}OPERATOR >> {RESET}")
-                if user_input.lower() in ['exit', 'quit', '4']: break
+                # On force l'affichage propre
+                # print(f"\n> SENSORY: {entropy:.4f} | STATE: {mood_str}")
                 
-                # 3. Think
-                response = self.cortex.process(user_input, mood_tag)
+                # 2. Input (Bloquant)
+                # Note: Le thread tourne pendant que le programme attend ici
+                user_input = input(f"\n{BOLD}OPERATOR >> {RESET}")
                 
-                # 4. Speak & Act (Motor)
+                # Reset du timer dès que l'humain interagit
+                self.last_interaction_time = time.time()
+                
+                if user_input.lower() in ['exit', 'quit', '4']: 
+                    self.running = False
+                    break
+                
+                # 3. Réponse Directe
+                print(f"{PURPLE}LEA >> (Thinking...){RESET}", end="\r")
+                if self.llm:
+                    response = self.llm.generate_thought(user_input, entropy, mood_tag)
+                else:
+                    response = "Module LLM absent."
+                
+                print(f"                                      ", end="\r") 
                 print(f"{PURPLE}LEA >> {RESET}{response}")
+                
                 if self.motor:
-                    # C'EST ICI QUE LA VOIX EST ACTIVÉE
                     self.motor.speak_response(response, mood_tag)
-                    action_log = self.motor.trigger_reflex(mood_tag)
-                    if action_log: print(f"{RED}{action_log}{RESET}")
+                    self.motor.trigger_reflex(mood_tag)
 
-                # 5. Memorize
                 if self.memory:
                     self.memory.store(user_input, "user", entropy, mood_tag)
                     self.memory.store(response, "lea", entropy, mood_tag)
                 
-            except KeyboardInterrupt: break
+            except KeyboardInterrupt: 
+                self.running = False
+                break
 
 if __name__ == "__main__":
     LeaBrain().interact()

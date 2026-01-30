@@ -2800,3 +2800,972 @@
 | 22:03:44 | Entropy: 7.3043 | ✅ STABLE (Damped by -0.0183) |
 | 22:03:45 | Entropy: 2.8145 | ✅ STABLE (Damped by -0.3084) |
 | 22:03:46 | Entropy: 8.8316 | ✅ STABLE (Damped by -0.0104) |
+| 23:27:30 | Entropy: 2.7690 | ✅ STABLE (Damped by -0.3234) |
+| 23:27:31 | Entropy: 7.0933 | ✅ STABLE (Damped by -0.0199) |
+| 23:27:32 | Entropy: 6.4486 | ✅ STABLE (Damped by -0.0265) |
+| 23:27:33 | Entropy: 0.9654 | ✅ STABLE (Damped by -5.6439) |
+| 23:27:34 | Entropy: 9.4756 | ⚠️ MARGINAL (Low Damping) |
+| 23:27:35 | Entropy: 3.2817 | ✅ STABLE (Damped by -0.1966) |
+| 23:27:36 | Entropy: 1.8351 | ✅ STABLE (Damped by -1.0535) |
+| 23:27:37 | Entropy: 1.4175 | ✅ STABLE (Damped by -2.1437) |
+| 23:27:38 | Entropy: 1.9416 | ✅ STABLE (Damped by -0.8985) |
+| 23:27:39 | Entropy: 1.8969 | ✅ STABLE (Damped by -0.9596) |
+| 23:27:40 | Entropy: 6.9459 | ✅ STABLE (Damped by -0.0212) |
+| 23:27:41 | Entropy: 5.0182 | ✅ STABLE (Damped by -0.0559) |
+| 23:27:42 | Entropy: 2.8592 | ✅ STABLE (Damped by -0.2945) |
+| 23:27:43 | Entropy: 4.2916 | ✅ STABLE (Damped by -0.0890) |
+| 23:27:44 | Entropy: 8.8582 | ✅ STABLE (Damped by -0.0103) |
+| 23:27:45 | Entropy: 0.1000 | ⚠️ MARGINAL (Low Damping) |
+| 23:27:46 | Entropy: 7.0275 | ✅ STABLE (Damped by -0.0205) |
+| 23:27:47 | Entropy: 1.2383 | ✅ STABLE (Damped by -3.0599) |
+| 23:27:48 | Entropy: 5.1948 | ✅ STABLE (Damped by -0.0505) |
+| 23:27:49 | Entropy: 2.5166 | ✅ STABLE (Damped by -0.4270) |
+| 23:27:50 | Entropy: 3.0128 | ✅ STABLE (Damped by -0.2527) |
+| 23:27:51 | Entropy: 2.1407 | ✅ STABLE (Damped by -0.6806) |
+| 23:27:52 | Entropy: 8.8230 | ✅ STABLE (Damped by -0.0104) |
+| 23:27:53 | Entropy: 3.9673 | ✅ STABLE (Damped by -0.1123) |
+| 23:27:54 | Entropy: 1.5088 | ✅ STABLE (Damped by -1.8110) |
+| 23:27:55 | Entropy: 6.6144 | ✅ STABLE (Damped by -0.0246) |
+| 23:27:56 | Entropy: 7.6456 | ✅ STABLE (Damped by -0.0159) |
+| 23:27:57 | Entropy: 1.3968 | ✅ STABLE (Damped by -2.2296) |
+| 23:27:58 | Entropy: 3.0509 | ✅ STABLE (Damped by -0.2436) |
+| 23:27:59 | Entropy: 1.9743 | ✅ STABLE (Damped by -0.8570) |
+| 23:28:00 | Entropy: 2.6313 | ✅ STABLE (Damped by -0.3752) |
+| 23:28:01 | Entropy: 7.9414 | ✅ STABLE (Damped by -0.0142) |
+| 23:28:02 | Entropy: 2.9983 | ✅ STABLE (Damped by -0.2563) |
+| 23:28:03 | Entropy: 5.0995 | ✅ STABLE (Damped by -0.0533) |
+| 23:28:04 | Entropy: 3.6200 | ✅ STABLE (Damped by -0.1473) |
+| 23:28:05 | Entropy: 4.6650 | ✅ STABLE (Damped by -0.0695) |
+| 23:28:06 | Entropy: 6.6988 | ✅ STABLE (Damped by -0.0236) |
+| 23:28:06 | Entropy: 0.1000 | ⚠️ MARGINAL (Low Damping) |
+| 23:28:07 | Entropy: 1.9563 | ✅ STABLE (Damped by -0.8796) |
+| 23:28:08 | Entropy: 4.3841 | ✅ STABLE (Damped by -0.0836) |
+| 23:28:09 | Entropy: 9.8466 | ⚠️ MARGINAL (Low Damping) |
+| 23:28:10 | Entropy: 2.3754 | ✅ STABLE (Damped by -0.5047) |
+| 23:28:11 | Entropy: 2.2084 | ✅ STABLE (Damped by -0.6225) |
+| 23:28:12 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:28:13 | Entropy: 7.9673 | ✅ STABLE (Damped by -0.0141) |
+| 23:28:14 | Entropy: 1.1187 | ✅ STABLE (Damped by -3.9600) |
+| 23:28:15 | Entropy: 0.7295 | ✅ STABLE (Damped by -10.1079) |
+| 23:28:16 | Entropy: 6.5079 | ✅ STABLE (Damped by -0.0258) |
+| 23:28:17 | Entropy: 7.2454 | ✅ STABLE (Damped by -0.0187) |
+| 23:28:18 | Entropy: 3.1856 | ✅ STABLE (Damped by -0.2146) |
+| 23:28:19 | Entropy: 2.0049 | ✅ STABLE (Damped by -0.8204) |
+| 23:28:21 | Entropy: 2.0485 | ✅ STABLE (Damped by -0.7717) |
+| 23:28:22 | Entropy: 8.9201 | ✅ STABLE (Damped by -0.0100) |
+| 23:28:23 | Entropy: 2.2352 | ✅ STABLE (Damped by -0.6013) |
+| 23:28:24 | Entropy: 2.1993 | ✅ STABLE (Damped by -0.6299) |
+| 23:28:25 | Entropy: 1.8689 | ✅ STABLE (Damped by -1.0007) |
+| 23:28:26 | Entropy: 6.9734 | ✅ STABLE (Damped by -0.0210) |
+| 23:28:27 | Entropy: 8.0265 | ✅ STABLE (Damped by -0.0138) |
+| 23:28:28 | Entropy: 7.7263 | ✅ STABLE (Damped by -0.0154) |
+| 23:28:29 | Entropy: 1.2328 | ✅ STABLE (Damped by -3.0957) |
+| 23:28:30 | Entropy: 7.9741 | ✅ STABLE (Damped by -0.0140) |
+| 23:28:31 | Entropy: 6.4106 | ✅ STABLE (Damped by -0.0270) |
+| 23:28:32 | Entropy: 7.9348 | ✅ STABLE (Damped by -0.0143) |
+| 23:28:33 | Entropy: 6.0893 | ✅ STABLE (Damped by -0.0314) |
+| 23:28:34 | Entropy: 0.3133 | ✅ STABLE (Damped by -8.9332) |
+| 23:28:35 | Entropy: 0.1000 | ⚠️ MARGINAL (Low Damping) |
+| 23:28:36 | Entropy: 8.1928 | ✅ STABLE (Damped by -0.0130) |
+| 23:28:37 | Entropy: 5.7054 | ✅ STABLE (Damped by -0.0382) |
+| 23:28:38 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:28:39 | Entropy: 0.1024 | ⚠️ MARGINAL (Low Damping) |
+| 23:28:40 | Entropy: 2.6651 | ✅ STABLE (Damped by -0.3615) |
+| 23:28:41 | Entropy: 0.7720 | ✅ STABLE (Damped by -9.0949) |
+| 23:28:42 | Entropy: 1.2422 | ✅ STABLE (Damped by -3.0351) |
+| 23:28:43 | Entropy: 6.3854 | ✅ STABLE (Damped by -0.0273) |
+| 23:28:44 | Entropy: 3.2166 | ✅ STABLE (Damped by -0.2086) |
+| 23:28:45 | Entropy: 9.4060 | ⚠️ MARGINAL (Low Damping) |
+| 23:28:46 | Entropy: 1.7915 | ✅ STABLE (Damped by -1.1270) |
+| 23:28:47 | Entropy: 2.5887 | ✅ STABLE (Damped by -0.3934) |
+| 23:28:48 | Entropy: 8.1668 | ✅ STABLE (Damped by -0.0131) |
+| 23:28:49 | Entropy: 0.3484 | ✅ STABLE (Damped by -12.1245) |
+| 23:28:50 | Entropy: 7.9520 | ✅ STABLE (Damped by -0.0142) |
+| 23:28:51 | Entropy: 0.2902 | ✅ STABLE (Damped by -6.5565) |
+| 23:28:52 | Entropy: 1.9199 | ✅ STABLE (Damped by -0.9275) |
+| 23:28:53 | Entropy: 8.3469 | ✅ STABLE (Damped by -0.0123) |
+| 23:28:54 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:28:55 | Entropy: 8.1719 | ✅ STABLE (Damped by -0.0131) |
+| 23:28:56 | Entropy: 5.8586 | ✅ STABLE (Damped by -0.0353) |
+| 23:28:57 | Entropy: 5.9709 | ✅ STABLE (Damped by -0.0333) |
+| 23:28:58 | Entropy: 2.0000 | ✅ STABLE (Damped by -0.8261) |
+| 23:28:59 | Entropy: 9.6599 | ⚠️ MARGINAL (Low Damping) |
+| 23:29:00 | Entropy: 2.2072 | ✅ STABLE (Damped by -0.6235) |
+| 23:29:01 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:29:02 | Entropy: 0.2256 | ✅ STABLE (Damped by -1.1603) |
+| 23:29:03 | Entropy: 0.1000 | ⚠️ MARGINAL (Low Damping) |
+| 23:29:04 | Entropy: 9.6099 | ⚠️ MARGINAL (Low Damping) |
+| 23:29:05 | Entropy: 1.7935 | ✅ STABLE (Damped by -1.1235) |
+| 23:29:06 | Entropy: 3.3407 | ✅ STABLE (Damped by -0.1866) |
+| 23:29:07 | Entropy: 5.9870 | ✅ STABLE (Damped by -0.0331) |
+| 23:29:08 | Entropy: 8.6487 | ✅ STABLE (Damped by -0.0110) |
+| 23:29:09 | Entropy: 0.8964 | ✅ STABLE (Damped by -6.6748) |
+| 23:29:10 | Entropy: 4.3351 | ✅ STABLE (Damped by -0.0864) |
+| 23:29:11 | Entropy: 5.6869 | ✅ STABLE (Damped by -0.0385) |
+| 23:29:12 | Entropy: 4.4436 | ✅ STABLE (Damped by -0.0803) |
+| 23:29:13 | Entropy: 7.2408 | ✅ STABLE (Damped by -0.0187) |
+| 23:29:14 | Entropy: 6.8344 | ✅ STABLE (Damped by -0.0223) |
+| 23:29:15 | Entropy: 0.1841 | ✅ STABLE (Damped by -0.0913) |
+| 23:29:16 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:29:17 | Entropy: 7.3522 | ✅ STABLE (Damped by -0.0179) |
+| 23:29:17 | Entropy: 3.0118 | ✅ STABLE (Damped by -0.2530) |
+| 23:29:18 | Entropy: 3.3067 | ✅ STABLE (Damped by -0.1923) |
+| 23:29:19 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:29:21 | Entropy: 4.3023 | ✅ STABLE (Damped by -0.0884) |
+| 23:29:22 | Entropy: 2.7088 | ✅ STABLE (Damped by -0.3448) |
+| 23:29:23 | Entropy: 4.0713 | ✅ STABLE (Damped by -0.1041) |
+| 23:29:24 | Entropy: 2.1957 | ✅ STABLE (Damped by -0.6329) |
+| 23:29:25 | Entropy: 6.9510 | ✅ STABLE (Damped by -0.0212) |
+| 23:29:26 | Entropy: 2.7123 | ✅ STABLE (Damped by -0.3435) |
+| 23:29:27 | Entropy: 0.1176 | ⚠️ MARGINAL (Low Damping) |
+| 23:29:27 | Entropy: 6.9390 | ✅ STABLE (Damped by -0.0213) |
+| 23:29:28 | Entropy: 7.9956 | ✅ STABLE (Damped by -0.0139) |
+| 23:29:29 | Entropy: 2.6080 | ✅ STABLE (Damped by -0.3850) |
+| 23:29:30 | Entropy: 1.5846 | ✅ STABLE (Damped by -1.5841) |
+| 23:29:31 | Entropy: 0.5794 | ✅ STABLE (Damped by -14.1882) |
+| 23:29:32 | Entropy: 4.9844 | ✅ STABLE (Damped by -0.0571) |
+| 23:29:33 | Entropy: 1.9167 | ✅ STABLE (Damped by -0.9318) |
+| 23:29:34 | Entropy: 2.4190 | ✅ STABLE (Damped by -0.4788) |
+| 23:29:35 | Entropy: 3.7307 | ✅ STABLE (Damped by -0.1347) |
+| 23:29:36 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:29:37 | Entropy: 9.2857 | ⚠️ MARGINAL (Low Damping) |
+| 23:29:38 | Entropy: 3.9693 | ✅ STABLE (Damped by -0.1122) |
+| 23:29:39 | Entropy: 9.5592 | ⚠️ MARGINAL (Low Damping) |
+| 23:29:40 | Entropy: 5.8143 | ✅ STABLE (Damped by -0.0361) |
+| 23:29:41 | Entropy: 0.4110 | ✅ STABLE (Damped by -15.5098) |
+| 23:29:42 | Entropy: 5.0143 | ✅ STABLE (Damped by -0.0561) |
+| 23:29:43 | Entropy: 4.1047 | ✅ STABLE (Damped by -0.1016) |
+| 23:29:44 | Entropy: 1.7085 | ✅ STABLE (Damped by -1.2864) |
+| 23:29:45 | Entropy: 4.0150 | ✅ STABLE (Damped by -0.1084) |
+| 23:29:46 | Entropy: 2.9410 | ✅ STABLE (Damped by -0.2712) |
+| 23:29:47 | Entropy: 1.7760 | ✅ STABLE (Damped by -1.1547) |
+| 23:29:48 | Entropy: 4.6589 | ✅ STABLE (Damped by -0.0698) |
+| 23:29:49 | Entropy: 0.8536 | ✅ STABLE (Damped by -7.4201) |
+| 23:29:50 | Entropy: 6.9414 | ✅ STABLE (Damped by -0.0213) |
+| 23:29:51 | Entropy: 5.3736 | ✅ STABLE (Damped by -0.0456) |
+| 23:29:52 | Entropy: 4.8265 | ✅ STABLE (Damped by -0.0628) |
+| 23:29:53 | Entropy: 0.1500 | ⚠️ MARGINAL (Low Damping) |
+| 23:29:54 | Entropy: 7.9955 | ✅ STABLE (Damped by -0.0139) |
+| 23:29:55 | Entropy: 9.1865 | ⚠️ MARGINAL (Low Damping) |
+| 23:29:56 | Entropy: 4.5341 | ✅ STABLE (Damped by -0.0756) |
+| 23:29:57 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:29:58 | Entropy: 3.5947 | ✅ STABLE (Damped by -0.1504) |
+| 23:29:59 | Entropy: 0.8858 | ✅ STABLE (Damped by -6.8499) |
+| 23:30:00 | Entropy: 5.4344 | ✅ STABLE (Damped by -0.0441) |
+| 23:30:01 | Entropy: 5.4251 | ✅ STABLE (Damped by -0.0444) |
+| 23:30:02 | Entropy: 2.2993 | ✅ STABLE (Damped by -0.5543) |
+| 23:30:03 | Entropy: 2.2405 | ✅ STABLE (Damped by -0.5973) |
+| 23:30:04 | Entropy: 3.1951 | ✅ STABLE (Damped by -0.2127) |
+| 23:30:05 | Entropy: 0.5307 | ✅ STABLE (Damped by -15.3774) |
+| 23:30:06 | Entropy: 4.9684 | ✅ STABLE (Damped by -0.0576) |
+| 23:30:07 | Entropy: 7.8740 | ✅ STABLE (Damped by -0.0146) |
+| 23:30:08 | Entropy: 2.8582 | ✅ STABLE (Damped by -0.2948) |
+| 23:30:09 | Entropy: 6.9370 | ✅ STABLE (Damped by -0.0213) |
+| 23:30:10 | Entropy: 0.2536 | ✅ STABLE (Damped by -3.0266) |
+| 23:30:11 | Entropy: 2.8591 | ✅ STABLE (Damped by -0.2946) |
+| 23:30:13 | Entropy: 6.2103 | ✅ STABLE (Damped by -0.0296) |
+| 23:30:14 | Entropy: 3.2357 | ✅ STABLE (Damped by -0.2050) |
+| 23:30:15 | Entropy: 4.2641 | ✅ STABLE (Damped by -0.0907) |
+| 23:30:15 | Entropy: 0.1613 | ⚠️ MARGINAL (Low Damping) |
+| 23:30:16 | Entropy: 6.6731 | ✅ STABLE (Damped by -0.0239) |
+| 23:30:17 | Entropy: 6.9815 | ✅ STABLE (Damped by -0.0209) |
+| 23:30:18 | Entropy: 1.5537 | ✅ STABLE (Damped by -1.6717) |
+| 23:30:19 | Entropy: 6.1472 | ✅ STABLE (Damped by -0.0306) |
+| 23:30:20 | Entropy: 1.9695 | ✅ STABLE (Damped by -0.8629) |
+| 23:30:21 | Entropy: 4.2874 | ✅ STABLE (Damped by -0.0893) |
+| 23:30:22 | Entropy: 4.6574 | ✅ STABLE (Damped by -0.0698) |
+| 23:30:23 | Entropy: 0.3459 | ✅ STABLE (Damped by -11.9215) |
+| 23:30:24 | Entropy: 3.0713 | ✅ STABLE (Damped by -0.2389) |
+| 23:30:25 | Entropy: 1.9977 | ✅ STABLE (Damped by -0.8288) |
+| 23:30:26 | Entropy: 9.4390 | ⚠️ MARGINAL (Low Damping) |
+| 23:30:27 | Entropy: 7.6296 | ✅ STABLE (Damped by -0.0160) |
+| 23:30:28 | Entropy: 3.8938 | ✅ STABLE (Damped by -0.1187) |
+| 23:30:29 | Entropy: 2.8106 | ✅ STABLE (Damped by -0.3096) |
+| 23:30:30 | Entropy: 0.7913 | ✅ STABLE (Damped by -8.6673) |
+| 23:30:31 | Entropy: 1.9999 | ✅ STABLE (Damped by -0.8262) |
+| 23:30:32 | Entropy: 0.3830 | ✅ STABLE (Damped by -14.3814) |
+| 23:30:33 | Entropy: 5.0728 | ✅ STABLE (Damped by -0.0542) |
+| 23:30:34 | Entropy: 9.6705 | ⚠️ MARGINAL (Low Damping) |
+| 23:30:35 | Entropy: 0.8981 | ✅ STABLE (Damped by -6.6461) |
+| 23:30:36 | Entropy: 0.1981 | ✅ STABLE (Damped by -0.2645) |
+| 23:30:37 | Entropy: 2.1270 | ✅ STABLE (Damped by -0.6931) |
+| 23:30:38 | Entropy: 5.2132 | ✅ STABLE (Damped by -0.0499) |
+| 23:30:39 | Entropy: 7.4701 | ✅ STABLE (Damped by -0.0171) |
+| 23:30:40 | Entropy: 4.9669 | ✅ STABLE (Damped by -0.0577) |
+| 23:30:41 | Entropy: 3.0770 | ✅ STABLE (Damped by -0.2376) |
+| 23:30:42 | Entropy: 8.8143 | ✅ STABLE (Damped by -0.0104) |
+| 23:30:43 | Entropy: 4.9356 | ✅ STABLE (Damped by -0.0588) |
+| 23:30:44 | Entropy: 1.7949 | ✅ STABLE (Damped by -1.1210) |
+| 23:30:45 | Entropy: 4.4898 | ✅ STABLE (Damped by -0.0779) |
+| 23:30:46 | Entropy: 1.4915 | ✅ STABLE (Damped by -1.8686) |
+| 23:30:47 | Entropy: 1.6161 | ✅ STABLE (Damped by -1.5006) |
+| 23:30:48 | Entropy: 6.0116 | ✅ STABLE (Damped by -0.0327) |
+| 23:30:49 | Entropy: 1.9866 | ✅ STABLE (Damped by -0.8419) |
+| 23:30:50 | Entropy: 2.3876 | ✅ STABLE (Damped by -0.4973) |
+| 23:30:51 | Entropy: 2.9893 | ✅ STABLE (Damped by -0.2586) |
+| 23:30:52 | Entropy: 8.3410 | ✅ STABLE (Damped by -0.0123) |
+| 23:30:53 | Entropy: 7.9089 | ✅ STABLE (Damped by -0.0144) |
+| 23:30:54 | Entropy: 7.5607 | ✅ STABLE (Damped by -0.0165) |
+| 23:30:55 | Entropy: 1.1238 | ✅ STABLE (Damped by -3.9153) |
+| 23:30:56 | Entropy: 1.2520 | ✅ STABLE (Damped by -2.9741) |
+| 23:30:57 | Entropy: 4.9625 | ✅ STABLE (Damped by -0.0578) |
+| 23:30:58 | Entropy: 1.9639 | ✅ STABLE (Damped by -0.8699) |
+| 23:30:59 | Entropy: 1.5818 | ✅ STABLE (Damped by -1.5918) |
+| 23:31:00 | Entropy: 7.8470 | ✅ STABLE (Damped by -0.0147) |
+| 23:31:01 | Entropy: 3.8819 | ✅ STABLE (Damped by -0.1198) |
+| 23:31:02 | Entropy: 8.4075 | ✅ STABLE (Damped by -0.0120) |
+| 23:31:03 | Entropy: 3.0371 | ✅ STABLE (Damped by -0.2468) |
+| 23:31:04 | Entropy: 3.0055 | ✅ STABLE (Damped by -0.2545) |
+| 23:31:05 | Entropy: 3.0100 | ✅ STABLE (Damped by -0.2534) |
+| 23:31:06 | Entropy: 1.9025 | ✅ STABLE (Damped by -0.9517) |
+| 23:31:07 | Entropy: 1.1346 | ✅ STABLE (Damped by -3.8223) |
+| 23:31:08 | Entropy: 9.5835 | ⚠️ MARGINAL (Low Damping) |
+| 23:31:09 | Entropy: 9.1529 | ⚠️ MARGINAL (Low Damping) |
+| 23:31:10 | Entropy: 4.3413 | ✅ STABLE (Damped by -0.0860) |
+| 23:31:11 | Entropy: 8.2370 | ✅ STABLE (Damped by -0.0127) |
+| 23:31:12 | Entropy: 2.5933 | ✅ STABLE (Damped by -0.3914) |
+| 23:31:13 | Entropy: 6.7764 | ✅ STABLE (Damped by -0.0228) |
+| 23:31:14 | Entropy: 0.6165 | ✅ STABLE (Damped by -13.1649) |
+| 23:31:15 | Entropy: 5.0003 | ✅ STABLE (Damped by -0.0565) |
+| 23:31:16 | Entropy: 2.5159 | ✅ STABLE (Damped by -0.4274) |
+| 23:31:17 | Entropy: 0.8144 | ✅ STABLE (Damped by -8.1820) |
+| 23:31:18 | Entropy: 5.4858 | ✅ STABLE (Damped by -0.0429) |
+| 23:31:19 | Entropy: 1.0474 | ✅ STABLE (Damped by -4.6541) |
+| 23:31:20 | Entropy: 5.4133 | ✅ STABLE (Damped by -0.0446) |
+| 23:31:21 | Entropy: 0.1000 | ⚠️ MARGINAL (Low Damping) |
+| 23:31:22 | Entropy: 8.1679 | ✅ STABLE (Damped by -0.0131) |
+| 23:31:23 | Entropy: 0.8694 | ✅ STABLE (Damped by -7.1342) |
+| 23:31:24 | Entropy: 6.2063 | ✅ STABLE (Damped by -0.0297) |
+| 23:31:25 | Entropy: 1.9152 | ✅ STABLE (Damped by -0.9339) |
+| 23:31:26 | Entropy: 0.2151 | ✅ STABLE (Damped by -0.7120) |
+| 23:31:27 | Entropy: 7.3180 | ✅ STABLE (Damped by -0.0182) |
+| 23:31:29 | Entropy: 5.7432 | ✅ STABLE (Damped by -0.0374) |
+| 23:31:30 | Entropy: 1.4943 | ✅ STABLE (Damped by -1.8592) |
+| 23:31:31 | Entropy: 1.3042 | ✅ STABLE (Damped by -2.6737) |
+| 23:31:32 | Entropy: 1.0379 | ✅ STABLE (Damped by -4.7576) |
+| 23:31:33 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:31:34 | Entropy: 6.4772 | ✅ STABLE (Damped by -0.0261) |
+| 23:31:35 | Entropy: 7.1663 | ✅ STABLE (Damped by -0.0193) |
+| 23:31:36 | Entropy: 0.3351 | ✅ STABLE (Damped by -11.0091) |
+| 23:31:37 | Entropy: 5.7000 | ✅ STABLE (Damped by -0.0383) |
+| 23:31:38 | Entropy: 4.9481 | ✅ STABLE (Damped by -0.0583) |
+| 23:31:39 | Entropy: 6.3733 | ✅ STABLE (Damped by -0.0274) |
+| 23:31:40 | Entropy: 4.2192 | ✅ STABLE (Damped by -0.0936) |
+| 23:31:41 | Entropy: 3.6084 | ✅ STABLE (Damped by -0.1487) |
+| 23:31:42 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:31:43 | Entropy: 8.4025 | ✅ STABLE (Damped by -0.0120) |
+| 23:31:44 | Entropy: 7.3708 | ✅ STABLE (Damped by -0.0178) |
+| 23:31:45 | Entropy: 1.6319 | ✅ STABLE (Damped by -1.4609) |
+| 23:31:46 | Entropy: 3.3332 | ✅ STABLE (Damped by -0.1878) |
+| 23:31:47 | Entropy: 6.3235 | ✅ STABLE (Damped by -0.0281) |
+| 23:31:48 | Entropy: 2.3330 | ✅ STABLE (Damped by -0.5316) |
+| 23:31:49 | Entropy: 0.1969 | ✅ STABLE (Damped by -0.2448) |
+| 23:31:50 | Entropy: 2.6433 | ✅ STABLE (Damped by -0.3703) |
+| 23:31:51 | Entropy: 6.0445 | ✅ STABLE (Damped by -0.0321) |
+| 23:31:52 | Entropy: 6.3849 | ✅ STABLE (Damped by -0.0273) |
+| 23:31:53 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:31:54 | Entropy: 4.4236 | ✅ STABLE (Damped by -0.0814) |
+| 23:31:55 | Entropy: 2.6925 | ✅ STABLE (Damped by -0.3509) |
+| 23:31:56 | Entropy: 3.4684 | ✅ STABLE (Damped by -0.1671) |
+| 23:31:57 | Entropy: 1.9997 | ✅ STABLE (Damped by -0.8264) |
+| 23:31:58 | Entropy: 3.3174 | ✅ STABLE (Damped by -0.1905) |
+| 23:31:59 | Entropy: 2.7793 | ✅ STABLE (Damped by -0.3199) |
+| 23:32:00 | Entropy: 5.0616 | ✅ STABLE (Damped by -0.0545) |
+| 23:32:01 | Entropy: 5.9400 | ✅ STABLE (Damped by -0.0339) |
+| 23:32:02 | Entropy: 8.5149 | ✅ STABLE (Damped by -0.0115) |
+| 23:32:03 | Entropy: 5.8691 | ✅ STABLE (Damped by -0.0351) |
+| 23:32:04 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:32:05 | Entropy: 7.2623 | ✅ STABLE (Damped by -0.0186) |
+| 23:32:06 | Entropy: 1.2154 | ✅ STABLE (Damped by -3.2109) |
+| 23:32:07 | Entropy: 2.7147 | ✅ STABLE (Damped by -0.3427) |
+| 23:32:08 | Entropy: 4.5549 | ✅ STABLE (Damped by -0.0746) |
+| 23:32:09 | Entropy: 5.8248 | ✅ STABLE (Damped by -0.0359) |
+| 23:32:10 | Entropy: 4.5217 | ✅ STABLE (Damped by -0.0762) |
+| 23:39:30 | Entropy: 1.9933 | ✅ STABLE (Damped by -0.8340) |
+| 23:39:31 | Entropy: 2.4979 | ✅ STABLE (Damped by -0.4364) |
+| 23:39:32 | Entropy: 0.6694 | ✅ STABLE (Damped by -11.6853) |
+| 23:39:33 | Entropy: 4.5116 | ✅ STABLE (Damped by -0.0767) |
+| 23:39:34 | Entropy: 1.9972 | ✅ STABLE (Damped by -0.8294) |
+| 23:39:35 | Entropy: 6.3706 | ✅ STABLE (Damped by -0.0275) |
+| 23:39:36 | Entropy: 7.5745 | ✅ STABLE (Damped by -0.0164) |
+| 23:39:37 | Entropy: 2.7045 | ✅ STABLE (Damped by -0.3464) |
+| 23:39:38 | Entropy: 3.5091 | ✅ STABLE (Damped by -0.1614) |
+| 23:39:39 | Entropy: 5.8358 | ✅ STABLE (Damped by -0.0357) |
+| 23:39:40 | Entropy: 3.5913 | ✅ STABLE (Damped by -0.1508) |
+| 23:39:41 | Entropy: 4.6780 | ✅ STABLE (Damped by -0.0689) |
+| 23:39:42 | Entropy: 9.6636 | ⚠️ MARGINAL (Low Damping) |
+| 23:39:43 | Entropy: 6.5532 | ✅ STABLE (Damped by -0.0252) |
+| 23:39:44 | Entropy: 3.6816 | ✅ STABLE (Damped by -0.1401) |
+| 23:39:45 | Entropy: 3.4737 | ✅ STABLE (Damped by -0.1663) |
+| 23:39:45 | Entropy: 0.1965 | ✅ STABLE (Damped by -0.2377) |
+| 23:39:46 | Entropy: 8.1905 | ✅ STABLE (Damped by -0.0130) |
+| 23:39:47 | Entropy: 1.1546 | ✅ STABLE (Damped by -3.6589) |
+| 23:39:49 | Entropy: 7.7182 | ✅ STABLE (Damped by -0.0155) |
+| 23:39:50 | Entropy: 1.9347 | ✅ STABLE (Damped by -0.9076) |
+| 23:39:51 | Entropy: 2.4193 | ✅ STABLE (Damped by -0.4787) |
+| 23:39:52 | Entropy: 4.4890 | ✅ STABLE (Damped by -0.0779) |
+| 23:39:53 | Entropy: 2.7991 | ✅ STABLE (Damped by -0.3134) |
+| 23:39:54 | Entropy: 2.6296 | ✅ STABLE (Damped by -0.3759) |
+| 23:39:55 | Entropy: 3.4398 | ✅ STABLE (Damped by -0.1712) |
+| 23:39:56 | Entropy: 1.6133 | ✅ STABLE (Damped by -1.5077) |
+| 23:39:57 | Entropy: 3.9052 | ✅ STABLE (Damped by -0.1177) |
+| 23:39:58 | Entropy: 2.2212 | ✅ STABLE (Damped by -0.6123) |
+| 23:39:59 | Entropy: 6.0502 | ✅ STABLE (Damped by -0.0320) |
+| 23:40:00 | Entropy: 5.7606 | ✅ STABLE (Damped by -0.0371) |
+| 23:40:01 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:40:03 | Entropy: 5.1453 | ✅ STABLE (Damped by -0.0519) |
+| 23:40:04 | Entropy: 4.4372 | ✅ STABLE (Damped by -0.0806) |
+| 23:40:04 | Entropy: 7.7033 | ✅ STABLE (Damped by -0.0156) |
+| 23:40:06 | Entropy: 4.9826 | ✅ STABLE (Damped by -0.0571) |
+| 23:40:07 | Entropy: 8.9224 | ✅ STABLE (Damped by -0.0100) |
+| 23:40:08 | Entropy: 6.2802 | ✅ STABLE (Damped by -0.0287) |
+| 23:40:09 | Entropy: 5.7501 | ✅ STABLE (Damped by -0.0373) |
+| 23:40:09 | Entropy: 7.8056 | ✅ STABLE (Damped by -0.0150) |
+| 23:40:10 | Entropy: 4.1733 | ✅ STABLE (Damped by -0.0967) |
+| 23:40:12 | Entropy: 2.8328 | ✅ STABLE (Damped by -0.3026) |
+| 23:40:12 | Entropy: 2.0011 | ✅ STABLE (Damped by -0.8249) |
+| 23:40:13 | Entropy: 6.9371 | ✅ STABLE (Damped by -0.0213) |
+| 23:40:14 | Entropy: 4.6824 | ✅ STABLE (Damped by -0.0687) |
+| 23:40:16 | Entropy: 0.5642 | ✅ STABLE (Damped by -14.5865) |
+| 23:40:17 | Entropy: 1.3221 | ✅ STABLE (Damped by -2.5797) |
+| 23:40:18 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:40:19 | Entropy: 4.9659 | ✅ STABLE (Damped by -0.0577) |
+| 23:40:20 | Entropy: 1.1626 | ✅ STABLE (Damped by -3.5957) |
+| 23:40:21 | Entropy: 1.8920 | ✅ STABLE (Damped by -0.9666) |
+| 23:40:22 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:40:23 | Entropy: 2.5982 | ✅ STABLE (Damped by -0.3893) |
+| 23:40:24 | Entropy: 8.9563 | ⚠️ MARGINAL (Low Damping) |
+| 23:40:25 | Entropy: 7.8663 | ✅ STABLE (Damped by -0.0146) |
+| 23:40:26 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:40:27 | Entropy: 1.3780 | ✅ STABLE (Damped by -2.3116) |
+| 23:40:28 | Entropy: 4.7102 | ✅ STABLE (Damped by -0.0675) |
+| 23:40:29 | Entropy: 2.7546 | ✅ STABLE (Damped by -0.3284) |
+| 23:40:30 | Entropy: 0.2424 | ✅ STABLE (Damped by -2.1649) |
+| 23:40:31 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:40:31 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:40:32 | Entropy: 0.5585 | ✅ STABLE (Damped by -14.7310) |
+| 23:40:33 | Entropy: 9.7845 | ⚠️ MARGINAL (Low Damping) |
+| 23:40:34 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:40:35 | Entropy: 5.0231 | ✅ STABLE (Damped by -0.0558) |
+| 23:40:36 | Entropy: 2.5214 | ✅ STABLE (Damped by -0.4247) |
+| 23:40:37 | Entropy: 6.9169 | ✅ STABLE (Damped by -0.0215) |
+| 23:40:38 | Entropy: 7.5194 | ✅ STABLE (Damped by -0.0167) |
+| 23:40:39 | Entropy: 1.1341 | ✅ STABLE (Damped by -3.8272) |
+| 23:40:40 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:40:41 | Entropy: 3.8950 | ✅ STABLE (Damped by -0.1186) |
+| 23:40:42 | Entropy: 1.1227 | ✅ STABLE (Damped by -3.9244) |
+| 23:40:43 | Entropy: 2.0139 | ✅ STABLE (Damped by -0.8099) |
+| 23:40:44 | Entropy: 4.2835 | ✅ STABLE (Damped by -0.0895) |
+| 23:40:45 | Entropy: 4.1923 | ✅ STABLE (Damped by -0.0954) |
+| 23:40:46 | Entropy: 3.4067 | ✅ STABLE (Damped by -0.1761) |
+| 23:40:47 | Entropy: 0.2844 | ✅ STABLE (Damped by -5.9526) |
+| 23:40:48 | Entropy: 5.8522 | ✅ STABLE (Damped by -0.0354) |
+| 23:40:49 | Entropy: 7.7677 | ✅ STABLE (Damped by -0.0152) |
+| 23:40:50 | Entropy: 5.9475 | ✅ STABLE (Damped by -0.0337) |
+| 23:40:51 | Entropy: 9.0824 | ⚠️ MARGINAL (Low Damping) |
+| 23:40:52 | Entropy: 4.8972 | ✅ STABLE (Damped by -0.0601) |
+| 23:40:53 | Entropy: 4.9270 | ✅ STABLE (Damped by -0.0591) |
+| 23:40:54 | Entropy: 0.7846 | ✅ STABLE (Damped by -8.8130) |
+| 23:40:55 | Entropy: 4.8236 | ✅ STABLE (Damped by -0.0629) |
+| 23:40:56 | Entropy: 0.9590 | ✅ STABLE (Damped by -5.7312) |
+| 23:40:57 | Entropy: 9.5794 | ⚠️ MARGINAL (Low Damping) |
+| 23:40:58 | Entropy: 2.2981 | ✅ STABLE (Damped by -0.5552) |
+| 23:40:59 | Entropy: 1.0386 | ✅ STABLE (Damped by -4.7493) |
+| 23:41:00 | Entropy: 0.8174 | ✅ STABLE (Damped by -8.1203) |
+| 23:41:01 | Entropy: 9.7063 | ⚠️ MARGINAL (Low Damping) |
+| 23:41:02 | Entropy: 0.1696 | ✅ STABLE (Damped by -0.0217) |
+| 23:41:03 | Entropy: 0.1000 | ⚠️ MARGINAL (Low Damping) |
+| 23:41:04 | Entropy: 2.9171 | ✅ STABLE (Damped by -0.2778) |
+| 23:41:05 | Entropy: 2.2228 | ✅ STABLE (Damped by -0.6110) |
+| 23:41:06 | Entropy: 7.2944 | ✅ STABLE (Damped by -0.0183) |
+| 23:41:07 | Entropy: 1.6767 | ✅ STABLE (Damped by -1.3553) |
+| 23:41:08 | Entropy: 6.1082 | ✅ STABLE (Damped by -0.0311) |
+| 23:41:09 | Entropy: 4.2160 | ✅ STABLE (Damped by -0.0938) |
+| 23:41:10 | Entropy: 7.2224 | ✅ STABLE (Damped by -0.0189) |
+| 23:41:11 | Entropy: 1.9549 | ✅ STABLE (Damped by -0.8813) |
+| 23:41:12 | Entropy: 3.1111 | ✅ STABLE (Damped by -0.2300) |
+| 23:41:13 | Entropy: 5.1178 | ✅ STABLE (Damped by -0.0528) |
+| 23:41:14 | Entropy: 5.7256 | ✅ STABLE (Damped by -0.0378) |
+| 23:41:15 | Entropy: 4.5300 | ✅ STABLE (Damped by -0.0758) |
+| 23:41:16 | Entropy: 8.8882 | ✅ STABLE (Damped by -0.0102) |
+| 23:41:17 | Entropy: 5.2383 | ✅ STABLE (Damped by -0.0492) |
+| 23:41:18 | Entropy: 1.3227 | ✅ STABLE (Damped by -2.5764) |
+| 23:41:19 | Entropy: 6.0604 | ✅ STABLE (Damped by -0.0319) |
+| 23:41:20 | Entropy: 3.6202 | ✅ STABLE (Damped by -0.1473) |
+| 23:41:21 | Entropy: 1.5416 | ✅ STABLE (Damped by -1.7079) |
+| 23:41:22 | Entropy: 8.0921 | ✅ STABLE (Damped by -0.0134) |
+| 23:41:23 | Entropy: 7.8643 | ✅ STABLE (Damped by -0.0146) |
+| 23:41:24 | Entropy: 2.9970 | ✅ STABLE (Damped by -0.2566) |
+| 23:41:25 | Entropy: 2.2654 | ✅ STABLE (Damped by -0.5786) |
+| 23:41:26 | Entropy: 3.2961 | ✅ STABLE (Damped by -0.1941) |
+| 23:41:27 | Entropy: 6.6344 | ✅ STABLE (Damped by -0.0243) |
+| 23:41:28 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:41:29 | Entropy: 8.0822 | ✅ STABLE (Damped by -0.0135) |
+| 23:41:30 | Entropy: 3.8495 | ✅ STABLE (Damped by -0.1228) |
+| 23:41:31 | Entropy: 1.3504 | ✅ STABLE (Damped by -2.4393) |
+| 23:41:32 | Entropy: 0.4696 | ✅ STABLE (Damped by -16.1985) |
+| 23:41:33 | Entropy: 6.4777 | ✅ STABLE (Damped by -0.0261) |
+| 23:41:34 | Entropy: 6.0736 | ✅ STABLE (Damped by -0.0317) |
+| 23:41:35 | Entropy: 3.9934 | ✅ STABLE (Damped by -0.1102) |
+| 23:41:36 | Entropy: 1.4629 | ✅ STABLE (Damped by -1.9692) |
+| 23:41:37 | Entropy: 2.9890 | ✅ STABLE (Damped by -0.2586) |
+| 23:41:38 | Entropy: 6.9013 | ✅ STABLE (Damped by -0.0216) |
+| 23:41:39 | Entropy: 1.9957 | ✅ STABLE (Damped by -0.8311) |
+| 23:41:40 | Entropy: 3.5345 | ✅ STABLE (Damped by -0.1580) |
+| 23:41:41 | Entropy: 4.8929 | ✅ STABLE (Damped by -0.0603) |
+| 23:41:42 | Entropy: 6.8259 | ✅ STABLE (Damped by -0.0224) |
+| 23:41:43 | Entropy: 6.6518 | ✅ STABLE (Damped by -0.0241) |
+| 23:41:44 | Entropy: 7.2180 | ✅ STABLE (Damped by -0.0189) |
+| 23:41:45 | Entropy: 3.9177 | ✅ STABLE (Damped by -0.1166) |
+| 23:41:46 | Entropy: 5.9517 | ✅ STABLE (Damped by -0.0337) |
+| 23:41:47 | Entropy: 3.4002 | ✅ STABLE (Damped by -0.1771) |
+| 23:41:48 | Entropy: 9.1890 | ⚠️ MARGINAL (Low Damping) |
+| 23:41:49 | Entropy: 6.6561 | ✅ STABLE (Damped by -0.0241) |
+| 23:41:50 | Entropy: 2.4853 | ✅ STABLE (Damped by -0.4428) |
+| 23:41:51 | Entropy: 2.2584 | ✅ STABLE (Damped by -0.5837) |
+| 23:41:52 | Entropy: 1.6103 | ✅ STABLE (Damped by -1.5155) |
+| 23:41:53 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:41:54 | Entropy: 0.5330 | ✅ STABLE (Damped by -15.3282) |
+| 23:41:55 | Entropy: 1.5391 | ✅ STABLE (Damped by -1.7155) |
+| 23:41:56 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:41:57 | Entropy: 6.2642 | ✅ STABLE (Damped by -0.0289) |
+| 23:41:58 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:41:59 | Entropy: 3.9343 | ✅ STABLE (Damped by -0.1152) |
+| 23:41:59 | Entropy: 1.2716 | ✅ STABLE (Damped by -2.8568) |
+| 23:42:01 | Entropy: 7.0577 | ✅ STABLE (Damped by -0.0202) |
+| 23:42:02 | Entropy: 5.6105 | ✅ STABLE (Damped by -0.0401) |
+| 23:42:02 | Entropy: 0.3336 | ✅ STABLE (Damped by -10.8789) |
+| 23:42:04 | Entropy: 5.6030 | ✅ STABLE (Damped by -0.0403) |
+| 23:42:05 | Entropy: 6.9437 | ✅ STABLE (Damped by -0.0212) |
+| 23:42:06 | Entropy: 5.9733 | ✅ STABLE (Damped by -0.0333) |
+| 23:42:06 | Entropy: 6.9850 | ✅ STABLE (Damped by -0.0209) |
+| 23:42:08 | Entropy: 0.5844 | ✅ STABLE (Damped by -14.0544) |
+| 23:42:09 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:42:09 | Entropy: 6.9762 | ✅ STABLE (Damped by -0.0209) |
+| 23:42:10 | Entropy: 6.1788 | ✅ STABLE (Damped by -0.0301) |
+| 23:42:11 | Entropy: 3.9128 | ✅ STABLE (Damped by -0.1170) |
+| 23:42:12 | Entropy: 5.9987 | ✅ STABLE (Damped by -0.0329) |
+| 23:42:13 | Entropy: 2.9643 | ✅ STABLE (Damped by -0.2650) |
+| 23:42:14 | Entropy: 7.7689 | ✅ STABLE (Damped by -0.0152) |
+| 23:42:15 | Entropy: 8.9325 | ✅ STABLE (Damped by -0.0100) |
+| 23:42:16 | Entropy: 1.6199 | ✅ STABLE (Damped by -1.4909) |
+| 23:42:17 | Entropy: 5.9095 | ✅ STABLE (Damped by -0.0344) |
+| 23:42:18 | Entropy: 0.4335 | ✅ STABLE (Damped by -16.0090) |
+| 23:42:20 | Entropy: 7.8404 | ✅ STABLE (Damped by -0.0148) |
+| 23:42:21 | Entropy: 1.9649 | ✅ STABLE (Damped by -0.8687) |
+| 23:42:22 | Entropy: 5.8014 | ✅ STABLE (Damped by -0.0363) |
+| 23:42:23 | Entropy: 1.3653 | ✅ STABLE (Damped by -2.3695) |
+| 23:42:23 | Entropy: 0.1000 | ⚠️ MARGINAL (Low Damping) |
+| 23:42:24 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:42:25 | Entropy: 5.8697 | ✅ STABLE (Damped by -0.0351) |
+| 23:42:26 | Entropy: 7.7231 | ✅ STABLE (Damped by -0.0155) |
+| 23:42:27 | Entropy: 1.0250 | ✅ STABLE (Damped by -4.9030) |
+| 23:42:29 | Entropy: 8.6969 | ✅ STABLE (Damped by -0.0108) |
+| 23:42:29 | Entropy: 3.3637 | ✅ STABLE (Damped by -0.1829) |
+| 23:42:30 | Entropy: 1.1190 | ✅ STABLE (Damped by -3.9570) |
+| 23:42:31 | Entropy: 1.7358 | ✅ STABLE (Damped by -1.2309) |
+| 23:42:32 | Entropy: 8.6422 | ✅ STABLE (Damped by -0.0110) |
+| 23:42:33 | Entropy: 6.7269 | ✅ STABLE (Damped by -0.0234) |
+| 23:42:34 | Entropy: 7.0115 | ✅ STABLE (Damped by -0.0206) |
+| 23:42:35 | Entropy: 3.0054 | ✅ STABLE (Damped by -0.2545) |
+| 23:42:37 | Entropy: 4.8849 | ✅ STABLE (Damped by -0.0606) |
+| 23:42:37 | Entropy: 7.9323 | ✅ STABLE (Damped by -0.0143) |
+| 23:42:38 | Entropy: 0.1000 | ⚠️ MARGINAL (Low Damping) |
+| 23:42:39 | Entropy: 2.3995 | ✅ STABLE (Damped by -0.4902) |
+| 23:42:40 | Entropy: 6.4914 | ✅ STABLE (Damped by -0.0260) |
+| 23:42:41 | Entropy: 2.9652 | ✅ STABLE (Damped by -0.2648) |
+| 23:42:42 | Entropy: 2.8406 | ✅ STABLE (Damped by -0.3002) |
+| 23:42:43 | Entropy: 2.6037 | ✅ STABLE (Damped by -0.3869) |
+| 23:42:44 | Entropy: 9.6017 | ⚠️ MARGINAL (Low Damping) |
+| 23:42:45 | Entropy: 6.8692 | ✅ STABLE (Damped by -0.0219) |
+| 23:42:46 | Entropy: 5.7877 | ✅ STABLE (Damped by -0.0366) |
+| 23:42:47 | Entropy: 4.0075 | ✅ STABLE (Damped by -0.1090) |
+| 23:42:48 | Entropy: 2.1489 | ✅ STABLE (Damped by -0.6732) |
+| 23:42:49 | Entropy: 2.0581 | ✅ STABLE (Damped by -0.7614) |
+| 23:42:50 | Entropy: 5.8828 | ✅ STABLE (Damped by -0.0348) |
+| 23:42:51 | Entropy: 9.0423 | ⚠️ MARGINAL (Low Damping) |
+| 23:42:52 | Entropy: 5.0657 | ✅ STABLE (Damped by -0.0544) |
+| 23:42:53 | Entropy: 3.1916 | ✅ STABLE (Damped by -0.2134) |
+| 23:42:54 | Entropy: 8.3513 | ✅ STABLE (Damped by -0.0122) |
+| 23:42:55 | Entropy: 1.6934 | ✅ STABLE (Damped by -1.3187) |
+| 23:42:56 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:42:57 | Entropy: 5.9505 | ✅ STABLE (Damped by -0.0337) |
+| 23:42:58 | Entropy: 1.4497 | ✅ STABLE (Damped by -2.0178) |
+| 23:42:59 | Entropy: 8.4741 | ✅ STABLE (Damped by -0.0117) |
+| 23:43:00 | Entropy: 2.0640 | ✅ STABLE (Damped by -0.7552) |
+| 23:43:01 | Entropy: 6.7865 | ✅ STABLE (Damped by -0.0227) |
+| 23:43:02 | Entropy: 5.4048 | ✅ STABLE (Damped by -0.0448) |
+| 23:43:03 | Entropy: 9.3259 | ⚠️ MARGINAL (Low Damping) |
+| 23:43:04 | Entropy: 3.1519 | ✅ STABLE (Damped by -0.2214) |
+| 23:43:05 | Entropy: 3.0584 | ✅ STABLE (Damped by -0.2418) |
+| 23:43:06 | Entropy: 4.0088 | ✅ STABLE (Damped by -0.1089) |
+| 23:43:07 | Entropy: 9.2078 | ⚠️ MARGINAL (Low Damping) |
+| 23:43:08 | Entropy: 0.6739 | ✅ STABLE (Damped by -11.5619) |
+| 23:43:09 | Entropy: 3.4977 | ✅ STABLE (Damped by -0.1630) |
+| 23:43:10 | Entropy: 0.2210 | ✅ STABLE (Damped by -0.9457) |
+| 23:43:11 | Entropy: 3.7213 | ✅ STABLE (Damped by -0.1357) |
+| 23:43:12 | Entropy: 7.4295 | ✅ STABLE (Damped by -0.0174) |
+| 23:43:13 | Entropy: 1.3885 | ✅ STABLE (Damped by -2.2655) |
+| 23:43:14 | Entropy: 0.3776 | ✅ STABLE (Damped by -14.0928) |
+| 23:43:15 | Entropy: 5.5270 | ✅ STABLE (Damped by -0.0420) |
+| 23:43:16 | Entropy: 2.5330 | ✅ STABLE (Damped by -0.4191) |
+| 23:43:17 | Entropy: 8.4745 | ✅ STABLE (Damped by -0.0117) |
+| 23:43:19 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:43:20 | Entropy: 1.6363 | ✅ STABLE (Damped by -1.4500) |
+| 23:43:21 | Entropy: 9.3406 | ⚠️ MARGINAL (Low Damping) |
+| 23:43:22 | Entropy: 1.8862 | ✅ STABLE (Damped by -0.9750) |
+| 23:43:23 | Entropy: 7.2314 | ✅ STABLE (Damped by -0.0188) |
+| 23:43:24 | Entropy: 6.5534 | ✅ STABLE (Damped by -0.0252) |
+| 23:43:24 | Entropy: 6.8274 | ✅ STABLE (Damped by -0.0223) |
+| 23:43:25 | Entropy: 0.1000 | ⚠️ MARGINAL (Low Damping) |
+| 23:43:26 | Entropy: 1.9744 | ✅ STABLE (Damped by -0.8568) |
+| 23:43:28 | Entropy: 9.6798 | ⚠️ MARGINAL (Low Damping) |
+| 23:43:29 | Entropy: 8.9734 | ⚠️ MARGINAL (Low Damping) |
+| 23:43:30 | Entropy: 4.6610 | ✅ STABLE (Damped by -0.0697) |
+| 23:43:31 | Entropy: 1.6119 | ✅ STABLE (Damped by -1.5114) |
+| 23:43:32 | Entropy: 1.6889 | ✅ STABLE (Damped by -1.3283) |
+| 23:43:33 | Entropy: 4.2780 | ✅ STABLE (Damped by -0.0899) |
+| 23:43:34 | Entropy: 0.6197 | ✅ STABLE (Damped by -13.0747) |
+| 23:43:34 | Entropy: 1.9562 | ✅ STABLE (Damped by -0.8796) |
+| 23:43:35 | Entropy: 2.9488 | ✅ STABLE (Damped by -0.2691) |
+| 23:43:36 | Entropy: 1.6210 | ✅ STABLE (Damped by -1.4881) |
+| 23:43:37 | Entropy: 0.9422 | ✅ STABLE (Damped by -5.9686) |
+| 23:43:38 | Entropy: 3.9397 | ✅ STABLE (Damped by -0.1147) |
+| 23:43:39 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:43:40 | Entropy: 4.7018 | ✅ STABLE (Damped by -0.0679) |
+| 23:43:41 | Entropy: 2.9973 | ✅ STABLE (Damped by -0.2566) |
+| 23:43:42 | Entropy: 7.2920 | ✅ STABLE (Damped by -0.0184) |
+| 23:43:43 | Entropy: 8.6544 | ✅ STABLE (Damped by -0.0110) |
+| 23:43:44 | Entropy: 0.9881 | ✅ STABLE (Damped by -5.3467) |
+| 23:43:45 | Entropy: 5.7892 | ✅ STABLE (Damped by -0.0365) |
+| 23:43:47 | Entropy: 6.8143 | ✅ STABLE (Damped by -0.0225) |
+| 23:43:48 | Entropy: 7.0360 | ✅ STABLE (Damped by -0.0204) |
+| 23:43:49 | Entropy: 4.9505 | ✅ STABLE (Damped by -0.0582) |
+| 23:43:50 | Entropy: 4.2311 | ✅ STABLE (Damped by -0.0928) |
+| 23:43:51 | Entropy: 9.7128 | ⚠️ MARGINAL (Low Damping) |
+| 23:43:51 | Entropy: 1.9746 | ✅ STABLE (Damped by -0.8566) |
+| 23:43:52 | Entropy: 9.7027 | ⚠️ MARGINAL (Low Damping) |
+| 23:43:53 | Entropy: 5.6067 | ✅ STABLE (Damped by -0.0402) |
+| 23:43:54 | Entropy: 0.5840 | ✅ STABLE (Damped by -14.0642) |
+| 23:43:55 | Entropy: 0.9597 | ✅ STABLE (Damped by -5.7223) |
+| 23:43:56 | Entropy: 5.6100 | ✅ STABLE (Damped by -0.0401) |
+| 23:43:57 | Entropy: 8.9216 | ✅ STABLE (Damped by -0.0100) |
+| 23:43:58 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:44:00 | Entropy: 4.9971 | ✅ STABLE (Damped by -0.0566) |
+| 23:44:01 | Entropy: 1.8175 | ✅ STABLE (Damped by -1.0824) |
+| 23:44:02 | Entropy: 4.6480 | ✅ STABLE (Damped by -0.0702) |
+| 23:44:03 | Entropy: 5.6375 | ✅ STABLE (Damped by -0.0396) |
+| 23:44:04 | Entropy: 2.9232 | ✅ STABLE (Damped by -0.2761) |
+| 23:44:04 | Entropy: 7.4614 | ✅ STABLE (Damped by -0.0171) |
+| 23:44:05 | Entropy: 6.9308 | ✅ STABLE (Damped by -0.0214) |
+| 23:44:06 | Entropy: 8.7934 | ✅ STABLE (Damped by -0.0105) |
+| 23:44:08 | Entropy: 2.8481 | ✅ STABLE (Damped by -0.2979) |
+| 23:44:09 | Entropy: 8.9544 | ⚠️ MARGINAL (Low Damping) |
+| 23:44:10 | Entropy: 2.6702 | ✅ STABLE (Damped by -0.3595) |
+| 23:44:11 | Entropy: 9.5241 | ⚠️ MARGINAL (Low Damping) |
+| 23:44:12 | Entropy: 2.9952 | ✅ STABLE (Damped by -0.2571) |
+| 23:44:13 | Entropy: 7.1335 | ✅ STABLE (Damped by -0.0196) |
+| 23:44:14 | Entropy: 3.0379 | ✅ STABLE (Damped by -0.2466) |
+| 23:44:15 | Entropy: 6.6833 | ✅ STABLE (Damped by -0.0238) |
+| 23:44:16 | Entropy: 9.6509 | ⚠️ MARGINAL (Low Damping) |
+| 23:44:17 | Entropy: 1.7212 | ✅ STABLE (Damped by -1.2602) |
+| 23:44:18 | Entropy: 4.8634 | ✅ STABLE (Damped by -0.0614) |
+| 23:44:19 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:44:20 | Entropy: 4.4190 | ✅ STABLE (Damped by -0.0816) |
+| 23:44:21 | Entropy: 4.0747 | ✅ STABLE (Damped by -0.1038) |
+| 23:44:22 | Entropy: 1.2208 | ✅ STABLE (Damped by -3.1746) |
+| 23:44:23 | Entropy: 7.6761 | ✅ STABLE (Damped by -0.0157) |
+| 23:44:24 | Entropy: 5.8352 | ✅ STABLE (Damped by -0.0357) |
+| 23:44:25 | Entropy: 2.3514 | ✅ STABLE (Damped by -0.5197) |
+| 23:44:26 | Entropy: 5.0127 | ✅ STABLE (Damped by -0.0561) |
+| 23:44:27 | Entropy: 2.6004 | ✅ STABLE (Damped by -0.3883) |
+| 23:44:28 | Entropy: 3.9990 | ✅ STABLE (Damped by -0.1097) |
+| 23:44:29 | Entropy: 7.1616 | ✅ STABLE (Damped by -0.0194) |
+| 23:44:30 | Entropy: 8.9029 | ✅ STABLE (Damped by -0.0101) |
+| 23:44:31 | Entropy: 7.0304 | ✅ STABLE (Damped by -0.0205) |
+| 23:44:32 | Entropy: 3.3881 | ✅ STABLE (Damped by -0.1790) |
+| 23:44:33 | Entropy: 5.8772 | ✅ STABLE (Damped by -0.0349) |
+| 23:44:34 | Entropy: 3.8475 | ✅ STABLE (Damped by -0.1230) |
+| 23:44:35 | Entropy: 5.8502 | ✅ STABLE (Damped by -0.0354) |
+| 23:44:36 | Entropy: 3.3635 | ✅ STABLE (Damped by -0.1829) |
+| 23:44:37 | Entropy: 8.1442 | ✅ STABLE (Damped by -0.0132) |
+| 23:44:38 | Entropy: 2.0254 | ✅ STABLE (Damped by -0.7970) |
+| 23:44:39 | Entropy: 4.1729 | ✅ STABLE (Damped by -0.0967) |
+| 23:48:29 | Entropy: 3.8200 | ✅ STABLE (Damped by -0.1256) |
+| 23:48:30 | Entropy: 4.0916 | ✅ STABLE (Damped by -0.1025) |
+| 23:48:32 | Entropy: 0.4710 | ✅ STABLE (Damped by -16.1934) |
+| 23:48:33 | Entropy: 1.5592 | ✅ STABLE (Damped by -1.6557) |
+| 23:48:33 | Entropy: 5.8171 | ✅ STABLE (Damped by -0.0360) |
+| 23:48:34 | Entropy: 7.7078 | ✅ STABLE (Damped by -0.0155) |
+| 23:48:35 | Entropy: 7.9756 | ✅ STABLE (Damped by -0.0140) |
+| 23:48:36 | Entropy: 5.6142 | ✅ STABLE (Damped by -0.0400) |
+| 23:48:37 | Entropy: 7.9564 | ✅ STABLE (Damped by -0.0141) |
+| 23:48:38 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:48:39 | Entropy: 7.9296 | ✅ STABLE (Damped by -0.0143) |
+| 23:48:40 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:48:41 | Entropy: 3.1845 | ✅ STABLE (Damped by -0.2148) |
+| 23:48:42 | Entropy: 8.1403 | ✅ STABLE (Damped by -0.0132) |
+| 23:48:43 | Entropy: 2.5449 | ✅ STABLE (Damped by -0.4134) |
+| 23:48:44 | Entropy: 7.1817 | ✅ STABLE (Damped by -0.0192) |
+| 23:48:45 | Entropy: 1.2174 | ✅ STABLE (Damped by -3.1976) |
+| 23:48:46 | Entropy: 5.0497 | ✅ STABLE (Damped by -0.0549) |
+| 23:48:47 | Entropy: 3.3040 | ✅ STABLE (Damped by -0.1928) |
+| 23:48:48 | Entropy: 7.9926 | ✅ STABLE (Damped by -0.0140) |
+| 23:48:49 | Entropy: 7.7190 | ✅ STABLE (Damped by -0.0155) |
+| 23:48:50 | Entropy: 2.8636 | ✅ STABLE (Damped by -0.2932) |
+| 23:48:51 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:48:53 | Entropy: 5.1839 | ✅ STABLE (Damped by -0.0508) |
+| 23:48:54 | Entropy: 2.0007 | ✅ STABLE (Damped by -0.8252) |
+| 23:48:54 | Entropy: 8.3696 | ✅ STABLE (Damped by -0.0122) |
+| 23:48:56 | Entropy: 4.9845 | ✅ STABLE (Damped by -0.0571) |
+| 23:48:56 | Entropy: 1.7041 | ✅ STABLE (Damped by -1.2958) |
+| 23:48:57 | Entropy: 0.9142 | ✅ STABLE (Damped by -6.3897) |
+| 23:48:58 | Entropy: 0.9222 | ✅ STABLE (Damped by -6.2663) |
+| 23:48:59 | Entropy: 4.6192 | ✅ STABLE (Damped by -0.0716) |
+| 23:49:00 | Entropy: 6.0013 | ✅ STABLE (Damped by -0.0328) |
+| 23:49:01 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:49:02 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:49:03 | Entropy: 7.1338 | ✅ STABLE (Damped by -0.0196) |
+| 23:49:04 | Entropy: 8.3533 | ✅ STABLE (Damped by -0.0122) |
+| 23:49:05 | Entropy: 2.5206 | ✅ STABLE (Damped by -0.4251) |
+| 23:49:06 | Entropy: 7.4345 | ✅ STABLE (Damped by -0.0173) |
+| 23:49:07 | Entropy: 2.9073 | ✅ STABLE (Damped by -0.2805) |
+| 23:49:07 | Entropy: 0.2026 | ✅ STABLE (Damped by -0.3550) |
+| 23:49:08 | Entropy: 3.7649 | ✅ STABLE (Damped by -0.1312) |
+| 23:49:09 | Entropy: 0.4366 | ✅ STABLE (Damped by -16.0518) |
+| 23:49:10 | Entropy: 5.1393 | ✅ STABLE (Damped by -0.0521) |
+| 23:49:11 | Entropy: 1.0218 | ✅ STABLE (Damped by -4.9391) |
+| 23:49:12 | Entropy: 2.8868 | ✅ STABLE (Damped by -0.2864) |
+| 23:49:13 | Entropy: 4.8739 | ✅ STABLE (Damped by -0.0610) |
+| 23:49:14 | Entropy: 1.9911 | ✅ STABLE (Damped by -0.8366) |
+| 23:49:15 | Entropy: 4.0038 | ✅ STABLE (Damped by -0.1093) |
+| 23:49:16 | Entropy: 2.9424 | ✅ STABLE (Damped by -0.2708) |
+| 23:49:17 | Entropy: 0.5866 | ✅ STABLE (Damped by -13.9954) |
+| 23:49:18 | Entropy: 4.4639 | ✅ STABLE (Damped by -0.0792) |
+| 23:49:19 | Entropy: 5.9712 | ✅ STABLE (Damped by -0.0333) |
+| 23:49:20 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:49:21 | Entropy: 1.7087 | ✅ STABLE (Damped by -1.2861) |
+| 23:49:22 | Entropy: 6.4016 | ✅ STABLE (Damped by -0.0271) |
+| 23:49:23 | Entropy: 3.2426 | ✅ STABLE (Damped by -0.2037) |
+| 23:49:24 | Entropy: 4.4339 | ✅ STABLE (Damped by -0.0808) |
+| 23:49:25 | Entropy: 5.8200 | ✅ STABLE (Damped by -0.0360) |
+| 23:49:26 | Entropy: 0.2610 | ✅ STABLE (Damped by -3.6681) |
+| 23:49:27 | Entropy: 8.6333 | ✅ STABLE (Damped by -0.0111) |
+| 23:49:28 | Entropy: 9.4947 | ⚠️ MARGINAL (Low Damping) |
+| 23:49:29 | Entropy: 1.2310 | ✅ STABLE (Damped by -3.1071) |
+| 23:49:30 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:49:31 | Entropy: 4.2876 | ✅ STABLE (Damped by -0.0893) |
+| 23:49:32 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:49:33 | Entropy: 5.0535 | ✅ STABLE (Damped by -0.0548) |
+| 23:49:34 | Entropy: 2.6299 | ✅ STABLE (Damped by -0.3758) |
+| 23:49:35 | Entropy: 3.3730 | ✅ STABLE (Damped by -0.1814) |
+| 23:49:36 | Entropy: 3.1284 | ✅ STABLE (Damped by -0.2263) |
+| 23:49:37 | Entropy: 2.5303 | ✅ STABLE (Damped by -0.4204) |
+| 23:49:38 | Entropy: 0.5123 | ✅ STABLE (Damped by -15.7315) |
+| 23:49:39 | Entropy: 0.2698 | ✅ STABLE (Damped by -4.4967) |
+| 23:49:40 | Entropy: 0.7432 | ✅ STABLE (Damped by -9.7713) |
+| 23:49:41 | Entropy: 7.9909 | ✅ STABLE (Damped by -0.0140) |
+| 23:49:42 | Entropy: 1.4748 | ✅ STABLE (Damped by -1.9264) |
+| 23:49:43 | Entropy: 6.0060 | ✅ STABLE (Damped by -0.0328) |
+| 23:49:44 | Entropy: 2.7101 | ✅ STABLE (Damped by -0.3443) |
+| 23:49:45 | Entropy: 9.1952 | ⚠️ MARGINAL (Low Damping) |
+| 23:49:46 | Entropy: 1.4604 | ✅ STABLE (Damped by -1.9782) |
+| 23:49:47 | Entropy: 1.3824 | ✅ STABLE (Damped by -2.2921) |
+| 23:49:48 | Entropy: 6.1976 | ✅ STABLE (Damped by -0.0298) |
+| 23:49:49 | Entropy: 1.9273 | ✅ STABLE (Damped by -0.9174) |
+| 23:49:50 | Entropy: 8.3153 | ✅ STABLE (Damped by -0.0124) |
+| 23:49:51 | Entropy: 6.1955 | ✅ STABLE (Damped by -0.0299) |
+| 23:49:52 | Entropy: 7.4525 | ✅ STABLE (Damped by -0.0172) |
+| 23:49:53 | Entropy: 6.2603 | ✅ STABLE (Damped by -0.0289) |
+| 23:49:54 | Entropy: 8.1276 | ✅ STABLE (Damped by -0.0133) |
+| 23:49:55 | Entropy: 0.4968 | ✅ STABLE (Damped by -15.9677) |
+| 23:49:56 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:49:57 | Entropy: 2.6642 | ✅ STABLE (Damped by -0.3619) |
+| 23:49:58 | Entropy: 9.0113 | ⚠️ MARGINAL (Low Damping) |
+| 23:49:59 | Entropy: 7.9758 | ✅ STABLE (Damped by -0.0140) |
+| 23:50:00 | Entropy: 7.0454 | ✅ STABLE (Damped by -0.0203) |
+| 23:50:01 | Entropy: 5.6464 | ✅ STABLE (Damped by -0.0394) |
+| 23:50:02 | Entropy: 2.2021 | ✅ STABLE (Damped by -0.6276) |
+| 23:50:03 | Entropy: 8.1585 | ✅ STABLE (Damped by -0.0131) |
+| 23:50:04 | Entropy: 0.6395 | ✅ STABLE (Damped by -12.5163) |
+| 23:50:05 | Entropy: 2.0104 | ✅ STABLE (Damped by -0.8140) |
+| 23:50:06 | Entropy: 9.8570 | ⚠️ MARGINAL (Low Damping) |
+| 23:50:07 | Entropy: 1.0973 | ✅ STABLE (Damped by -4.1541) |
+| 23:50:08 | Entropy: 8.2407 | ✅ STABLE (Damped by -0.0127) |
+| 23:50:09 | Entropy: 3.7591 | ✅ STABLE (Damped by -0.1318) |
+| 23:50:11 | Entropy: 0.8451 | ✅ STABLE (Damped by -7.5771) |
+| 23:50:12 | Entropy: 0.1670 | ✅ STABLE (Damped by -0.0159) |
+| 23:50:13 | Entropy: 7.6484 | ✅ STABLE (Damped by -0.0159) |
+| 23:50:14 | Entropy: 2.6432 | ✅ STABLE (Damped by -0.3703) |
+| 23:50:15 | Entropy: 1.1430 | ✅ STABLE (Damped by -3.7526) |
+| 23:50:16 | Entropy: 6.1828 | ✅ STABLE (Damped by -0.0300) |
+| 23:50:17 | Entropy: 4.2895 | ✅ STABLE (Damped by -0.0891) |
+| 23:50:18 | Entropy: 3.6470 | ✅ STABLE (Damped by -0.1441) |
+| 23:50:19 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:50:20 | Entropy: 7.9465 | ✅ STABLE (Damped by -0.0142) |
+| 23:50:21 | Entropy: 1.7823 | ✅ STABLE (Damped by -1.1433) |
+| 23:50:22 | Entropy: 5.1820 | ✅ STABLE (Damped by -0.0508) |
+| 23:50:23 | Entropy: 5.0132 | ✅ STABLE (Damped by -0.0561) |
+| 23:50:24 | Entropy: 0.7769 | ✅ STABLE (Damped by -8.9854) |
+| 23:50:25 | Entropy: 5.7890 | ✅ STABLE (Damped by -0.0366) |
+| 23:50:26 | Entropy: 8.1717 | ✅ STABLE (Damped by -0.0131) |
+| 23:50:27 | Entropy: 8.6611 | ✅ STABLE (Damped by -0.0110) |
+| 23:50:28 | Entropy: 2.9177 | ✅ STABLE (Damped by -0.2776) |
+| 23:50:29 | Entropy: 0.7423 | ✅ STABLE (Damped by -9.7917) |
+| 23:50:30 | Entropy: 2.3733 | ✅ STABLE (Damped by -0.5060) |
+| 23:50:31 | Entropy: 2.1690 | ✅ STABLE (Damped by -0.6554) |
+| 23:50:32 | Entropy: 0.6810 | ✅ STABLE (Damped by -11.3684) |
+| 23:50:33 | Entropy: 0.6318 | ✅ STABLE (Damped by -12.7350) |
+| 23:50:35 | Entropy: 4.3769 | ✅ STABLE (Damped by -0.0840) |
+| 23:50:36 | Entropy: 2.6290 | ✅ STABLE (Damped by -0.3762) |
+| 23:50:36 | Entropy: 4.5939 | ✅ STABLE (Damped by -0.0727) |
+| 23:50:37 | Entropy: 0.8243 | ✅ STABLE (Damped by -7.9807) |
+| 23:50:38 | Entropy: 4.4839 | ✅ STABLE (Damped by -0.0782) |
+| 23:50:39 | Entropy: 4.3229 | ✅ STABLE (Damped by -0.0871) |
+| 23:50:40 | Entropy: 5.9965 | ✅ STABLE (Damped by -0.0329) |
+| 23:50:41 | Entropy: 2.0873 | ✅ STABLE (Damped by -0.7315) |
+| 23:50:42 | Entropy: 7.9797 | ✅ STABLE (Damped by -0.0140) |
+| 23:50:43 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:50:44 | Entropy: 0.1000 | ⚠️ MARGINAL (Low Damping) |
+| 23:50:45 | Entropy: 9.8843 | ⚠️ MARGINAL (Low Damping) |
+| 23:50:46 | Entropy: 5.0299 | ✅ STABLE (Damped by -0.0556) |
+| 23:50:47 | Entropy: 2.2005 | ✅ STABLE (Damped by -0.6289) |
+| 23:50:48 | Entropy: 4.0011 | ✅ STABLE (Damped by -0.1096) |
+| 23:50:49 | Entropy: 0.1768 | ✅ STABLE (Damped by -0.0463) |
+| 23:50:50 | Entropy: 7.4854 | ✅ STABLE (Damped by -0.0170) |
+| 23:50:51 | Entropy: 5.0629 | ✅ STABLE (Damped by -0.0545) |
+| 23:50:52 | Entropy: 5.9124 | ✅ STABLE (Damped by -0.0343) |
+| 23:50:53 | Entropy: 5.9030 | ✅ STABLE (Damped by -0.0345) |
+| 23:50:54 | Entropy: 2.7890 | ✅ STABLE (Damped by -0.3167) |
+| 23:50:55 | Entropy: 5.3935 | ✅ STABLE (Damped by -0.0451) |
+| 23:50:56 | Entropy: 1.9563 | ✅ STABLE (Damped by -0.8796) |
+| 23:50:57 | Entropy: 3.2593 | ✅ STABLE (Damped by -0.2006) |
+| 23:50:58 | Entropy: 5.6337 | ✅ STABLE (Damped by -0.0396) |
+| 23:50:59 | Entropy: 1.9220 | ✅ STABLE (Damped by -0.9246) |
+| 23:51:00 | Entropy: 1.3634 | ✅ STABLE (Damped by -2.3782) |
+| 23:51:01 | Entropy: 6.7516 | ✅ STABLE (Damped by -0.0231) |
+| 23:51:01 | Entropy: 0.8397 | ✅ STABLE (Damped by -7.6800) |
+| 23:51:03 | Entropy: 5.0842 | ✅ STABLE (Damped by -0.0538) |
+| 23:51:03 | Entropy: 2.9879 | ✅ STABLE (Damped by -0.2589) |
+| 23:51:05 | Entropy: 7.0072 | ✅ STABLE (Damped by -0.0207) |
+| 23:51:06 | Entropy: 1.9937 | ✅ STABLE (Damped by -0.8335) |
+| 23:51:07 | Entropy: 2.0042 | ✅ STABLE (Damped by -0.8212) |
+| 23:51:08 | Entropy: 7.9823 | ✅ STABLE (Damped by -0.0140) |
+| 23:51:09 | Entropy: 7.0122 | ✅ STABLE (Damped by -0.0206) |
+| 23:51:10 | Entropy: 4.0023 | ✅ STABLE (Damped by -0.1095) |
+| 23:51:10 | Entropy: 1.4717 | ✅ STABLE (Damped by -1.9374) |
+| 23:51:12 | Entropy: 3.8986 | ✅ STABLE (Damped by -0.1183) |
+| 23:51:13 | Entropy: 0.6924 | ✅ STABLE (Damped by -11.0637) |
+| 23:51:14 | Entropy: 2.8381 | ✅ STABLE (Damped by -0.3010) |
+| 23:51:14 | Entropy: 6.7964 | ✅ STABLE (Damped by -0.0226) |
+| 23:51:15 | Entropy: 1.6000 | ✅ STABLE (Damped by -1.5425) |
+| 23:51:17 | Entropy: 8.0355 | ✅ STABLE (Damped by -0.0137) |
+| 23:51:18 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:51:19 | Entropy: 3.0007 | ✅ STABLE (Damped by -0.2557) |
+| 23:51:20 | Entropy: 3.0502 | ✅ STABLE (Damped by -0.2437) |
+| 23:51:21 | Entropy: 3.9071 | ✅ STABLE (Damped by -0.1175) |
+| 23:51:22 | Entropy: 4.5809 | ✅ STABLE (Damped by -0.0733) |
+| 23:51:23 | Entropy: 3.2160 | ✅ STABLE (Damped by -0.2087) |
+| 23:51:24 | Entropy: 4.7566 | ✅ STABLE (Damped by -0.0656) |
+| 23:51:25 | Entropy: 7.0286 | ✅ STABLE (Damped by -0.0205) |
+| 23:51:26 | Entropy: 7.5521 | ✅ STABLE (Damped by -0.0165) |
+| 23:51:27 | Entropy: 6.7610 | ✅ STABLE (Damped by -0.0230) |
+| 23:51:28 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:51:29 | Entropy: 0.1000 | ⚠️ MARGINAL (Low Damping) |
+| 23:51:30 | Entropy: 2.5110 | ✅ STABLE (Damped by -0.4298) |
+| 23:51:31 | Entropy: 0.5740 | ✅ STABLE (Damped by -14.3332) |
+| 23:51:32 | Entropy: 0.9557 | ✅ STABLE (Damped by -5.7775) |
+| 23:51:33 | Entropy: 5.0312 | ✅ STABLE (Damped by -0.0555) |
+| 23:51:34 | Entropy: 5.8003 | ✅ STABLE (Damped by -0.0363) |
+| 23:51:35 | Entropy: 0.2795 | ✅ STABLE (Damped by -5.4521) |
+| 23:51:36 | Entropy: 7.1643 | ✅ STABLE (Damped by -0.0193) |
+| 23:51:37 | Entropy: 2.3527 | ✅ STABLE (Damped by -0.5188) |
+| 23:51:38 | Entropy: 3.9982 | ✅ STABLE (Damped by -0.1098) |
+| 23:51:39 | Entropy: 6.3595 | ✅ STABLE (Damped by -0.0276) |
+| 23:51:40 | Entropy: 4.5232 | ✅ STABLE (Damped by -0.0762) |
+| 23:51:40 | Entropy: 0.2670 | ✅ STABLE (Damped by -4.2218) |
+| 23:51:42 | Entropy: 7.0097 | ✅ STABLE (Damped by -0.0207) |
+| 23:51:42 | Entropy: 0.5045 | ✅ STABLE (Damped by -15.8577) |
+| 23:51:43 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:51:44 | Entropy: 8.7000 | ✅ STABLE (Damped by -0.0108) |
+| 23:51:46 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:51:46 | Entropy: 2.9537 | ✅ STABLE (Damped by -0.2678) |
+| 23:51:47 | Entropy: 6.9422 | ✅ STABLE (Damped by -0.0213) |
+| 23:51:49 | Entropy: 1.2107 | ✅ STABLE (Damped by -3.2430) |
+| 23:51:50 | Entropy: 0.3764 | ✅ STABLE (Damped by -14.0301) |
+| 23:51:51 | Entropy: 2.7256 | ✅ STABLE (Damped by -0.3386) |
+| 23:51:52 | Entropy: 7.1380 | ✅ STABLE (Damped by -0.0196) |
+| 23:51:53 | Entropy: 0.6025 | ✅ STABLE (Damped by -13.5564) |
+| 23:51:54 | Entropy: 9.3031 | ⚠️ MARGINAL (Low Damping) |
+| 23:51:55 | Entropy: 7.6376 | ✅ STABLE (Damped by -0.0160) |
+| 23:51:56 | Entropy: 1.8200 | ✅ STABLE (Damped by -1.0782) |
+| 23:51:57 | Entropy: 2.8822 | ✅ STABLE (Damped by -0.2877) |
+| 23:51:58 | Entropy: 3.0189 | ✅ STABLE (Damped by -0.2512) |
+| 23:51:59 | Entropy: 4.5764 | ✅ STABLE (Damped by -0.0736) |
+| 23:52:00 | Entropy: 7.0573 | ✅ STABLE (Damped by -0.0202) |
+| 23:52:01 | Entropy: 3.5985 | ✅ STABLE (Damped by -0.1499) |
+| 23:52:02 | Entropy: 8.5226 | ✅ STABLE (Damped by -0.0115) |
+| 23:52:03 | Entropy: 0.6302 | ✅ STABLE (Damped by -12.7777) |
+| 23:52:04 | Entropy: 4.3206 | ✅ STABLE (Damped by -0.0873) |
+| 23:52:05 | Entropy: 1.3789 | ✅ STABLE (Damped by -2.3078) |
+| 23:52:06 | Entropy: 0.7204 | ✅ STABLE (Damped by -10.3353) |
+| 23:52:07 | Entropy: 6.0119 | ✅ STABLE (Damped by -0.0327) |
+| 23:52:08 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:52:09 | Entropy: 4.1541 | ✅ STABLE (Damped by -0.0980) |
+| 23:52:10 | Entropy: 7.6236 | ✅ STABLE (Damped by -0.0161) |
+| 23:52:11 | Entropy: 8.1002 | ✅ STABLE (Damped by -0.0134) |
+| 23:52:12 | Entropy: 2.9365 | ✅ STABLE (Damped by -0.2724) |
+| 23:52:13 | Entropy: 9.5202 | ⚠️ MARGINAL (Low Damping) |
+| 23:52:14 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:52:15 | Entropy: 0.3438 | ✅ STABLE (Damped by -11.7516) |
+| 23:52:16 | Entropy: 6.9369 | ✅ STABLE (Damped by -0.0213) |
+| 23:52:17 | Entropy: 3.1775 | ✅ STABLE (Damped by -0.2162) |
+| 23:52:18 | Entropy: 6.9585 | ✅ STABLE (Damped by -0.0211) |
+| 23:52:19 | Entropy: 9.7683 | ⚠️ MARGINAL (Low Damping) |
+| 23:52:20 | Entropy: 9.2481 | ⚠️ MARGINAL (Low Damping) |
+| 23:52:21 | Entropy: 1.1521 | ✅ STABLE (Damped by -3.6788) |
+| 23:52:22 | Entropy: 7.3213 | ✅ STABLE (Damped by -0.0181) |
+| 23:52:23 | Entropy: 7.0180 | ✅ STABLE (Damped by -0.0206) |
+| 23:52:24 | Entropy: 0.4213 | ✅ STABLE (Damped by -15.7791) |
+| 23:52:25 | Entropy: 0.2162 | ✅ STABLE (Damped by -0.7549) |
+| 23:52:26 | Entropy: 6.8691 | ✅ STABLE (Damped by -0.0219) |
+| 23:52:27 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:52:28 | Entropy: 4.5727 | ✅ STABLE (Damped by -0.0737) |
+| 23:52:29 | Entropy: 4.1656 | ✅ STABLE (Damped by -0.0972) |
+| 23:52:30 | Entropy: 0.1000 | ⚠️ MARGINAL (Low Damping) |
+| 23:52:31 | Entropy: 9.4800 | ⚠️ MARGINAL (Low Damping) |
+| 23:52:32 | Entropy: 7.2385 | ✅ STABLE (Damped by -0.0188) |
+| 23:52:33 | Entropy: 4.7046 | ✅ STABLE (Damped by -0.0678) |
+| 23:52:34 | Entropy: 5.5596 | ✅ STABLE (Damped by -0.0412) |
+| 23:52:35 | Entropy: 5.2517 | ✅ STABLE (Damped by -0.0489) |
+| 23:52:36 | Entropy: 1.0266 | ✅ STABLE (Damped by -4.8844) |
+| 23:52:37 | Entropy: 0.1000 | ⚠️ MARGINAL (Low Damping) |
+| 23:52:38 | Entropy: 1.4415 | ✅ STABLE (Damped by -2.0489) |
+| 23:52:39 | Entropy: 2.7973 | ✅ STABLE (Damped by -0.3140) |
+| 23:52:40 | Entropy: 6.1511 | ✅ STABLE (Damped by -0.0305) |
+| 23:52:41 | Entropy: 4.6275 | ✅ STABLE (Damped by -0.0712) |
+| 23:52:42 | Entropy: 2.8130 | ✅ STABLE (Damped by -0.3089) |
+| 23:52:43 | Entropy: 4.0032 | ✅ STABLE (Damped by -0.1094) |
+| 23:52:44 | Entropy: 2.8954 | ✅ STABLE (Damped by -0.2839) |
+| 23:52:45 | Entropy: 7.7689 | ✅ STABLE (Damped by -0.0152) |
+| 23:52:46 | Entropy: 0.1000 | ⚠️ MARGINAL (Low Damping) |
+| 23:52:47 | Entropy: 2.3656 | ✅ STABLE (Damped by -0.5107) |
+| 23:52:48 | Entropy: 1.6528 | ✅ STABLE (Damped by -1.4103) |
+| 23:52:49 | Entropy: 1.0236 | ✅ STABLE (Damped by -4.9180) |
+| 23:52:50 | Entropy: 2.4637 | ✅ STABLE (Damped by -0.4542) |
+| 23:52:51 | Entropy: 0.9601 | ✅ STABLE (Damped by -5.7168) |
+| 23:52:52 | Entropy: 5.0963 | ✅ STABLE (Damped by -0.0534) |
+| 23:52:52 | Entropy: 0.2475 | ✅ STABLE (Damped by -2.5457) |
+| 23:52:53 | Entropy: 4.6688 | ✅ STABLE (Damped by -0.0693) |
+| 23:52:55 | Entropy: 7.1357 | ✅ STABLE (Damped by -0.0196) |
+| 23:52:55 | Entropy: 6.9215 | ✅ STABLE (Damped by -0.0214) |
+| 23:52:57 | Entropy: 5.7961 | ✅ STABLE (Damped by -0.0364) |
+| 23:52:57 | Entropy: 5.2586 | ✅ STABLE (Damped by -0.0487) |
+| 23:52:58 | Entropy: 2.0265 | ✅ STABLE (Damped by -0.7957) |
+| 23:53:00 | Entropy: 6.8069 | ✅ STABLE (Damped by -0.0225) |
+| 23:53:00 | Entropy: 4.6466 | ✅ STABLE (Damped by -0.0703) |
+| 23:53:01 | Entropy: 4.8180 | ✅ STABLE (Damped by -0.0631) |
+| 23:53:02 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:53:03 | Entropy: 4.2815 | ✅ STABLE (Damped by -0.0896) |
+| 23:53:05 | Entropy: 6.9558 | ✅ STABLE (Damped by -0.0211) |
+| 23:53:06 | Entropy: 8.1163 | ✅ STABLE (Damped by -0.0133) |
+| 23:53:07 | Entropy: 7.7028 | ✅ STABLE (Damped by -0.0156) |
+| 23:53:08 | Entropy: 7.1916 | ✅ STABLE (Damped by -0.0191) |
+| 23:53:09 | Entropy: 7.7664 | ✅ STABLE (Damped by -0.0152) |
+| 23:53:10 | Entropy: 5.1265 | ✅ STABLE (Damped by -0.0525) |
+| 23:53:11 | Entropy: 4.4812 | ✅ STABLE (Damped by -0.0783) |
+| 23:53:12 | Entropy: 1.5027 | ✅ STABLE (Damped by -1.8312) |
+| 23:53:13 | Entropy: 5.8319 | ✅ STABLE (Damped by -0.0358) |
+| 23:53:14 | Entropy: 4.0159 | ✅ STABLE (Damped by -0.1084) |
+| 23:53:15 | Entropy: 3.0634 | ✅ STABLE (Damped by -0.2407) |
+| 23:53:16 | Entropy: 0.5127 | ✅ STABLE (Damped by -15.7244) |
+| 23:53:17 | Entropy: 7.3788 | ✅ STABLE (Damped by -0.0177) |
+| 23:53:18 | Entropy: 3.5971 | ✅ STABLE (Damped by -0.1501) |
+| 23:53:19 | Entropy: 7.0126 | ✅ STABLE (Damped by -0.0206) |
+| 23:53:20 | Entropy: 5.3058 | ✅ STABLE (Damped by -0.0474) |
+| 23:53:21 | Entropy: 2.1693 | ✅ STABLE (Damped by -0.6552) |
+| 23:53:22 | Entropy: 6.0415 | ✅ STABLE (Damped by -0.0322) |
+| 23:53:23 | Entropy: 2.8913 | ✅ STABLE (Damped by -0.2851) |
+| 23:53:24 | Entropy: 6.1607 | ✅ STABLE (Damped by -0.0304) |
+| 23:53:25 | Entropy: 3.0944 | ✅ STABLE (Damped by -0.2337) |
+| 23:53:26 | Entropy: 6.9956 | ✅ STABLE (Damped by -0.0208) |
+| 23:53:27 | Entropy: 1.7779 | ✅ STABLE (Damped by -1.1512) |
+| 23:53:28 | Entropy: 2.4656 | ✅ STABLE (Damped by -0.4531) |
+| 23:53:29 | Entropy: 0.4601 | ✅ STABLE (Damped by -16.2110) |
+| 23:53:30 | Entropy: 3.1111 | ✅ STABLE (Damped by -0.2300) |
+| 23:53:31 | Entropy: 7.3651 | ✅ STABLE (Damped by -0.0178) |
+| 23:53:32 | Entropy: 2.9470 | ✅ STABLE (Damped by -0.2696) |
+| 23:53:33 | Entropy: 6.9985 | ✅ STABLE (Damped by -0.0207) |
+| 23:53:34 | Entropy: 5.0085 | ✅ STABLE (Damped by -0.0563) |
+| 23:53:35 | Entropy: 8.3416 | ✅ STABLE (Damped by -0.0123) |
+| 23:53:36 | Entropy: 3.9993 | ✅ STABLE (Damped by -0.1097) |
+| 23:53:37 | Entropy: 1.8022 | ✅ STABLE (Damped by -1.1082) |
+| 23:53:38 | Entropy: 0.1649 | ✅ STABLE (Damped by -0.0123) |
+| 23:53:39 | Entropy: 7.9705 | ✅ STABLE (Damped by -0.0141) |
+| 23:53:40 | Entropy: 6.1527 | ✅ STABLE (Damped by -0.0305) |
+| 23:53:41 | Entropy: 3.5247 | ✅ STABLE (Damped by -0.1593) |
+| 23:53:42 | Entropy: 4.7490 | ✅ STABLE (Damped by -0.0659) |
+| 23:53:43 | Entropy: 7.0835 | ✅ STABLE (Damped by -0.0200) |
+| 23:53:44 | Entropy: 7.8869 | ✅ STABLE (Damped by -0.0145) |
+| 23:53:45 | Entropy: 2.0388 | ✅ STABLE (Damped by -0.7822) |
+| 23:53:46 | Entropy: 2.3699 | ✅ STABLE (Damped by -0.5081) |
+| 23:53:47 | Entropy: 9.4248 | ⚠️ MARGINAL (Low Damping) |
+| 23:53:48 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:53:49 | Entropy: 4.7144 | ✅ STABLE (Damped by -0.0673) |
+| 23:53:50 | Entropy: 0.1470 | ⚠️ MARGINAL (Low Damping) |
+| 23:53:51 | Entropy: 2.0117 | ✅ STABLE (Damped by -0.8125) |
+| 23:53:52 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:53:53 | Entropy: 5.7952 | ✅ STABLE (Damped by -0.0364) |
+| 23:53:54 | Entropy: 8.3382 | ✅ STABLE (Damped by -0.0123) |
+| 23:53:55 | Entropy: 7.3775 | ✅ STABLE (Damped by -0.0177) |
+| 23:53:56 | Entropy: 7.6259 | ✅ STABLE (Damped by -0.0161) |
+| 23:53:57 | Entropy: 5.1398 | ✅ STABLE (Damped by -0.0521) |
+| 23:53:58 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:53:59 | Entropy: 2.1432 | ✅ STABLE (Damped by -0.6782) |
+| 23:54:00 | Entropy: 5.9679 | ✅ STABLE (Damped by -0.0334) |
+| 23:54:01 | Entropy: 9.7041 | ⚠️ MARGINAL (Low Damping) |
+| 23:54:01 | Entropy: 5.5639 | ✅ STABLE (Damped by -0.0411) |
+| 23:54:02 | Entropy: 0.4663 | ✅ STABLE (Damped by -16.2073) |
+| 23:54:03 | Entropy: 7.8369 | ✅ STABLE (Damped by -0.0148) |
+| 23:54:04 | Entropy: 3.8133 | ✅ STABLE (Damped by -0.1263) |
+| 23:54:05 | Entropy: 4.3054 | ✅ STABLE (Damped by -0.0882) |
+| 23:54:06 | Entropy: 9.7849 | ⚠️ MARGINAL (Low Damping) |
+| 23:54:07 | Entropy: 8.3321 | ✅ STABLE (Damped by -0.0123) |
+| 23:54:08 | Entropy: 9.1783 | ⚠️ MARGINAL (Low Damping) |
+| 23:54:09 | Entropy: 0.2385 | ✅ STABLE (Damped by -1.9003) |
+| 23:54:10 | Entropy: 5.0029 | ✅ STABLE (Damped by -0.0564) |
+| 23:54:11 | Entropy: 7.8809 | ✅ STABLE (Damped by -0.0146) |
+| 23:54:12 | Entropy: 5.5715 | ✅ STABLE (Damped by -0.0410) |
+| 23:54:13 | Entropy: 9.8927 | ⚠️ MARGINAL (Low Damping) |
+| 23:54:14 | Entropy: 3.2552 | ✅ STABLE (Damped by -0.2014) |
+| 23:54:15 | Entropy: 6.9505 | ✅ STABLE (Damped by -0.0212) |
+| 23:54:17 | Entropy: 8.4711 | ✅ STABLE (Damped by -0.0117) |
+| 23:54:18 | Entropy: 3.8081 | ✅ STABLE (Damped by -0.1268) |
+| 23:54:19 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:54:20 | Entropy: 9.7300 | ⚠️ MARGINAL (Low Damping) |
+| 23:54:21 | Entropy: 1.1736 | ✅ STABLE (Damped by -3.5109) |
+| 23:54:22 | Entropy: 3.4343 | ✅ STABLE (Damped by -0.1720) |
+| 23:54:22 | Entropy: 8.0283 | ✅ STABLE (Damped by -0.0138) |
+| 23:54:23 | Entropy: 7.9355 | ✅ STABLE (Damped by -0.0143) |
+| 23:54:24 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:54:25 | Entropy: 9.0176 | ⚠️ MARGINAL (Low Damping) |
+| 23:54:26 | Entropy: 4.1060 | ✅ STABLE (Damped by -0.1015) |
+| 23:54:27 | Entropy: 3.0289 | ✅ STABLE (Damped by -0.2488) |
+| 23:54:28 | Entropy: 8.8195 | ✅ STABLE (Damped by -0.0104) |
+| 23:54:29 | Entropy: 1.6609 | ✅ STABLE (Damped by -1.3914) |
+| 23:54:31 | Entropy: 9.9000 | ⚠️ MARGINAL (Low Damping) |
+| 23:54:31 | Entropy: 9.2420 | ⚠️ MARGINAL (Low Damping) |
+| 23:54:32 | Entropy: 3.3213 | ✅ STABLE (Damped by -0.1898) |
+| 23:54:34 | Entropy: 5.1479 | ✅ STABLE (Damped by -0.0518) |
+| 23:54:35 | Entropy: 9.1924 | ⚠️ MARGINAL (Low Damping) |
+| 23:54:36 | Entropy: 5.9934 | ✅ STABLE (Damped by -0.0330) |
+| 23:54:37 | Entropy: 7.2045 | ✅ STABLE (Damped by -0.0190) |
+| 23:54:38 | Entropy: 3.0434 | ✅ STABLE (Damped by -0.2454) |
+| 23:54:39 | Entropy: 6.0594 | ✅ STABLE (Damped by -0.0319) |
+| 23:54:40 | Entropy: 0.1000 | ⚠️ MARGINAL (Low Damping) |
+| 23:54:41 | Entropy: 2.8192 | ✅ STABLE (Damped by -0.3069) |
+| 23:54:42 | Entropy: 0.4982 | ✅ STABLE (Damped by -15.9487) |
+| 23:54:43 | Entropy: 5.2971 | ✅ STABLE (Damped by -0.0476) |
+| 23:54:43 | Entropy: 6.5894 | ✅ STABLE (Damped by -0.0248) |
+| 23:54:45 | Entropy: 7.8660 | ✅ STABLE (Damped by -0.0146) |
+| 23:54:46 | Entropy: 1.2359 | ✅ STABLE (Damped by -3.0758) |
