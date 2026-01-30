@@ -1,0 +1,26 @@
+{
+  "long_term": {
+    "2026-01-29": [
+      {
+        "timestamp": 1769739754.900599,
+        "content": "statut",
+        "source": "user",
+        "tags": [
+          "statut"
+        ],
+        "entropy_at_creation": 4.4966
+      },
+      {
+        "timestamp": 1769739754.901671,
+        "content": "Traitement en cours...",
+        "source": "lea",
+        "tags": [
+          "traitement",
+          "cours..."
+        ],
+        "entropy_at_creation": 4.4966
+      }
+    ]
+  },
+  "last_sync": 1769739925.093782
+}

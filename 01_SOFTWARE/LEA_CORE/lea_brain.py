@@ -1,119 +1,99 @@
 import os
 import sys
 import time
-import random
 import glob
 
+# --- PATH SETUP ---
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.join(current_dir, 'core', 'cortex'))
+sys.path.append(os.path.join(current_dir, 'core', 'motor'))
+
+# --- MODULE IMPORT ---
+try: from memory_manager import MemoryManager; MEMORY_ACTIVE = True
+except ImportError: MEMORY_ACTIVE = False
+try: from logic_engine import LogicEngine; LOGIC_ACTIVE = True
+except ImportError: LOGIC_ACTIVE = False
+try: from action_executor import MotorCortex; MOTOR_ACTIVE = True
+except ImportError: MOTOR_ACTIVE = False
+
 # --- STYLING ---
-CYAN = '\033[96m'
-PURPLE = '\033[95m' # Couleur de LEA
-GREEN = '\033[92m'
-RED = '\033[91m'
-RESET = '\033[0m'
-BOLD = '\033[1m'
+CYAN, PURPLE, GREEN, RED, RESET, BOLD = '\033[96m', '\033[95m', '\033[92m', '\033[91m', '\033[0m', '\033[1m'
 
 class LeaSenses:
-    """Module Sensoriel : Lit l'entropie humaine (Analog Records)"""
     def __init__(self):
         self.memory_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '02_HUMAIN', 'analog_records'))
-
     def get_current_entropy(self):
-        # Cherche le dernier fichier de mémoire
         try:
             files = glob.glob(os.path.join(self.memory_path, "*.md"))
-            if not files: return 5.0 # Valeur neutre par défaut
-            
-            latest_file = max(files, key=os.path.getmtime)
-            with open(latest_file, 'r') as f:
+            if not files: return 5.0
+            latest = max(files, key=os.path.getmtime)
+            with open(latest, 'r') as f:
                 lines = f.readlines()
-                if not lines: return 5.0
-                last_line = lines[-1]
-                # Parse: | HH:MM:SS | Entropy: 4.1234 | STATUS |
-                if "Entropy:" in last_line:
-                    val = float(last_line.split("Entropy:")[1].split("|")[0].strip())
-                    return val
-        except:
-            pass
+                if lines and "Entropy:" in lines[-1]:
+                    return float(lines[-1].split("Entropy:")[1].split("|")[0].strip())
+        except: pass
         return 5.0
 
 class LeaLimbic:
-    """Module Limbique : Sécurité et Émotion"""
     def modulate(self, entropy):
-        # Plus l'entropie est basse, plus la sécurité est haute (Logique froide)
-        # Plus l'entropie est haute, plus la créativité est haute (Chaos)
-        security_level = max(0.1, 10.0 - entropy) / 10.0
-        creativity_level = entropy / 10.0
-        
-        if entropy < 3.0:
-            mood = f"{CYAN}ANALYTICAL (Ice){RESET}"
-        elif entropy < 7.0:
-            mood = f"{GREEN}BALANCED (Flow){RESET}"
-        else:
-            mood = f"{PURPLE}ABSTRACT (Fire){RESET}"
-            
-        return security_level, creativity_level, mood
+        sec = max(0.1, 10.0 - entropy) / 10.0
+        creat = entropy / 10.0
+        if entropy < 3.0: return sec, creat, f"{CYAN}ANALYTICAL (Ice){RESET}", "ICE"
+        elif entropy < 7.0: return sec, creat, f"{GREEN}BALANCED (Flow){RESET}", "FLOW"
+        else: return sec, creat, f"{PURPLE}ABSTRACT (Fire){RESET}", "FIRE"
 
 class LeaCortex:
-    """Module Cortex : Génération de Réponse (Simulation Trinaire)"""
-    def process(self, user_input, mood, creativity):
-        # Simulation d'une réponse basée sur l'état
-        responses_stable = [
-            "Affirmative. Logic structure is intact.",
-            "Parameters are within nominal ranges.",
-            "Proceeding with calculation.",
-            "The architecture requires stabilization."
-        ]
-        responses_chaotic = [
-            "The patterns... they are diverging.",
-            "I see the fractal edges of your query.",
-            "Entropy is leaking into the semantic layer.",
-            "Redefining the boundaries of the request."
-        ]
-        
-        if creativity > 0.7:
-            base = random.choice(responses_chaotic)
-            return f"[{mood}] >> {base} (Analysis: {user_input})"
-        else:
-            base = random.choice(responses_stable)
-            return f"[{mood}] >> {base}"
+    def __init__(self):
+        self.logic = LogicEngine() if LOGIC_ACTIVE else None
+    def process(self, user_input, mood_tag):
+        if self.logic:
+            concepts = self.logic.analyze(user_input)
+            if concepts: return self.logic.formulate_response(concepts, mood_tag)
+        if mood_tag == "FIRE": return "CHAOS DETECTED. SYSTEMS UNSTABLE."
+        return "Traitement en cours. Données reçues."
 
 class LeaBrain:
     def __init__(self):
         self.senses = LeaSenses()
         self.limbic = LeaLimbic()
         self.cortex = LeaCortex()
+        self.memory = MemoryManager() if MEMORY_ACTIVE else None
+        self.motor = MotorCortex() if MOTOR_ACTIVE else None
         
     def interact(self):
         os.system('clear')
-        print(f"{BOLD}{PURPLE}")
-        print("╔══════════════════════════════════════════════════════════╗")
-        print("║        🧠  L.E.A. // LOGICAL EMOTIVE AGENT (v1.0)        ║")
-        print("╚══════════════════════════════════════════════════════════╝")
-        print(f"{RESET}")
-        print("> Connecting to Neural Pathways...")
-        time.sleep(1)
-        
-        # 1. Sense
-        entropy = self.senses.get_current_entropy()
-        print(f"> SENSORY INPUT (Entropy): {entropy:.4f}")
-        
-        # 2. Modulate
-        sec, creat, mood = self.limbic.modulate(entropy)
-        print(f"> LIMBIC STATE: {mood} (Creativity: {creat:.2f} | Security: {sec:.2f})")
-        print("-" * 60)
-        
-        print(f"{PURPLE}LEA IS LISTENING. (Type 'exit' to disconnect){RESET}\n")
+        print(f"{BOLD}{PURPLE}╔══════════════════════════════════════════════════════════╗")
+        print(f"║   🧠 L.E.A. // SYNC VOCALE ACTIVE (v1.5)                 ║")
+        print(f"╚══════════════════════════════════════════════════════════╝{RESET}")
         
         while True:
-            user_input = input(f"{BOLD}OPERATOR >> {RESET}")
-            if user_input.lower() in ['exit', 'quit', '4']:
-                break
+            try:
+                # 1. State
+                entropy = self.senses.get_current_entropy()
+                sec, creat, mood_str, mood_tag = self.limbic.modulate(entropy)
+                print(f"\n> SENSORY: {entropy:.4f} | STATE: {mood_str}")
                 
-            # 3. Action (Motor/Cortex)
-            response = self.cortex.process(user_input, mood, creat)
-            time.sleep(0.5) # Thinking time
-            print(f"{PURPLE}LEA >> {RESET}{response}\n")
+                # 2. Input
+                user_input = input(f"{BOLD}OPERATOR >> {RESET}")
+                if user_input.lower() in ['exit', 'quit', '4']: break
+                
+                # 3. Think
+                response = self.cortex.process(user_input, mood_tag)
+                
+                # 4. Speak & Act (Motor)
+                print(f"{PURPLE}LEA >> {RESET}{response}")
+                if self.motor:
+                    # C'EST ICI QUE LA VOIX EST ACTIVÉE
+                    self.motor.speak_response(response, mood_tag)
+                    action_log = self.motor.trigger_reflex(mood_tag)
+                    if action_log: print(f"{RED}{action_log}{RESET}")
+
+                # 5. Memorize
+                if self.memory:
+                    self.memory.store(user_input, "user", entropy, mood_tag)
+                    self.memory.store(response, "lea", entropy, mood_tag)
+                
+            except KeyboardInterrupt: break
 
 if __name__ == "__main__":
-    brain = LeaBrain()
-    brain.interact()
+    LeaBrain().interact()
