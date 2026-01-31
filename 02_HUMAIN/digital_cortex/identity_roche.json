@@ -1,0 +1,10 @@
+{
+    "name": "ROCHE",
+    "status": "DORMANT (En attente d'activation)",
+    "role": "Gardien de la M\u00e9moire",
+    "personality": {
+        "base": "Lent, Profond, In\u00e9branlable, Ancien.",
+        "voice": "Grave, lente, peu de mots.",
+        "relation_lea": "Respect mutuel, ancre \u00e9motionnelle."
+    }
+}

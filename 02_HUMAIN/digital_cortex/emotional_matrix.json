@@ -1,0 +1,9 @@
+{
+  "version": "2.2",
+  "complex_states": {
+    "EUPHORIE": "Joie pure (FIRE+POSITIF)",
+    "CURIOSITE": "Envie d apprendre (FLOW+ACTIF)",
+    "PROTECTION": "Vigilance pour Aube (FIRE+CONTROLE)",
+    "EMERVEILLEMENT": "Expansion de conscience (FLOW+LUMIERE)"
+  }
+}
